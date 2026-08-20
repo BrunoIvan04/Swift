@@ -1,93 +1,29 @@
-# To-Do List — UIKit (Develop in Swift Collections)
+Objetivo: Crear una aplicación de lista de tareas que permita al usuario agregar tareas, marcar tareas como completadas y eliminar tareas no deseadas. 
+Requisitos previos: 
 
-## Estructura
+Conocimiento básico de Swift y Xcode. 
+Acceso a un entorno de desarrollo Swift (preferiblemente Xcode). 
+Instrucciones: 
 
-```
-todoapp/
-├── Core/                          ← lógica de negocio, sin UIKit (testeable en WSL/Linux)
-│   ├── Package.swift
-│   ├── Sources/TodoCore/
-│   │   ├── Task.swift             ← struct Task (requisito 2)
-│   │   └── TaskStore.swift        ← agregar/completar/eliminar/persistencia (requisitos 3,4,6,7,8)
-│   └── Tests/TodoCoreTests/
-│       └── TaskStoreTests.swift   ← pruebas unitarias (requisito 9)
-└── iOS/                           ← capa de interfaz, solo compila en Xcode/macOS
-    ├── TaskCell.swift             ← celda personalizada (requisitos 1, 5)
-    ├── TaskListViewController.swift ← tabla + textfield + botón (requisitos 1,4,5,6,7)
-    ├── UserDefaultsTaskPersistence.swift ← persistencia real (requisito 8)
-    └── SceneDelegate.swift        ← arranque sin storyboard
-```
-
-La idea de separar `Core` de `iOS` es justamente resolver tu problema de no
-tener Mac: **toda la lógica que no depende de UIKit vive en `Core`**, y esa
-parte sí la puedes compilar y testear en WSL con el toolchain de Swift para
-Linux. La parte de `iOS` (UIKit) solo se puede compilar en Xcode, pero para
-esa parte el código ya está escrito y comentado línea por línea, así que la
-integración es prácticamente copiar y pegar.
-
-## 1. Probar la lógica en WSL (sin Mac)
-
-Instala el toolchain de Swift para Linux (una sola vez):
-
-```bash
-# En tu WSL Ubuntu
-sudo apt update
-sudo apt install -y binutils git gnupg2 libc6-dev libcurl4-openssl-dev \
-  libedit2 libgcc-9-dev libpython3.8 libsqlite3-0 libstdc++-9-dev \
-  libxml2-dev libz3-dev pkg-config tzdata zlib1g-dev
-
-# Instala swiftly (gestor de versiones oficial) o descarga el .tar.gz
-# de https://www.swift.org/install/linux/ para tu versión de Ubuntu
-```
-
-Luego, dentro de `Core/`:
-
-```bash
-cd todoapp/Core
-swift test
-```
-
-Esto compila `Task.swift` y `TaskStore.swift` y corre los 6 tests de
-`TaskStoreTests.swift`, que cubren: agregar tarea, ignorar título vacío,
-recortar espacios, marcar/desmarcar completada, eliminar, y persistencia.
-Si algo en la lógica está mal, lo verás fallar ahí mismo, sin necesitar
-un simulador de iOS.
-
-## 2. Integrar la parte de UI en Xcode
-
-1. Crea un proyecto nuevo en Xcode: **App**, interfaz **Storyboard** o
-   **SwiftUI** (da igual, la vamos a ignorar), lenguaje **Swift**.
-2. Arrastra la carpeta `Core/` completa al proyecto (member of target: tu app).
-   Alternativa más "correcta": en Xcode ve a *File → Add Package Dependencies →
-   Add Local...* y selecciona la carpeta `Core/` para agregarla como paquete
-   Swift local; luego añade `import TodoCore` donde haga falta (ya está en
-   los archivos de `iOS/`).
-3. Arrastra los 4 archivos de `iOS/` al proyecto.
-4. Borra `Main.storyboard` (o si no quieres borrarlo, simplemente ignóralo)
-   y en el target, en la pestaña **General → Main Interface**, deja el
-   campo vacío.
-5. Reemplaza el `SceneDelegate.swift` que Xcode generó por el que está en
-   `iOS/SceneDelegate.swift`.
-6. Corre en el simulador (Cmd+R). Ahí sí ya necesitas Xcode/Mac para ver
-   la interfaz gráfica final, pero para ese punto la lógica ya la
-   verificaste con `swift test`.
-
-## Checklist de requisitos del ejercicio
-
-- [x] **1. UI**: tabla (`UITableView`) + textfield + botón, celda personalizada `TaskCell`.
-- [x] **2. Modelo**: `struct Task { title, isCompleted }`.
-- [x] **3. Almacenamiento**: `TaskStore.tasks: [Task]` (array en memoria).
-- [x] **4. Agregar**: `TaskStore.addTask(title:)`, conectado al botón y a Return del teclado.
-- [x] **5. Mostrar**: `TaskCell.configure` tacha y pone en gris las completadas.
-- [x] **6. Completar**: tap en la celda → `didSelectRowAt` → `toggleCompletion`.
-- [x] **7. Eliminar**: swipe-to-delete → `commit editingStyle: .delete`.
-- [x] **8. Persistencia (opcional)**: `UserDefaultsTaskPersistence` + Codable.
-- [x] **9. Pruebas**: `TaskStoreTests.swift`, corribles con `swift test` en WSL.
-
-## Notas / posibles mejoras si te sobra tiempo
-
-- Podrías agregar una `UITextField` de edición al hacer swipe (acción
-  "Editar" además de "Eliminar"), usando `UISwipeActionsConfiguration`.
-- Si el profesor pide explícitamente Storyboard con `@IBOutlet`/`@IBAction`,
-  dime y te paso la misma lógica pero conectada por Interface Builder en
-  vez de layout programático — el `TaskStore` no cambia nada.
+Creación de la interfaz de usuario: 
+Crea una interfaz de usuario simple en Xcode que incluya una tabla para mostrar la lista de tareas y un campo de texto con un botón para agregar nuevas tareas. 
+Asegúrate de que la tabla tenga una celda personalizada para mostrar las tareas. 
+Definición de una estructura de datos para las tareas: 
+Define una estructura de datos para representar una tarea, que debe incluir un título y un indicador de estado (completada o no completada). 
+Almacenamiento de tareas: 
+Utiliza una matriz (Array) en Swift para almacenar las tareas en memoria. 
+Agregar tareas: 
+Implementa la lógica para agregar nuevas tareas cuando el usuario escriba una tarea en el campo de texto y haga clic en el botón "Agregar". 
+Mostrar tareas: 
+Muestra la lista de tareas en la tabla. 
+Las tareas completadas deben mostrarse con un estilo diferente (por ejemplo, tachadas o en un color diferente). 
+Marcar tareas como completadas: 
+Permite a los usuarios marcar las tareas como completadas tocando la celda de la tarea en la tabla. 
+Actualiza la representación visual de las tareas completadas en la tabla. 
+7. Eliminar tareas: 
+Agrega la capacidad de eliminar tareas al deslizar una celda hacia la izquierda y tocar un botón de eliminación. 
+Opcional: persistencia de datos. 
+Si deseas llevar la aplicación al siguiente nivel, puedes implementar la persistencia de datos para que las tareas se guarden entre sesiones de la aplicación. 
+Prueba y depuración: 
+Prueba la aplicación para asegurarte de que todas las funciones trabajen correctamente. 
+Realiza pruebas adicionales para encontrar y solucionar posibles errores. 
