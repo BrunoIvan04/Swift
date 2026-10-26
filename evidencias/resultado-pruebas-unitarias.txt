@@ -1,30 +1,30 @@
 Building for debugging...
 [0/7] /Users/runner/work/Swift/Swift/Core/.build/arm64-apple-macosx/debug/TodoCorePackageTests.derived/runner.swift
-[0/7] Write sources
+[1/7] Write sources
 [4/7] Write swift-version--79AA4F9932D1E87A.txt
-[6/10] Compiling TodoCore TodoTask.swift
-[7/10] Emitting module TodoCore
-[8/10] Compiling TodoCore TaskStore.swift
+[6/10] Emitting module TodoCore
+[7/10] Compiling TodoCore TaskStore.swift
+[8/10] Compiling TodoCore TodoTask.swift
 [9/12] Compiling TodoCoreTests TaskStoreTests.swift
 [10/12] Emitting module TodoCoreTests
 [11/14] Emitting module TodoCorePackageTests
 [12/14] Compiling TodoCorePackageTests runner.swift
 [12/14] Write Objects.LinkFileList
 [13/14] Linking TodoCorePackageTests
-Build complete! (22.82s)
-Test Suite 'All tests' started at 2026-10-26 22:41:06.857.
-Test Suite 'TodoCorePackageTests.xctest' started at 2026-10-26 22:41:06.860.
-Test Suite 'TaskStoreTests' started at 2026-10-26 22:41:06.860.
+Build complete! (28.71s)
+Test Suite 'All tests' started at 2026-10-26 22:53:34.456.
+Test Suite 'TodoCorePackageTests.xctest' started at 2026-10-26 22:53:34.459.
+Test Suite 'TaskStoreTests' started at 2026-10-26 22:53:34.459.
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToArray]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToArray]' passed (0.007 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToArray]' passed (0.004 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' passed (0.001 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' passed (0.002 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_isOverdue]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_isOverdue]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_persistence_savesAndReloads]' started.
@@ -45,12 +45,12 @@ Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_changesTitleAndDueDate
 Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_changesTitleAndDueDate]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_rejectsEmptyTitle]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_rejectsEmptyTitle]' passed (0.000 seconds).
-Test Suite 'TaskStoreTests' passed at 2026-10-26 22:41:06.872.
-	 Executed 15 tests, with 0 failures (0 unexpected) in 0.010 (0.012) seconds
-Test Suite 'TodoCorePackageTests.xctest' passed at 2026-10-26 22:41:06.872.
-	 Executed 15 tests, with 0 failures (0 unexpected) in 0.010 (0.012) seconds
-Test Suite 'All tests' passed at 2026-10-26 22:41:06.872.
-	 Executed 15 tests, with 0 failures (0 unexpected) in 0.010 (0.015) seconds
+Test Suite 'TaskStoreTests' passed at 2026-10-26 22:53:34.469.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.009 (0.010) seconds
+Test Suite 'TodoCorePackageTests.xctest' passed at 2026-10-26 22:53:34.469.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.009 (0.011) seconds
+Test Suite 'All tests' passed at 2026-10-26 22:53:34.469.
+	 Executed 15 tests, with 0 failures (0 unexpected) in 0.009 (0.013) seconds
 ◇ Test run started.
 ↳ Testing Library Version: 124.4
 ↳ Target Platform: arm64e-apple-macos14.0
