@@ -39,6 +39,9 @@ final class TaskCell: UITableViewCell {
     /// Configura la celda a partir de una `Task`. Aquí es donde se
     /// aplica el estilo diferente para tareas completadas (requisito 5).
     func configure(with task: Task) {
+        // Accesibilidad: VoiceOver (y las pruebas de UI) leen el estado de la tarea.
+        accessibilityLabel = task.title
+        accessibilityValue = task.isCompleted ? "Completada" : "Pendiente"
         if task.isCompleted {
             let attributed = NSAttributedString(
                 string: task.title,

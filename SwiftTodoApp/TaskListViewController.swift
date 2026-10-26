@@ -12,6 +12,7 @@ final class TaskListViewController: UIViewController {
     private let tableView: UITableView = {
         let table = UITableView()
         table.translatesAutoresizingMaskIntoConstraints = false
+        table.accessibilityIdentifier = "listaTareas"
         return table
     }()
 
@@ -21,6 +22,7 @@ final class TaskListViewController: UIViewController {
         field.borderStyle = .roundedRect
         field.translatesAutoresizingMaskIntoConstraints = false
         field.returnKeyType = .done
+        field.accessibilityIdentifier = "campoNuevaTarea"
         return field
     }()
 
@@ -29,6 +31,7 @@ final class TaskListViewController: UIViewController {
         button.setTitle("Agregar", for: .normal)
         button.titleLabel?.font = .boldSystemFont(ofSize: 16)
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.accessibilityIdentifier = "botonAgregar"
         return button
     }()
 

@@ -1,5 +1,8 @@
 name: iOS - pruebas y evidencias
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ main ]
@@ -26,7 +29,18 @@ jobs:
         shell: bash
         run: bash ci/simulator_evidence.sh
 
-      - name: Subir evidencias
+      - name: Guardar evidencias en el repositorio
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f evidencias/build-log.txt
+          git add -f evidencias
+          git commit -m "Evidencias del simulador (run ${{ github.run_number }}) [skip ci]" || echo "Sin cambios"
+          git pull --rebase origin main && git push origin HEAD:main
+
+      - name: Subir evidencias como artefacto
         if: always()
         uses: actions/upload-artifact@v4
         with:

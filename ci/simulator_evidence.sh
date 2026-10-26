@@ -86,7 +86,31 @@ xcrun simctl ui "$UDID" content_size extra-extra-extra-large
 launch; shot "05_texto_grande"; stop
 xcrun simctl ui "$UDID" content_size large
 
+# 9. Pruebas de interfaz (XCUITest) sobre una instalación limpia:
+#    agregan, completan, eliminan deslizando y reabren la app.
+xcrun simctl uninstall "$UDID" "$BUNDLE_ID" || true
+set +e
+TEST_RUNNER_SCREENSHOT_DIR="$PWD/$OUT" xcodebuild test \
+  -project SwiftTodoApp.xcodeproj -scheme SwiftTodoApp \
+  -destination "id=$UDID" -derivedDataPath build \
+  -resultBundlePath build/UITests.xcresult \
+  CODE_SIGNING_ALLOWED=NO 2>&1 | tee "$OUT/ui-tests-log.txt" | grep -E "Test (Case|Suite)|error:|failed|passed|XCTAssert" | tail -n 40
+UI_STATUS=${PIPESTATUS[0]}
+set -e
+echo "Resultado XCUITest: $UI_STATUS" | tee "$OUT/resultado-pruebas-ui.txt"
+grep -E "Test Case .*(passed|failed)|Executed" "$OUT/ui-tests-log.txt" >> "$OUT/resultado-pruebas-ui.txt" || true
+
 sleep 1
 kill -INT "$VIDEO_PID" || true
 wait "$VIDEO_PID" || true
+
+# Datos del entorno de prueba para el reporte
+{
+  echo "Fecha (UTC): $(date -u '+%Y-%m-%d %H:%M')"
+  sw_vers | sed 's/^/macOS /'
+  xcodebuild -version
+  xcrun simctl list devices | grep "$UDID"
+  xcrun simctl list runtimes | grep -i ios | tail -n 3
+} > "$OUT/entorno.txt"
 ls -la "$OUT"
+exit "$UI_STATUS"
