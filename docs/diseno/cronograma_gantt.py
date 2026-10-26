@@ -5,15 +5,16 @@ from datetime import date
 D=lambda m,d: date(2026,m,d)
 rows=[
  ("Base","Proyecto base: lista local, pruebas, persistencia",D(8,17),D(8,21),"done"),
- ("Análisis","Requerimientos y clasificación (PO)",D(10,26),D(10,30),"prog"),
+ ("Análisis","Requerimientos y clasificación (PO)",D(10,26),D(10,26),"done"),
  ("Análisis","CI en macOS + pruebas de UI automatizadas",D(10,26),D(10,26),"done"),
- ("Diseño","Navegación, arquitectura y modelo de datos",D(10,28),D(11,4),"prog"),
- ("Diseño","Prototipos de pantallas dinámicas",D(11,2),D(11,6),"todo"),
+ ("Diseño","Navegación, arquitectura, datos y prototipos",D(10,26),D(10,26),"done"),
+ ("Construcción","Detalle, fecha límite y filtro (adelantado)",D(10,26),D(10,26),"done"),
+ ("Pruebas","Corrección de defectos D-01 a D-05",D(10,26),D(10,26),"done"),
+ ("Sprint 2","Revisión del sprint y ajustes de diseño",D(10,27),D(11,6),"prog"),
  ("Construcción","Proyecto Firebase + login y registro",D(11,9),D(11,13),"todo"),
  ("Construcción","Repositorio Firestore async + estados de carga",D(11,11),D(11,19),"todo"),
  ("Construcción","Migración de tareas locales a la nube",D(11,18),D(11,20),"todo"),
- ("Construcción","Detalle, fecha límite y filtro",D(11,23),D(11,27),"todo"),
- ("Construcción","Recordatorios (notificaciones locales)",D(11,25),D(11,27),"todo"),
+ ("Construcción","Recordatorios (notificaciones locales)",D(11,23),D(11,27),"todo"),
  ("Pruebas","Unitarias, UI y reglas de Firestore",D(11,23),D(12,1),"todo"),
  ("Integración","Integración final, video y entrega",D(11,30),D(12,4),"todo"),
 ]
@@ -36,4 +37,4 @@ ax.set_xlim(mdates.date2num(D(8,14)),mdates.date2num(D(12,7))); ax.set_ylim(-0.7
 for sp in ["top","right"]: ax.spines[sp].set_visible(False)
 ax.legend(handles=[Patch(color=col[k],label=lab[k]) for k in col],loc="lower left",fontsize=8,frameon=False,ncol=3,bbox_to_anchor=(0,-0.24))
 ax.set_title("Cronograma — Mis tareas (línea roja: 26/10/2026)",fontsize=10.5,loc="left")
-plt.tight_layout(); plt.savefig("cronograma_gantt.png")
+plt.tight_layout(); plt.savefig("img/gantt.png")

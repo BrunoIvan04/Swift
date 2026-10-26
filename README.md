@@ -34,7 +34,18 @@ Realiza pruebas adicionales para encontrar y solucionar posibles errores.
 
 Las pruebas y capturas se generan automáticamente en una Mac de GitHub Actions (`.github/workflows/ios.yml`), en un simulador de iPhone 17 con iOS 26.2.
 
-- **Video demostrativo (76 s):** [`evidencias/demo_app_funcional.mp4`](evidencias/demo_app_funcional.mp4)
-- **Pruebas unitarias (7/7):** [`evidencias/resultado-pruebas-unitarias.txt`](evidencias/resultado-pruebas-unitarias.txt)
-- **Prueba de interfaz XCUITest (agregar, completar, eliminar y reabrir):** [`evidencias/resultado-pruebas-ui.txt`](evidencias/resultado-pruebas-ui.txt)
-- **Capturas del simulador:** carpeta [`evidencias/`](evidencias/)
+### Versión 1.1
+
+- Agregar, completar y eliminar tareas (deslizar a la izquierda → «Eliminar»).
+- Pantalla de detalle para editar el título y asignar una fecha límite (deslizar a la derecha → «Editar», o botón ⓘ). Las vencidas se ven en rojo.
+- Filtro Todas / Pendientes / Completadas y contador de pendientes.
+- Persistencia con UserDefaults + Codable y migración de los datos de la versión 1.0.
+- Dynamic Type, modo oscuro y VoiceOver.
+
+### Evidencias
+
+- **Video demostrativo (1 min 51 s):** [`evidencias/demo_app_funcional.mp4`](evidencias/demo_app_funcional.mp4)
+- **Pruebas unitarias (15/15):** [`evidencias/resultado-pruebas-unitarias.txt`](evidencias/resultado-pruebas-unitarias.txt)
+- **Pruebas de interfaz XCUITest (2/2):** flujo principal, y filtro + detalle + fecha límite: [`evidencias/resultado-pruebas-ui.txt`](evidencias/resultado-pruebas-ui.txt)
+- **Capturas del simulador:** carpeta [`evidencias/`](evidencias/) (ui_01 a ui_10 y 01 a 05)
+- **Diseño editable:** [`docs/diseno/`](docs/diseno/) · **Documentos de la Fase III:** [`docs/`](docs/)
