@@ -10,6 +10,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
+        // Las pruebas de UI arrancan con datos limpios usando este argumento.
+        if ProcessInfo.processInfo.arguments.contains("-resetData") {
+            UserDefaultsTaskPersistence.resetAll()
+        }
+
         let window = UIWindow(windowScene: windowScene)
         let rootVC = TaskListViewController()
         window.rootViewController = UINavigationController(rootViewController: rootVC)

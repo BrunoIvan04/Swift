@@ -6,7 +6,7 @@ set -euo pipefail
 
 OUT="evidencias"
 BUNDLE_ID="com.brunoivan.SwiftTodoApp"
-DEFAULTS_KEY="com.promoselect.todo.tasks"   # clave que usa UserDefaultsTaskPersistence
+DEFAULTS_KEY="com.promoselect.todo.tasks"   # clave de la v1.0; la app la migra a la nueva (D-05)
 mkdir -p "$OUT"
 
 # 1. Elegir el iPhone del runtime de iOS más reciente instalado
@@ -38,7 +38,7 @@ APP="build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app"
 test -d "$APP"
 
 shot() { sleep 4; xcrun simctl io "$UDID" screenshot "$OUT/$1.png"; echo "Captura: $1.png"; }
-launch() { xcrun simctl launch "$UDID" "$BUNDLE_ID" >/dev/null; }
+launch() { SIMCTL_CHILD_TZ=America/Mexico_City xcrun simctl launch "$UDID" "$BUNDLE_ID" >/dev/null; }
 stop()  { xcrun simctl terminate "$UDID" "$BUNDLE_ID" || true; sleep 1; }
 
 # 3. Grabar video de toda la demostración
@@ -57,18 +57,30 @@ xcrun simctl install "$UDID" "$APP"
 CONTAINER=$(xcrun simctl get_app_container "$UDID" "$BUNDLE_ID" data)
 mkdir -p "$CONTAINER/Library/Preferences"
 python3 - "$CONTAINER/Library/Preferences/$BUNDLE_ID.plist" "$DEFAULTS_KEY" <<'PY'
+# Se guarda con la clave ANTERIOR (v1.0) para comprobar la migración (D-05).
+# Las fechas usan el formato por defecto de JSONEncoder: segundos desde 2001-01-01 UTC.
 import json, plistlib, sys, uuid
+from datetime import datetime, timezone, timedelta
 path, key = sys.argv[1], sys.argv[2]
+ref = datetime(2001, 1, 1, tzinfo=timezone.utc)
+mx = timezone(timedelta(hours=-6))
+def ts(y, m, d, h, mi):
+    return (datetime(y, m, d, h, mi, tzinfo=mx) - ref).total_seconds()
 tasks = [
-    ("Estudiar Swift", True),
-    ("Entregar el plan del proyecto integrador", False),
-    ("Repasar UITableView y celdas personalizadas", True),
-    ("Grabar el video demostrativo de la app", False),
-    ("Comprar leche", False),
+    ("Estudiar Swift", True, None),
+    ("Entregar el plan del proyecto integrador", False, ts(2026, 11, 6, 23, 59)),
+    ("Repasar UITableView y celdas personalizadas", True, None),
+    ("Grabar el video demostrativo de la app", False, ts(2026, 12, 4, 18, 0)),
+    ("Comprar leche", False, ts(2026, 10, 20, 9, 0)),
 ]
-data = json.dumps([{"id": str(uuid.uuid4()).upper(), "title": t, "isCompleted": c} for t, c in tasks]).encode()
+items = []
+for title, done, due in tasks:
+    item = {"id": str(uuid.uuid4()).upper(), "title": title, "isCompleted": done}
+    if due is not None:
+        item["dueDate"] = due
+    items.append(item)
 with open(path, "wb") as f:
-    plistlib.dump({key: data}, f, fmt=plistlib.FMT_BINARY)
+    plistlib.dump({key: json.dumps(items).encode()}, f, fmt=plistlib.FMT_BINARY)
 PY
 
 launch; shot "02_lista_con_tareas_y_completadas"; stop
