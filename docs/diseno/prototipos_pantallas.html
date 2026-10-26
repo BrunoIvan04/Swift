@@ -1,0 +1,73 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+body{margin:0;background:#fff;font-family:-apple-system,"DejaVu Sans",Arial,sans-serif;padding:24px;display:flex;gap:26px}
+.col{display:flex;flex-direction:column;align-items:center;gap:10px}
+.phone{width:250px;height:520px;border:3px solid #222;border-radius:34px;padding:14px 12px;box-sizing:border-box;position:relative;background:#FAFAFA;overflow:hidden}
+.notch{width:90px;height:18px;background:#222;border-radius:10px;margin:0 auto 10px}
+.cap{font-size:13px;font-weight:700;color:#0B4F45;text-align:center;width:250px}
+.sub{font-size:10.5px;color:#555;text-align:center;width:250px;line-height:1.35}
+.nav{display:flex;justify-content:space-between;align-items:center;font-size:11px;color:#2F6DB5;margin-bottom:6px}
+h1{font-size:20px;margin:2px 0 10px;color:#111}
+.in{border:1.5px solid #bbb;border-radius:8px;height:30px;background:#fff;margin:8px 0;font-size:10.5px;color:#999;display:flex;align-items:center;padding:0 8px}
+.btn{background:#1F4E3D;color:#fff;border-radius:9px;height:34px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;margin-top:10px;gap:8px}
+.btn.dis{background:#8DA79F}
+.link{color:#2F6DB5;font-size:11px;text-align:center;margin-top:12px}
+.spin{width:14px;height:14px;border:2.5px solid rgba(255,255,255,.4);border-top-color:#fff;border-radius:50%}
+.spin.big{width:26px;height:26px;border-color:#ccc;border-top-color:#555;margin:6px auto}
+.seg{display:flex;border:1.5px solid #bbb;border-radius:7px;overflow:hidden;font-size:9.5px;margin:6px 0}
+.seg div{flex:1;text-align:center;padding:4px 0;border-right:1px solid #bbb}.seg div:last-child{border:0}.seg .on{background:#1F4E3D;color:#fff}
+.row{display:flex;gap:6px}.row .in{flex:1;margin:4px 0}.add{color:#2F6DB5;font-weight:700;font-size:11px;align-self:center}
+.cell{background:#fff;border-bottom:1px solid #e3e3e3;padding:8px 6px;display:flex;align-items:center;gap:6px;font-size:11px}
+.cell .t{flex:1}.cell .d{font-size:9px;color:#888}.chk{color:#1F4E3D;font-weight:700}.info{color:#2F6DB5;font-size:12px}
+.tpl{border:2px dashed #C98A1B;background:#FFF8EA;border-radius:6px}
+.tpl .t{color:#8A5A00;font-family:"DejaVu Sans Mono",monospace;font-size:9.5px}
+.done .t{text-decoration:line-through;color:#999}
+.sk{height:12px;background:linear-gradient(90deg,#e6e6e6,#f2f2f2);border-radius:5px;margin:12px 4px}
+.empty{text-align:center;color:#777;font-size:11px;margin-top:60px;line-height:1.5}
+.err{background:#FDECEA;color:#9B2C2C;font-size:10px;border-radius:7px;padding:7px;margin:8px 0;text-align:center}
+.lbl{font-size:10px;color:#666;margin-top:10px}
+.sw{width:34px;height:20px;background:#1F4E3D;border-radius:12px;position:relative;float:right}.sw:after{content:"";position:absolute;right:2px;top:2px;width:16px;height:16px;background:#fff;border-radius:50%}
+.pick{border:1.5px solid #bbb;border-radius:8px;background:#fff;font-size:10.5px;padding:7px;margin-top:4px;text-align:center}
+</style></head><body>
+
+<div class="col"><div class="phone"><div class="notch"></div>
+<h1>Iniciar sesión</h1>
+<div class="in">correo@ejemplo.com</div><div class="in">••••••••</div>
+<div class="btn dis"><div class="spin"></div>Entrando…</div>
+<div class="err">No se pudo iniciar sesión. Revisa tu conexión.</div>
+<div class="link">¿No tienes cuenta? Crear cuenta</div>
+</div><div class="cap">A · Iniciar sesión</div><div class="sub">Entradas: correo y contraseña. Mientras Firebase Auth responde, el botón se deshabilita y muestra un spinner.</div></div>
+
+<div class="col"><div class="phone"><div class="notch"></div>
+<div class="nav"><span>Cerrar sesión</span><span></span></div><h1>Mis tareas</h1>
+<div class="row"><div class="in">Nueva tarea...</div><span class="add">Agregar</span></div>
+<div class="spin big"></div><div class="sub" style="width:auto">Cargando tus tareas…</div>
+<div class="sk"></div><div class="sk" style="width:70%"></div><div class="sk"></div><div class="sk" style="width:60%"></div>
+</div><div class="cap">B · Lista: cargando</div><div class="sub">UIActivityIndicatorView y filas de relleno mientras llega el primer snapshot de Firestore. La interfaz sigue respondiendo.</div></div>
+
+<div class="col"><div class="phone"><div class="notch"></div>
+<div class="nav"><span>Cerrar sesión</span><span></span></div><h1>Mis tareas (3)</h1>
+<div class="row"><div class="in">Nueva tarea...</div><span class="add">Agregar</span></div>
+<div class="seg"><div class="on">Todas</div><div>Pendientes</div><div>Completadas</div></div>
+<div class="cell tpl"><div class="t">{task.title}<br><span class="d">{task.dueDate?}</span></div><span class="chk">{✓?}</span><span class="info">ⓘ</span></div>
+<div class="cell"><div class="t">Entregar Fase III<br><span class="d">6 nov · 23:59</span></div><span class="info">ⓘ</span></div>
+<div class="cell done"><div class="t">Estudiar Swift</div><span class="chk">✓</span><span class="info">ⓘ</span></div>
+<div class="cell"><div class="t">Comprar leche</div><span class="info">ⓘ</span></div>
+<div class="sub" style="width:auto;margin-top:10px">↻ desliza hacia abajo para actualizar</div>
+</div><div class="cap">C · Lista: plantilla dinámica</div><div class="sub">Una sola TaskCell (recuadro naranja) se recicla para cada documento; solo cambian título, fecha y estado.</div></div>
+
+<div class="col"><div class="phone"><div class="notch"></div>
+<div class="nav"><span>Cerrar sesión</span><span></span></div><h1>Mis tareas</h1>
+<div class="row"><div class="in">Nueva tarea...</div><span class="add">Agregar</span></div>
+<div class="err">Sin conexión. Mostrando tus tareas guardadas. <b>Reintentar</b></div>
+<div class="empty">📝<br><b>Aún no tienes tareas</b><br>Escribe una arriba y toca «Agregar».</div>
+</div><div class="cap">D · Lista: vacía / error</div><div class="sub">Estados explícitos para que la app nunca parezca trabada: aviso de error con «Reintentar» y mensaje de lista vacía.</div></div>
+
+<div class="col"><div class="phone"><div class="notch"></div>
+<div class="nav"><span>‹ Mis tareas</span><b>Guardar</b></div><h1>Detalle</h1>
+<div class="lbl">Título</div><div class="in" style="color:#111">{task.title}</div>
+<div class="lbl">Fecha límite</div><div class="pick">{task.dueDate} · UIDatePicker</div>
+<div class="lbl" style="margin-top:16px">Recordarme <span class="sw"></span></div>
+<div class="lbl" style="margin-top:22px">Creada: {task.createdAt}</div>
+<div class="btn" style="margin-top:28px">Guardar cambios</div>
+</div><div class="cap">E · Detalle de tarea</div><div class="sub">Recibe la TodoTask por inyección en init(task:) y devuelve los cambios a la lista mediante un delegate.</div></div>
+</body></html>

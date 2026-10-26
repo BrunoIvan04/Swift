@@ -1,0 +1,57 @@
+digraph nav {
+  rankdir=TB; dpi=200; nodesep=0.45; ranksep=0.55; newrank=true;
+  node [fontname="DejaVu Sans", fontsize=10, shape=plain];
+  edge [fontname="DejaVu Sans", fontsize=8.5, color="#333333"];
+
+  start [shape=oval, style=filled, fillcolor="#E8F1EC", color="#1F4E3D", label="Inicio de la app\nSceneDelegate consulta\nAuthService.shared.usuarioActual", fontsize=10];
+
+  login [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#2F6DB5" BGCOLOR="#FFFFFF">
+   <TR><TD BGCOLOR="#2F6DB5"><FONT COLOR="white"><B>1. Iniciar sesión</B> (LoginViewController)</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Entradas:</B> correo, contraseña</TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Salidas:</B> signIn(email:password:) → uid</TD></TR>
+   <TR><TD ALIGN="LEFT"><FONT COLOR="#555555">Carga: spinner en el botón · Error: alerta</FONT></TD></TR></TABLE>>];
+
+  registro [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#2F6DB5" BGCOLOR="#FFFFFF">
+   <TR><TD BGCOLOR="#2F6DB5"><FONT COLOR="white"><B>2. Crear cuenta</B> (RegistroViewController)</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Entradas:</B> nombre, correo, contraseña ×2</TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Salidas:</B> createUser() + doc users/{uid}</TD></TR>
+   <TR><TD ALIGN="LEFT"><FONT COLOR="#555555">Validación local antes de enviar</FONT></TD></TR></TABLE>>];
+
+  lista [label=<<TABLE BORDER="2" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#1F4E3D" BGCOLOR="#FFFFFF">
+   <TR><TD BGCOLOR="#1F4E3D"><FONT COLOR="white"><B>3. Mis tareas</B> (TaskListViewController)</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Entradas:</B> listener de users/{uid}/tasks → [TodoTask]</TD></TR>
+   <TR><TD ALIGN="LEFT">texto de nueva tarea · toque · deslizar · filtro</TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Salidas:</B> addDocument · updateData(isCompleted) · delete</TD></TR>
+   <TR><TD ALIGN="LEFT"><FONT COLOR="#555555">Estados: cargando (spinner) · vacía · error + Reintentar</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT"><FONT COLOR="#555555">UITableView con TaskCell reutilizable (plantilla)</FONT></TD></TR></TABLE>>];
+
+  detalle [label=<<TABLE BORDER="1" CELLBORDER="0" CELLSPACING="0" CELLPADDING="4" COLOR="#1F4E3D" BGCOLOR="#FFFFFF">
+   <TR><TD BGCOLOR="#3C7A64"><FONT COLOR="white"><B>4. Detalle de tarea</B> (TaskDetailViewController)</FONT></TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Entradas:</B> TodoTask inyectada por init(task:)</TD></TR>
+   <TR><TD ALIGN="LEFT">título · fecha límite (UIDatePicker) · recordatorio (UISwitch)</TD></TR>
+   <TR><TD ALIGN="LEFT"><B>Salidas:</B> updateData(...) · notificación local</TD></TR>
+   <TR><TD ALIGN="LEFT"><FONT COLOR="#555555">Guardando: botón deshabilitado + spinner</FONT></TD></TR></TABLE>>];
+
+  auth [shape=cylinder, style=filled, fillcolor="#FFF4DC", color="#C98A1B", fontsize=10, label="Firebase\nAuthentication"];
+  fs [shape=cylinder, style=filled, fillcolor="#FFF4DC", color="#C98A1B", fontsize=10, label="Cloud Firestore\nusers/{uid}/tasks"];
+  notif [shape=note, style=filled, fillcolor="#F4F6F8", color="#777777", fontsize=9, label="UNUserNotificationCenter\n(recordatorio local)"];
+
+  start -> login [label=" sin sesión"];
+  start -> lista [label=" sesión activa"];
+  login -> registro [label=" «Crear cuenta»\n [push]"];
+  registro -> lista [label=" cuenta creada\n [cambia raíz]"];
+  login -> lista [label=" sesión iniciada\n [cambia raíz]"];
+  lista -> detalle [label=" tocar (i)\n [push + TodoTask]"];
+  detalle -> lista [label=" «Guardar» / «Atrás»\n [pop + delegate]"];
+  lista -> login [label=" «Cerrar sesión»\n signOut()", style=dashed];
+
+  edge [color="#C98A1B", style=dashed, fontcolor="#8A5A00", arrowhead=normal, dir=both, arrowtail=normal];
+  login -> auth [label=" credenciales / uid", constraint=false];
+  registro -> auth [label=" alta de usuario"];
+  lista -> fs [label=" snapshot (JSON) ⇄ escrituras"];
+  detalle -> fs [label=" actualizar documento"];
+  detalle -> notif [dir=forward, color="#777777", fontcolor="#555555", label=" programar"];
+  { rank=same; login; registro; }
+  { rank=same; auth; }
+  { rank=same; detalle; fs; }
+}
