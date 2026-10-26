@@ -1,0 +1,34 @@
+name: iOS - pruebas y evidencias
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  pruebas-y-evidencias:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Versión de Xcode
+        run: xcodebuild -version
+
+      - name: Pruebas unitarias de TodoCore (XCTest)
+        shell: bash
+        working-directory: Core
+        run: |
+          mkdir -p ../evidencias
+          swift test 2>&1 | tee ../evidencias/resultado-pruebas-unitarias.txt
+
+      - name: Compilar la app y tomar capturas en el simulador
+        shell: bash
+        run: bash ci/simulator_evidence.sh
+
+      - name: Subir evidencias
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: evidencias-SwiftTodoApp
+          path: evidencias/
