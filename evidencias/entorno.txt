@@ -1,0 +1,10 @@
+Fecha (UTC): 2026-10-26 19:04
+macOS ProductName:		macOS
+macOS ProductVersion:		15.7.9
+macOS BuildVersion:		24G830
+Xcode 16.4
+Build version 16F6
+    iPhone 17 (22970779-4A47-463E-8B6D-CC012359B320) (Booted) 
+iOS 26.0 (26.0.1 - 23A8464) - com.apple.CoreSimulator.SimRuntime.iOS-26-0
+iOS 26.1 (26.1 - 23B86) - com.apple.CoreSimulator.SimRuntime.iOS-26-1
+iOS 26.2 (26.2 - 23C54) - com.apple.CoreSimulator.SimRuntime.iOS-26-2

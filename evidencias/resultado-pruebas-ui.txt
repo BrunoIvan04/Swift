@@ -1,0 +1,5 @@
+Resultado XCUITest: 0
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (43.346 seconds).
+	 Executed 1 test, with 0 failures (0 unexpected) in 43.346 (43.347) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 43.346 (43.348) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 43.346 (43.351) seconds

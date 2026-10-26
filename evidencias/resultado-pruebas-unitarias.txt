@@ -1,0 +1,42 @@
+Building for debugging...
+[0/7] Write sources
+[0/7] /Users/runner/work/Swift/Swift/Core/.build/arm64-apple-macosx/debug/TodoCorePackageTests.derived/runner.swift
+[0/7] Write sources
+[4/7] Write swift-version--79AA4F9932D1E87A.txt
+[6/10] Emitting module TodoCore
+[7/10] Compiling TodoCore TaskStore.swift
+[8/10] Compiling TodoCore Task.swift
+[9/12] Compiling TodoCoreTests TaskStoreTests.swift
+[10/12] Emitting module TodoCoreTests
+[11/14] Emitting module TodoCorePackageTests
+[12/14] Compiling TodoCorePackageTests runner.swift
+[12/14] Write Objects.LinkFileList
+[13/14] Linking TodoCorePackageTests
+Build complete! (30.89s)
+Test Suite 'All tests' started at 2026-10-26 18:54:39.816.
+Test Suite 'TodoCorePackageTests.xctest' started at 2026-10-26 18:54:39.824.
+Test Suite 'TaskStoreTests' started at 2026-10-26 18:54:39.824.
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToArray]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToArray]' passed (0.003 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_persistence_savesAndReloads]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_persistence_savesAndReloads]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_outOfBounds_doesNothing]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_outOfBounds_doesNothing]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_removesFromArray]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_removesFromArray]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_toggleCompletion_flipsStatus]' started.
+Test Case '-[TodoCoreTests.TaskStoreTests test_toggleCompletion_flipsStatus]' passed (0.000 seconds).
+Test Suite 'TaskStoreTests' passed at 2026-10-26 18:54:39.828.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'TodoCorePackageTests.xctest' passed at 2026-10-26 18:54:39.828.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.004 (0.004) seconds
+Test Suite 'All tests' passed at 2026-10-26 18:54:39.828.
+	 Executed 7 tests, with 0 failures (0 unexpected) in 0.004 (0.013) seconds
+◇ Test run started.
+↳ Testing Library Version: 124.4
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests passed after 0.001 seconds.
