@@ -13,7 +13,7 @@ final class SwiftTodoAppUITests: XCTestCase {
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["-resetData"]   // cada prueba inicia sin tareas
+        app.launchArguments = ["-resetData", "-uiTesting"]   // cada prueba inicia sin tareas
         app.launchEnvironment = ["TZ": "America/Mexico_City"]
         app.launch()
     }
@@ -106,7 +106,7 @@ final class SwiftTodoAppUITests: XCTestCase {
 
         // Persistencia: cerrar y volver a abrir la app SIN borrar datos
         app.terminate()
-        app.launchArguments = []
+        app.launchArguments = ["-uiTesting"]
         app.launch()
         XCTAssertTrue(celda("Estudiar Swift").waitForExistence(timeout: 10))
         XCTAssertEqual(lista.cells.count, 2)
@@ -150,7 +150,12 @@ final class SwiftTodoAppUITests: XCTestCase {
         let campoTitulo = app.textFields["campoTitulo"]
         XCTAssertEqual(campoTitulo.value as? String, "Entregar reporte")
         campoTitulo.tap()
-        campoTitulo.typeText(" final")
+        // Borra el título con el botón (x) del campo y escribe el nuevo completo.
+        let limpiar = campoTitulo.buttons.firstMatch
+        XCTAssertTrue(limpiar.waitForExistence(timeout: 3))
+        limpiar.tap()
+        campoTitulo.typeText("Entregar reporte final")
+        XCTAssertEqual(campoTitulo.value as? String, "Entregar reporte final")
 
         // REQ-12: activar la fecha límite
         app.switches["switchFecha"].tap()

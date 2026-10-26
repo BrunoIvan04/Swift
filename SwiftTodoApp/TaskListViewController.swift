@@ -40,6 +40,11 @@ final class TaskListViewController: UIViewController {
         field.font = .preferredFont(forTextStyle: .body)          // D-03
         field.adjustsFontForContentSizeCategory = true
         field.returnKeyType = .done
+        // En pruebas de UI se apaga el autocorrector para escribir texto exacto.
+        if ProcessInfo.processInfo.arguments.contains("-uiTesting") {
+            field.autocorrectionType = .no
+            field.spellCheckingType = .no
+        }
         field.accessibilityIdentifier = "campoNuevaTarea"
         // D-01: el campo ocupa todo el espacio libre y el botón solo su ancho.
         field.setContentHuggingPriority(.defaultLow, for: .horizontal)

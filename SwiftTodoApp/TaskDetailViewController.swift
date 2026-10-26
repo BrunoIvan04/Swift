@@ -24,6 +24,11 @@ final class TaskDetailViewController: UIViewController {
         field.adjustsFontForContentSizeCategory = true
         field.clearButtonMode = .whileEditing
         field.returnKeyType = .done
+        // En pruebas de UI se apaga el autocorrector para escribir texto exacto.
+        if ProcessInfo.processInfo.arguments.contains("-uiTesting") {
+            field.autocorrectionType = .no
+            field.spellCheckingType = .no
+        }
         field.accessibilityIdentifier = "campoTitulo"
         return field
     }()
