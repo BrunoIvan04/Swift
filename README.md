@@ -27,3 +27,14 @@ Si deseas llevar la aplicación al siguiente nivel, puedes implementar la persis
 Prueba y depuración: 
 Prueba la aplicación para asegurarte de que todas las funciones trabajen correctamente. 
 Realiza pruebas adicionales para encontrar y solucionar posibles errores. 
+
+---
+
+## Evidencias del proyecto integrador (Fase III)
+
+Las pruebas y capturas se generan automáticamente en una Mac de GitHub Actions (`.github/workflows/ios.yml`), en un simulador de iPhone 17 con iOS 26.2.
+
+- **Video demostrativo (76 s):** [`evidencias/demo_app_funcional.mp4`](evidencias/demo_app_funcional.mp4)
+- **Pruebas unitarias (7/7):** [`evidencias/resultado-pruebas-unitarias.txt`](evidencias/resultado-pruebas-unitarias.txt)
+- **Prueba de interfaz XCUITest (agregar, completar, eliminar y reabrir):** [`evidencias/resultado-pruebas-ui.txt`](evidencias/resultado-pruebas-ui.txt)
+- **Capturas del simulador:** carpeta [`evidencias/`](evidencias/)
