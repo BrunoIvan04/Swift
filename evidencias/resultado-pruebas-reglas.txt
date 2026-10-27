@@ -1,0 +1,57 @@
+
+> test
+> node --test reglas.test.js
+
+TAP version 13
+# Subtest: un usuario puede crear, leer y borrar sus propias tareas
+ok 1 - un usuario puede crear, leer y borrar sus propias tareas
+  ---
+  duration_ms: 883.353792
+  type: 'test'
+  ...
+# Subtest: un usuario puede crear y leer su documento de perfil users/{uid}
+ok 2 - un usuario puede crear y leer su documento de perfil users/{uid}
+  ---
+  duration_ms: 41.151375
+  type: 'test'
+  ...
+# Subtest: un usuario NO puede leer las tareas de otro usuario
+ok 3 - un usuario NO puede leer las tareas de otro usuario
+  ---
+  duration_ms: 47.358208
+  type: 'test'
+  ...
+# [2026-10-27T23:38:47.468Z]  @firebase/firestore: Firestore (10.14.1): GrpcConnection RPC 'Write' stream 0x31f226c2 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+# false for 'create' @ L8, false for 'update' @ L8
+# [2026-10-27T23:38:47.476Z]  @firebase/firestore: Firestore (10.14.1): GrpcConnection RPC 'Write' stream 0x31f226c3 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+# false for 'delete' @ L8
+# Subtest: un usuario NO puede escribir ni borrar en la cuenta de otro usuario
+ok 4 - un usuario NO puede escribir ni borrar en la cuenta de otro usuario
+  ---
+  duration_ms: 41.127959
+  type: 'test'
+  ...
+# [2026-10-27T23:38:47.507Z]  @firebase/firestore: Firestore (10.14.1): GrpcConnection RPC 'Write' stream 0x31f226c5 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+# false for 'create' @ L8, false for 'update' @ L8
+# Subtest: sin iniciar sesión no se puede leer ni escribir nada
+ok 5 - sin iniciar sesión no se puede leer ni escribir nada
+  ---
+  duration_ms: 31.115209
+  type: 'test'
+  ...
+# [2026-10-27T23:38:47.528Z]  @firebase/firestore: Firestore (10.14.1): GrpcConnection RPC 'Write' stream 0x31f226c6 error. Code: 7 Message: 7 PERMISSION_DENIED: No matching allow statements
+# Subtest: las colecciones fuera de users/{uid} están cerradas
+ok 6 - las colecciones fuera de users/{uid} están cerradas
+  ---
+  duration_ms: 65.581584
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1345.93175

@@ -1,6 +1,12 @@
-Resultado XCUITest: 0
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (51.897 seconds).
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' passed (40.718 seconds).
-	 Executed 2 tests, with 0 failures (0 unexpected) in 92.615 (92.619) seconds
-	 Executed 2 tests, with 0 failures (0 unexpected) in 92.615 (92.620) seconds
-	 Executed 2 tests, with 0 failures (0 unexpected) in 92.615 (92.626) seconds
+Resultado XCUITest: 65
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' failed (44.796 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' failed (38.057 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:259: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion] : XCTAssertEqual failed: ("XCTWaiterResult(rawValue: 2)") is not equal to ("XCTWaiterResult(rawValue: 1)") - No se cumplió: label == 'Las contraseñas no coinciden.'
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' failed (28.845 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' failed (39.979 seconds).
+	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.678) seconds
+	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.679) seconds
+	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.680) seconds
