@@ -91,8 +91,11 @@ final class SwiftTodoAppUITests: XCTestCase {
         escribir(app.textFields["campoNombre"], nombre)
         escribir(app.textFields["campoCorreoRegistro"], correo)
         escribir(app.secureTextFields["campoContrasenaRegistro"], clave)
-        escribir(app.secureTextFields["campoConfirmar"], clave + "\n")
-        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20), "Debe entrar a «Mis tareas»")
+        escribir(app.secureTextFields["campoConfirmar"], clave)
+        app.buttons["botonCrearCuenta"].tap()
+        let entro = app.navigationBars["Mis tareas"].waitForExistence(timeout: 20)
+        if !entro { diagnostico("diag_crear_cuenta") }
+        XCTAssertTrue(entro, "Debe entrar a «Mis tareas». Mensaje: \(textoVisible("mensajeErrorRegistro"))")
         return correo
     }
 
@@ -107,7 +110,22 @@ final class SwiftTodoAppUITests: XCTestCase {
         campoCorreo.typeText(correo)
         campoClave.tap()
         campoClave.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 20))
-        campoClave.typeText(contrasena + "\n")
+        campoClave.typeText(contrasena)
+        app.buttons["botonEntrar"].tap()
+    }
+
+    private func textoVisible(_ id: String) -> String {
+        let etiqueta = app.staticTexts[id]
+        return etiqueta.exists ? etiqueta.label : "(sin mensaje)"
+    }
+
+    /// Si algo falla, guarda una captura y el árbol de accesibilidad para revisarlo.
+    private func diagnostico(_ nombre: String) {
+        captura(nombre)
+        if let dir = ProcessInfo.processInfo.environment["SCREENSHOT_DIR"] {
+            let url = URL(fileURLWithPath: dir).appendingPathComponent("\(nombre).txt")
+            try? app.debugDescription.write(to: url, atomically: true, encoding: .utf8)
+        }
     }
 
     private func captura(_ nombre: String) {
@@ -255,15 +273,19 @@ final class SwiftTodoAppUITests: XCTestCase {
         escribir(app.textFields["campoNombre"], "Bruno")
         escribir(app.textFields["campoCorreoRegistro"], correo)
         escribir(app.secureTextFields["campoContrasenaRegistro"], clave)
-        escribir(app.secureTextFields["campoConfirmar"], "otra-clave\n")
+        escribir(app.secureTextFields["campoConfirmar"], "otra-clave")
+        app.buttons["botonCrearCuenta"].tap()
+        if !app.staticTexts["mensajeErrorRegistro"].waitForExistence(timeout: 5) { diagnostico("diag_validacion_registro") }
         esperar("label == 'Las contraseñas no coinciden.'", app.staticTexts["mensajeErrorRegistro"])
         captura("ui_12_crear_cuenta_validacion")
 
         let confirmar = app.secureTextFields["campoConfirmar"]
         confirmar.tap()
         confirmar.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 15))
-        confirmar.typeText(clave + "\n")
-        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20))
+        confirmar.typeText(clave)
+        app.buttons["botonCrearCuenta"].tap()
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20),
+                      "Mensaje: \(textoVisible("mensajeErrorRegistro"))")
 
         agregar("Tarea guardada en la nube")
         XCTAssertTrue(celda("Tarea guardada en la nube").waitForExistence(timeout: 5))
@@ -279,7 +301,8 @@ final class SwiftTodoAppUITests: XCTestCase {
 
         // Contraseña correcta: entra y sus tareas siguen en Firestore
         iniciarSesion(correo, clave)
-        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20))
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20),
+                      "Mensaje: \(textoVisible("mensajeError"))")
         XCTAssertTrue(celda("Tarea guardada en la nube").waitForExistence(timeout: 15),
                       "La tarea debe seguir en la cuenta después de salir y volver a entrar")
         captura("ui_14_tareas_desde_la_nube")
