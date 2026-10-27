@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Compila SwiftTodoApp, la abre en un simulador de iPhone y guarda capturas
-# y un video en la carpeta evidencias/. Lo ejecuta GitHub Actions en una Mac
+# y un video en la carpeta evidencias/. Necesita el emulador de Firebase
+# (Auth en 9099 y Firestore en 8080) corriendo en la misma Mac. Lo ejecuta GitHub Actions en una Mac
 # en la nube (ver .github/workflows/ios.yml), así que no se necesita una Mac propia.
 set -euo pipefail
 
 OUT="evidencias"
 BUNDLE_ID="com.brunoivan.SwiftTodoApp"
-DEFAULTS_KEY="com.promoselect.todo.tasks"   # clave de la v1.0; la app la migra a la nueva (D-05)
+DEFAULTS_KEY="com.promoselect.todo.tasks"   # clave de la v1.0 (D-05)
 mkdir -p "$OUT"
 
 # 1. Elegir el iPhone del runtime de iOS más reciente instalado
@@ -30,15 +31,19 @@ xcrun simctl bootstatus "$UDID" -b
 xcrun simctl ui "$UDID" appearance light
 xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3 || true
 
-# 2. Compilar la app para el simulador
+# 2. Compilar la app para el simulador (firmada "para ejecutar localmente",
+#    sin equipo de desarrollo; Firebase Auth necesita el llavero del simulador).
 xcodebuild -project SwiftTodoApp.xcodeproj -scheme SwiftTodoApp \
   -sdk iphonesimulator -destination "id=$UDID" \
-  -derivedDataPath build CODE_SIGNING_ALLOWED=NO build | tee "$OUT/build-log.txt" | tail -n 25
+  -derivedDataPath build -clonedSourcePackagesDirPath build/SourcePackages \
+  build | tee "$OUT/build-log.txt" | grep -E "error:|warning: .*Swift|BUILD (SUCCEEDED|FAILED)|Resolved source packages|firebase-ios-sdk" | tail -n 40
 APP="build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app"
 test -d "$APP"
 
-shot() { sleep 4; xcrun simctl io "$UDID" screenshot "$OUT/$1.png"; echo "Captura: $1.png"; }
-launch() { SIMCTL_CHILD_TZ=America/Mexico_City xcrun simctl launch "$UDID" "$BUNDLE_ID" >/dev/null; }
+PROJECT="demo-mis-tareas"
+EMU_FS="http://127.0.0.1:8080/v1/projects/$PROJECT/databases/(default)/documents"
+shot() { sleep "${2:-4}"; xcrun simctl io "$UDID" screenshot "$OUT/$1.png"; echo "Captura: $1.png"; }
+launch() { SIMCTL_CHILD_TZ=America/Mexico_City xcrun simctl launch "$UDID" "$BUNDLE_ID" "$@" >/dev/null; }
 stop()  { xcrun simctl terminate "$UDID" "$BUNDLE_ID" || true; sleep 1; }
 
 # 3. Grabar video de toda la demostración
@@ -46,18 +51,18 @@ xcrun simctl io "$UDID" recordVideo --codec=h264 --force "$OUT/demo-simulador.mp
 VIDEO_PID=$!
 sleep 2
 
-# 4. Primera apertura: lista vacía
+# 4. Primera apertura: pantalla «Iniciar sesión»
 xcrun simctl install "$UDID" "$APP"
-launch; shot "01_lista_vacia"; stop
+launch; shot "01_inicio_de_sesion"; stop
 
-# 5. Reinstalar y precargar tareas de ejemplo en UserDefaults (mismo formato
-#    JSON que genera la app con Codable), una de ellas completada.
+# 5. Reinstalar y precargar tareas en UserDefaults como las dejaba la v1.x
+#    (clave anterior, mismo JSON de Codable). Al entrar con la cuenta de
+#    demostración, la app las sube a Firestore (REQ-10) y las borra del teléfono.
 xcrun simctl uninstall "$UDID" "$BUNDLE_ID"
 xcrun simctl install "$UDID" "$APP"
 CONTAINER=$(xcrun simctl get_app_container "$UDID" "$BUNDLE_ID" data)
 mkdir -p "$CONTAINER/Library/Preferences"
 python3 - "$CONTAINER/Library/Preferences/$BUNDLE_ID.plist" "$DEFAULTS_KEY" <<'PY'
-# Se guarda con la clave ANTERIOR (v1.0) para comprobar la migración (D-05).
 # Las fechas usan el formato por defecto de JSONEncoder: segundos desde 2001-01-01 UTC.
 import json, plistlib, sys, uuid
 from datetime import datetime, timezone, timedelta
@@ -83,34 +88,49 @@ with open(path, "wb") as f:
     plistlib.dump({key: json.dumps(items).encode()}, f, fmt=plistlib.FMT_BINARY)
 PY
 
-launch; shot "02_lista_con_tareas_y_completadas"; stop
+launch -demoAccount; shot "02_tareas_migradas_a_la_nube" 7; stop
 
-# 6. Persistencia: se cierra la app y se vuelve a abrir
-launch; shot "03_persistencia_tras_reabrir"; stop
+# 6. Sesión recordada: se cierra la app y se vuelve a abrir. Ya no hay datos en
+#    el teléfono, así que las tareas que aparecen vienen de Firestore.
+launch; shot "03_sesion_recordada_datos_de_la_nube" 6; stop
 
 # 7. Modo oscuro
 xcrun simctl ui "$UDID" appearance dark
-launch; shot "04_modo_oscuro"; stop
+launch; shot "04_modo_oscuro" 5; stop
 xcrun simctl ui "$UDID" appearance light
 
 # 8. Texto grande (Dynamic Type)
 xcrun simctl ui "$UDID" content_size extra-extra-extra-large
-launch; shot "05_texto_grande"; stop
+launch; shot "05_texto_grande" 5; stop
 xcrun simctl ui "$UDID" content_size large
 
-# 9. Pruebas de interfaz (XCUITest) sobre una instalación limpia:
-#    agregan, completan, eliminan deslizando y reabren la app.
+# 9. Lo que quedó guardado en Firestore (emulador): documentos de la cuenta demo
+curl -s -X POST -H "Authorization: Bearer owner" -H "Content-Type: application/json" \
+  "$EMU_FS:runQuery" -d '{"structuredQuery":{"from":[{"collectionId":"tasks","allDescendants":true}]}}' \
+  | python3 -m json.tool > "$OUT/firestore_tareas_cuenta_demo.json" || true
+
+# 10. Pruebas de interfaz (XCUITest) sobre una instalación limpia: crean
+#     cuentas en el emulador, agregan, completan, eliminan, editan y reabren.
 xcrun simctl uninstall "$UDID" "$BUNDLE_ID" || true
 set +e
 TEST_RUNNER_SCREENSHOT_DIR="$PWD/$OUT" xcodebuild test \
   -project SwiftTodoApp.xcodeproj -scheme SwiftTodoApp \
-  -destination "id=$UDID" -derivedDataPath build \
+  -destination "id=$UDID" -derivedDataPath build -clonedSourcePackagesDirPath build/SourcePackages \
   -resultBundlePath build/UITests.xcresult \
-  CODE_SIGNING_ALLOWED=NO 2>&1 | tee "$OUT/ui-tests-log.txt" | grep -E "Test (Case|Suite)|error:|failed|passed|XCTAssert" | tail -n 40
+  2>&1 | tee "$OUT/ui-tests-log.txt" | grep -E "Test (Case|Suite)|error:|failed|passed|XCTAssert" | tail -n 60
 UI_STATUS=${PIPESTATUS[0]}
 set -e
 echo "Resultado XCUITest: $UI_STATUS" | tee "$OUT/resultado-pruebas-ui.txt"
-grep -E "Test Case .*(passed|failed)|Executed" "$OUT/ui-tests-log.txt" >> "$OUT/resultado-pruebas-ui.txt" || true
+grep -E "Test Case .*(passed|failed)|Executed|error:" "$OUT/ui-tests-log.txt" >> "$OUT/resultado-pruebas-ui.txt" || true
+
+# 11. Cuentas que crearon las pruebas en el emulador de Authentication (sin contraseñas)
+curl -s -H "Authorization: Bearer owner" "http://127.0.0.1:9099/identitytoolkit.googleapis.com/v1/projects/$PROJECT/accounts:batchGet?maxResults=100" \
+  | python3 -c '
+import json, sys
+data = json.load(sys.stdin)
+users = [{k: u.get(k) for k in ("localId", "email", "displayName", "createdAt")} for u in data.get("users", [])]
+print(json.dumps({"cuentas": users, "total": len(users)}, indent=2, ensure_ascii=False))
+' > "$OUT/auth_cuentas_emulador.json" || true
 
 sleep 1
 kill -INT "$VIDEO_PID" || true

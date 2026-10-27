@@ -1,95 +1,126 @@
 import Foundation
 
-/// Protocolo de persistencia. Al abstraerlo así, la lógica de negocio
-/// (TaskStore) no depende de UserDefaults directamente, lo cual nos
-/// permite escribir tests que corren en Linux/WSL con `swift test`,
-/// sin necesitar Xcode ni un Mac.
-public protocol TaskPersisting {
-    func load() -> [TodoTask]
-    func save(_ tasks: [TodoTask])
-}
-
-/// Implementación en memoria, útil para tests y para previews.
-public final class InMemoryTaskPersistence: TaskPersisting {
-    private var storage: [TodoTask] = []
-    public init(initial: [TodoTask] = []) { self.storage = initial }
-    public func load() -> [TodoTask] { storage }
-    public func save(_ tasks: [TodoTask]) { storage = tasks }
-}
-
-/// TaskStore contiene TODA la lógica de negocio de la app:
-/// - guarda las tareas en un Array en memoria (requisito 3)
-/// - agregar (requisito 4)
-/// - marcar como completada (requisito 6)
-/// - eliminar (requisito 7)
-/// - persistencia opcional a través de `TaskPersisting` (requisito 8)
-/// - editar título y fecha límite (REQ-11, REQ-12)
-/// - filtrar y contar pendientes (REQ-13)
+/// Estado y lógica de la lista «Mis tareas».
 ///
-/// El ViewController de UIKit solo debe llamar a estos métodos y
-/// refrescar la tabla; no debe manipular el array directamente.
-/// Esto separa la lógica de la interfaz, y es justo lo que nos permite
-/// probar la lógica sin necesitar un simulador de iOS.
+/// - Escucha el repositorio y publica el estado cargando / lista / error
+///   (REQ-09); el ViewController solo refleja ese estado.
+/// - Valida y recorta títulos (REQ-01, REQ-02), completa (REQ-04),
+///   elimina (REQ-05), edita título y fecha (REQ-11, REQ-12), filtra y
+///   cuenta pendientes (REQ-13) y migra tareas locales (REQ-10).
+/// - Trabaja en el hilo principal (@MainActor) y las escrituras son
+///   asíncronas, así que la interfaz nunca se congela (REQ-17).
+@MainActor
 public final class TaskStore {
 
-    public private(set) var tasks: [TodoTask]
-    private let persistence: TaskPersisting
+    public enum State: Equatable {
+        case loading
+        case loaded
+        case failed(String)
+    }
 
-    public init(persistence: TaskPersisting = InMemoryTaskPersistence()) {
-        self.persistence = persistence
-        self.tasks = persistence.load()
+    /// Tareas en el orden en que se crearon.
+    public private(set) var tasks: [TodoTask] = []
+    public private(set) var state: State = .loading
+    /// Se llama cada vez que cambian las tareas o el estado.
+    public var onChange: (() -> Void)?
+
+    private let repository: TaskRepository
+    private let errorMessage: (Error) -> String
+    private var observation: TaskObservation?
+
+    /// - Parameter errorMessage: convierte un error en un texto para el usuario.
+    public init(repository: TaskRepository,
+                errorMessage: @escaping (Error) -> String = { $0.localizedDescription }) {
+        self.repository = repository
+        self.errorMessage = errorMessage
+    }
+
+    // MARK: - Carga
+
+    /// Empieza (o reintenta) la escucha de las tareas.
+    public func start() {
+        observation?.cancel()
+        state = .loading
+        onChange?()
+        observation = repository.observeTasks { [weak self] result in
+            self?.apply(result)
+        }
+    }
+
+    public func stop() {
+        observation?.cancel()
+        observation = nil
+    }
+
+    private func apply(_ result: Result<[TodoTask], Error>) {
+        switch result {
+        case .success(let list):
+            tasks = list
+            state = .loaded
+        case .failure(let error):
+            state = .failed(errorMessage(error))
+        }
+        onChange?()
+    }
+
+    // MARK: - Escrituras
+
+    /// Devuelve el título sin espacios sobrantes, o `nil` si queda vacío.
+    public static func normalizedTitle(_ title: String) -> String? {
+        let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 
     @discardableResult
-    public func addTask(title: String) -> TodoTask? {
-        let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return nil }
-        let newTask = TodoTask(title: trimmed)
-        tasks.append(newTask)
-        persist()
-        return newTask
+    public func addTask(title: String, dueDate: Date? = nil) async throws -> TodoTask? {
+        guard let title = Self.normalizedTitle(title) else { return nil }
+        let task = TodoTask(title: title, dueDate: dueDate)
+        try await repository.add(task)
+        return task
     }
 
-    public func toggleCompletion(at index: Int) {
-        guard tasks.indices.contains(index) else { return }
-        tasks[index].isCompleted.toggle()
-        persist()
+    public func toggleCompletion(id: UUID) async throws {
+        guard var task = task(id: id) else { return }
+        task.isCompleted.toggle()
+        try await repository.update(task)
     }
 
-    public func toggleCompletion(id: UUID) {
-        guard let index = tasks.firstIndex(where: { $0.id == id }) else { return }
-        toggleCompletion(at: index)
+    public func removeTask(id: UUID) async throws {
+        guard task(id: id) != nil else { return }
+        try await repository.delete(id: id)
     }
 
-    public func removeTask(at index: Int) {
-        guard tasks.indices.contains(index) else { return }
-        tasks.remove(at: index)
-        persist()
-    }
-
-    public func removeTask(id: UUID) {
-        guard let index = tasks.firstIndex(where: { $0.id == id }) else { return }
-        removeTask(at: index)
-    }
-
-    // MARK: - Edición (REQ-11, REQ-12)
-
-    /// Actualiza el título y la fecha límite de una tarea.
-    /// Devuelve `false` si la tarea no existe o si el título queda vacío.
+    /// Cambia el título y la fecha límite. Devuelve `false` si la tarea no
+    /// existe o si el título queda vacío.
     @discardableResult
-    public func updateTask(id: UUID, title: String, dueDate: Date?) -> Bool {
-        let trimmed = title.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty,
-              let index = tasks.firstIndex(where: { $0.id == id }) else { return false }
-        tasks[index].title = trimmed
-        tasks[index].dueDate = dueDate
-        persist()
+    public func updateTask(id: UUID, title: String, dueDate: Date?) async throws -> Bool {
+        guard let title = Self.normalizedTitle(title), var task = task(id: id) else { return false }
+        task.title = title
+        task.dueDate = dueDate
+        try await repository.update(task)
         return true
     }
 
-    // MARK: - Filtro y contador (REQ-13)
+    /// Sube a la cuenta las tareas guardadas en el teléfono (REQ-10).
+    /// Omite las que ya existen (mismo id), así que se puede repetir sin duplicar.
+    /// - Returns: cuántas tareas se subieron.
+    @discardableResult
+    public func importTasks(_ localTasks: [TodoTask]) async throws -> Int {
+        var imported = 0
+        for local in localTasks where task(id: local.id) == nil {
+            try await repository.add(local)
+            imported += 1
+        }
+        return imported
+    }
 
-    /// Tareas visibles con el filtro indicado, en el mismo orden en que se agregaron.
+    // MARK: - Consultas
+
+    public func task(id: UUID) -> TodoTask? {
+        tasks.first { $0.id == id }
+    }
+
+    /// Tareas visibles con el filtro indicado (REQ-13).
     public func tasks(matching filter: TaskFilter) -> [TodoTask] {
         tasks.filter { filter.includes($0) }
     }
@@ -97,9 +128,5 @@ public final class TaskStore {
     /// Número de tareas que aún no se completan.
     public var pendingCount: Int {
         tasks.filter { !$0.isCompleted }.count
-    }
-
-    private func persist() {
-        persistence.save(tasks)
     }
 }

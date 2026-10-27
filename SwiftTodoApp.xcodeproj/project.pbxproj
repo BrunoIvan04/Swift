@@ -16,6 +16,14 @@
 		DA56617FCB37880D097A6E6D /* TodoCore in Frameworks */ = {isa = PBXBuildFile; productRef = 477DE0FE05F621E4192BE1AD /* TodoCore */; };
 		A1B2C3D4E5F6A7B8C9D0E102 /* SwiftTodoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E101 /* SwiftTodoAppUITests.swift */; };
 		B1C2D3E4F5A6B7C8D9E0F102 /* TaskDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C2D3E4F5A6B7C8D9E0F101 /* TaskDetailViewController.swift */; };
+		C1000000000000000000B001 /* FirebaseSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F001 /* FirebaseSetup.swift */; };
+		C1000000000000000000B002 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F002 /* AuthService.swift */; };
+		C1000000000000000000B003 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F003 /* LoginViewController.swift */; };
+		C1000000000000000000B004 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F004 /* SignUpViewController.swift */; };
+		C1000000000000000000B005 /* FirestoreTaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F005 /* FirestoreTaskRepository.swift */; };
+		C1000000000000000000B006 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C1000000000000000000F006 /* GoogleService-Info.plist */; };
+		C1000000000000000000B024 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C1000000000000000000D022 /* FirebaseAuth */; };
+		C1000000000000000000B025 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C1000000000000000000D023 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +38,12 @@
 		A1B2C3D4E5F6A7B8C9D0E101 /* SwiftTodoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTodoAppUITests.swift; sourceTree = "<group>"; };
 		A1B2C3D4E5F6A7B8C9D0E103 /* SwiftTodoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftTodoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1C2D3E4F5A6B7C8D9E0F101 /* TaskDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailViewController.swift; sourceTree = "<group>"; };
+		C1000000000000000000F001 /* FirebaseSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirebaseSetup.swift"; sourceTree = "<group>"; };
+		C1000000000000000000F002 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService.swift"; sourceTree = "<group>"; };
+		C1000000000000000000F003 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LoginViewController.swift"; sourceTree = "<group>"; };
+		C1000000000000000000F004 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController.swift"; sourceTree = "<group>"; };
+		C1000000000000000000F005 /* FirestoreTaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirestoreTaskRepository.swift"; sourceTree = "<group>"; };
+		C1000000000000000000F006 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +62,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA56617FCB37880D097A6E6D /* TodoCore in Frameworks */,
+				C1000000000000000000B024 /* FirebaseAuth in Frameworks */,
+				C1000000000000000000B025 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +104,12 @@
 				B1C2D3E4F5A6B7C8D9E0F101 /* TaskDetailViewController.swift */,
 				ED92FE1D1BFDA23A345A487D /* TaskCell.swift */,
 				FE6464ADAD9644A101404977 /* UserDefaultsTaskPersistence.swift */,
+				C1000000000000000000F001 /* FirebaseSetup.swift */,
+				C1000000000000000000F002 /* AuthService.swift */,
+				C1000000000000000000F003 /* LoginViewController.swift */,
+				C1000000000000000000F004 /* SignUpViewController.swift */,
+				C1000000000000000000F005 /* FirestoreTaskRepository.swift */,
+				C1000000000000000000F006 /* GoogleService-Info.plist */,
 				DF8588CF7D513DA11F58CAA5 /* Assets.xcassets */,
 				EA60C6E93324B4E24BBE697E /* Info.plist */,
 			);
@@ -120,6 +142,8 @@
 			name = SwiftTodoApp;
 			packageProductDependencies = (
 				477DE0FE05F621E4192BE1AD /* TodoCore */,
+				C1000000000000000000D022 /* FirebaseAuth */,
+				C1000000000000000000D023 /* FirebaseFirestore */,
 			);
 			productName = SwiftTodoApp;
 			productReference = 7C03B52FE5670EB5DDD2ADB3 /* SwiftTodoApp.app */;
@@ -173,6 +197,7 @@
 			mainGroup = F4524F924A7A8A4B5BB57B5D;
 			packageReferences = (
 				2EE9A7405D44E0E33E657494 /* XCLocalSwiftPackageReference "Core" */,
+				C1000000000000000000D021 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = DC51AA232BDBCD06C40367F9 /* Products */;
 			projectDirPath = "";
@@ -190,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E5AA015C9D25FC499D337B5 /* Assets.xcassets in Resources */,
+				C1000000000000000000B006 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +239,11 @@
 				B1C2D3E4F5A6B7C8D9E0F102 /* TaskDetailViewController.swift in Sources */,
 				3FC3242A79632BCB4E1E2734 /* TaskCell.swift in Sources */,
 				5518AF66DF6024267291FB5D /* UserDefaultsTaskPersistence.swift in Sources */,
+				C1000000000000000000B001 /* FirebaseSetup.swift in Sources */,
+				C1000000000000000000B002 /* AuthService.swift in Sources */,
+				C1000000000000000000B003 /* LoginViewController.swift in Sources */,
+				C1000000000000000000B004 /* SignUpViewController.swift in Sources */,
+				C1000000000000000000B005 /* FirestoreTaskRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +396,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.SwiftTodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -387,7 +418,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.SwiftTodoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -467,10 +498,31 @@
 		};
 /* End XCLocalSwiftPackageReference section */
 
+/* Begin XCRemoteSwiftPackageReference section */
+		C1000000000000000000D021 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
 /* Begin XCSwiftPackageProductDependency section */
 		477DE0FE05F621E4192BE1AD /* TodoCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = TodoCore;
+		};
+		C1000000000000000000D022 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1000000000000000000D021 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C1000000000000000000D023 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C1000000000000000000D021 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

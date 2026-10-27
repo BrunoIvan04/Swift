@@ -1,0 +1,12 @@
+{
+  "name": "pruebas-reglas-firestore",
+  "private": true,
+  "description": "Pruebas de las reglas de seguridad de Firestore (REQ-16) contra el emulador.",
+  "scripts": {
+    "test": "node --test reglas.test.js"
+  },
+  "dependencies": {
+    "@firebase/rules-unit-testing": "3.0.4",
+    "firebase": "10.14.1"
+  }
+}

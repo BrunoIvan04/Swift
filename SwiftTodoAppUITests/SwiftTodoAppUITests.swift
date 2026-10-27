@@ -1,19 +1,24 @@
 import XCTest
 
 /// Pruebas de interfaz (XCUITest) que usan la app como lo haría una persona:
-/// escriben en el campo de texto, tocan botones, deslizan celdas, editan en la
-/// pantalla de detalle y vuelven a abrir la app. Cada paso guarda una captura.
+/// crean una cuenta, escriben tareas, tocan botones, deslizan celdas, editan
+/// en el detalle, cierran sesión y vuelven a abrir la app. Cada paso guarda
+/// una captura.
+///
+/// La app se conecta al emulador de Firebase (Auth + Firestore) que CI levanta
+/// en la Mac; cada prueba usa una cuenta nueva, así que empieza sin tareas.
 ///
 /// Si la variable de entorno SCREENSHOT_DIR existe, las capturas también se
 /// escriben como PNG en esa carpeta (en CI se pasa como TEST_RUNNER_SCREENSHOT_DIR).
 final class SwiftTodoAppUITests: XCTestCase {
 
     private var app: XCUIApplication!
+    private let clave = "secreta123"
 
     override func setUpWithError() throws {
         continueAfterFailure = false
         app = XCUIApplication()
-        app.launchArguments = ["-resetData", "-uiTesting"]   // cada prueba inicia sin tareas
+        app.launchArguments = ["-resetData", "-uiTesting"]   // sin sesión ni datos locales
         app.launchEnvironment = ["TZ": "America/Mexico_City"]
         app.launch()
     }
@@ -26,10 +31,32 @@ final class SwiftTodoAppUITests: XCTestCase {
     private var contador: XCUIElement { app.staticTexts["contadorPendientes"] }
     private func celda(_ titulo: String) -> XCUIElement { lista.cells[titulo] }
 
-    /// Estado de la celda («Completada» o «Pendiente»), sin la fecha.
-    private func estado(_ titulo: String) -> String {
-        let valor = (celda(titulo).value as? String) ?? ""
-        return valor.components(separatedBy: ",").first ?? valor
+    // MARK: - Ayudantes
+
+    /// Espera hasta que se cumpla la condición sobre el objeto (máx. `timeout` s).
+    private func esperar(_ formato: String, _ objeto: Any, timeout: TimeInterval = 10,
+                         file: StaticString = #filePath, line: UInt = #line) {
+        let condicion = XCTNSPredicateExpectation(predicate: NSPredicate(format: formato), object: objeto)
+        let resultado = XCTWaiter().wait(for: [condicion], timeout: timeout)
+        XCTAssertEqual(resultado, .completed, "No se cumplió: \(formato)", file: file, line: line)
+    }
+
+    private func esperarCeldas(_ n: Int, file: StaticString = #filePath, line: UInt = #line) {
+        esperar("count == \(n)", lista.cells, file: file, line: line)
+    }
+
+    private func esperarContador(_ texto: String, file: StaticString = #filePath, line: UInt = #line) {
+        esperar("label == '\(texto)'", contador, file: file, line: line)
+    }
+
+    private func esperarEstado(_ titulo: String, _ estado: String, file: StaticString = #filePath, line: UInt = #line) {
+        esperar("value BEGINSWITH '\(estado)'", celda(titulo), file: file, line: line)
+    }
+
+    private func escribir(_ elemento: XCUIElement, _ texto: String) {
+        XCTAssertTrue(elemento.waitForExistence(timeout: 5))
+        elemento.tap()
+        elemento.typeText(texto)
     }
 
     private func agregar(_ titulo: String, conReturn: Bool = false) {
@@ -46,6 +73,43 @@ final class SwiftTodoAppUITests: XCTestCase {
         app.segmentedControls["filtroEstado"].buttons[opcion].tap()
     }
 
+    private func correoNuevo() -> String {
+        "prueba-\(UUID().uuidString.prefix(8).lowercased())@mistareas.test"
+    }
+
+    private func abrirCrearCuenta() {
+        XCTAssertTrue(app.navigationBars["Iniciar sesión"].waitForExistence(timeout: 15))
+        app.buttons["botonIrACrearCuenta"].tap()
+        XCTAssertTrue(app.navigationBars["Crear cuenta"].waitForExistence(timeout: 5))
+    }
+
+    /// Crea una cuenta nueva y espera a entrar a «Mis tareas». Devuelve el correo.
+    @discardableResult
+    private func crearCuentaNueva(nombre: String = "Prueba") -> String {
+        let correo = correoNuevo()
+        abrirCrearCuenta()
+        escribir(app.textFields["campoNombre"], nombre)
+        escribir(app.textFields["campoCorreoRegistro"], correo)
+        escribir(app.secureTextFields["campoContrasenaRegistro"], clave)
+        escribir(app.secureTextFields["campoConfirmar"], clave + "\n")
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20), "Debe entrar a «Mis tareas»")
+        return correo
+    }
+
+    private func iniciarSesion(_ correo: String, _ contrasena: String) {
+        XCTAssertTrue(app.navigationBars["Iniciar sesión"].waitForExistence(timeout: 10))
+        let campoCorreo = app.textFields["campoCorreo"]
+        let campoClave = app.secureTextFields["campoContrasena"]
+        campoCorreo.tap()
+        if let actual = campoCorreo.value as? String, !actual.isEmpty, actual != "Correo electrónico" {
+            campoCorreo.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: actual.count))
+        }
+        campoCorreo.typeText(correo)
+        campoClave.tap()
+        campoClave.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 20))
+        campoClave.typeText(contrasena + "\n")
+    }
+
     private func captura(_ nombre: String) {
         let screenshot = XCUIScreen.main.screenshot()
         let adjunto = XCTAttachment(screenshot: screenshot)
@@ -58,12 +122,13 @@ final class SwiftTodoAppUITests: XCTestCase {
         }
     }
 
-    // MARK: - Flujo principal (REQ-01 a REQ-05 y persistencia)
+    // MARK: - 1. Flujo principal con datos en la nube (REQ-01 a REQ-05, REQ-07, REQ-08)
 
     func test_1_flujoCompleto_agregarCompletarEliminarYPersistir() {
-        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 10))
-        XCTAssertEqual(lista.cells.count, 0, "La app debe iniciar sin tareas")
-        XCTAssertEqual(contador.label, "0 pendientes")
+        crearCuentaNueva()
+        esperar("label BEGINSWITH 'Aún no tienes tareas'", app.staticTexts["mensajeLista"])
+        XCTAssertEqual(lista.cells.count, 0, "Una cuenta nueva empieza sin tareas")
+        esperarContador("0 pendientes")
         captura("ui_01_inicio_sin_tareas")
 
         // REQ-01: agregar con el botón y con la tecla Return
@@ -75,24 +140,25 @@ final class SwiftTodoAppUITests: XCTestCase {
 
         // REQ-02: un título con solo espacios no se agrega
         agregar("   ")
-        XCTAssertEqual(lista.cells.count, 2)
+        esperarCeldas(2)
 
         agregar("Comprar leche")
-        XCTAssertEqual(lista.cells.count, 3)
-        XCTAssertEqual(contador.label, "3 pendientes")
+        esperarCeldas(3)
+        esperarContador("3 pendientes")
         captura("ui_02_tres_tareas_agregadas")
 
         // REQ-04: tocar la celda la marca como completada
         celda("Estudiar Swift").tap()
-        XCTAssertEqual(estado("Estudiar Swift"), "Completada")
-        XCTAssertEqual(estado("Entregar Fase III"), "Pendiente")
-        XCTAssertEqual(contador.label, "2 pendientes")
+        esperarEstado("Estudiar Swift", "Completada")
+        esperarEstado("Entregar Fase III", "Pendiente")
+        esperarContador("2 pendientes")
         captura("ui_03_tarea_completada")
 
         // Tocar de nuevo la desmarca, y otra vez la vuelve a marcar
         celda("Estudiar Swift").tap()
-        XCTAssertEqual(estado("Estudiar Swift"), "Pendiente")
+        esperarEstado("Estudiar Swift", "Pendiente")
         celda("Estudiar Swift").tap()
+        esperarEstado("Estudiar Swift", "Completada")
 
         // REQ-05 y D-02: deslizar a la izquierda muestra «Eliminar» en español
         celda("Comprar leche").swipeLeft()
@@ -100,44 +166,47 @@ final class SwiftTodoAppUITests: XCTestCase {
         XCTAssertTrue(eliminar.waitForExistence(timeout: 5), "El botón debe decir «Eliminar»")
         captura("ui_04_boton_eliminar_al_deslizar")
         eliminar.tap()
-        XCTAssertFalse(celda("Comprar leche").waitForExistence(timeout: 2))
-        XCTAssertEqual(lista.cells.count, 2)
+        esperarCeldas(2)
+        XCTAssertFalse(celda("Comprar leche").exists)
         captura("ui_05_tarea_eliminada")
 
-        // Persistencia: cerrar y volver a abrir la app SIN borrar datos
+        // REQ-07 y REQ-08: cerrar y volver a abrir la app SIN borrar datos.
+        // La sesión se recuerda y las tareas vuelven a llegar desde Firestore.
         app.terminate()
         app.launchArguments = ["-uiTesting"]
         app.launch()
-        XCTAssertTrue(celda("Estudiar Swift").waitForExistence(timeout: 10))
-        XCTAssertEqual(lista.cells.count, 2)
-        XCTAssertEqual(estado("Estudiar Swift"), "Completada")
-        XCTAssertEqual(estado("Entregar Fase III"), "Pendiente")
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 15), "La sesión debe recordarse")
+        XCTAssertTrue(celda("Estudiar Swift").waitForExistence(timeout: 15))
+        esperarCeldas(2)
+        esperarEstado("Estudiar Swift", "Completada")
+        esperarEstado("Entregar Fase III", "Pendiente")
         captura("ui_06_persistencia_al_reabrir")
     }
 
-    // MARK: - Filtro, detalle y fecha límite (REQ-11 a REQ-13)
+    // MARK: - 2. Filtro, detalle y fecha límite (REQ-11 a REQ-13)
 
     func test_2_filtroDetalleYFechaLimite() {
-        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 10))
+        crearCuentaNueva()
         agregar("Leer capítulo 3")
         agregar("Hacer ejercicios")
         agregar("Entregar reporte")
+        esperarCeldas(3)
         celda("Hacer ejercicios").tap()
-        XCTAssertEqual(contador.label, "2 pendientes")
+        esperarContador("2 pendientes")
 
         // REQ-13: filtro por estado
         filtrar("Pendientes")
-        XCTAssertEqual(lista.cells.count, 2)
+        esperarCeldas(2)
         XCTAssertFalse(celda("Hacer ejercicios").exists)
         captura("ui_07_filtro_pendientes")
 
         filtrar("Completadas")
-        XCTAssertEqual(lista.cells.count, 1)
+        esperarCeldas(1)
         XCTAssertTrue(celda("Hacer ejercicios").exists)
         captura("ui_08_filtro_completadas")
 
         filtrar("Todas")
-        XCTAssertEqual(lista.cells.count, 3)
+        esperarCeldas(3)
 
         // REQ-11: abrir el detalle deslizando a la derecha
         celda("Entregar reporte").swipeRight()
@@ -165,10 +234,76 @@ final class SwiftTodoAppUITests: XCTestCase {
         app.buttons["botonGuardar"].tap()
 
         // De regreso en la lista: título nuevo y fecha límite visible
-        XCTAssertTrue(celda("Entregar reporte final").waitForExistence(timeout: 5))
+        XCTAssertTrue(celda("Entregar reporte final").waitForExistence(timeout: 10))
         XCTAssertFalse(celda("Entregar reporte").exists)
-        let valor = (celda("Entregar reporte final").value as? String) ?? ""
-        XCTAssertTrue(valor.contains("vence"), "La celda debe mostrar la fecha límite: \(valor)")
+        esperar("value CONTAINS 'vence'", celda("Entregar reporte final"))
         captura("ui_10_tarea_editada_con_fecha")
+    }
+
+    // MARK: - 3. Cuenta: crear, cerrar sesión, errores y volver a entrar (REQ-06, REQ-07)
+
+    func test_3_cuentaInicioYCierreDeSesion() {
+        // Validación en el teléfono antes de llamar a Firebase
+        XCTAssertTrue(app.navigationBars["Iniciar sesión"].waitForExistence(timeout: 15))
+        app.buttons["botonEntrar"].tap()
+        esperar("label == 'Escribe tu correo y tu contraseña.'", app.staticTexts["mensajeError"])
+        captura("ui_11_inicio_de_sesion")
+
+        // REQ-06: crear cuenta; primero con contraseñas que no coinciden
+        let correo = correoNuevo()
+        abrirCrearCuenta()
+        escribir(app.textFields["campoNombre"], "Bruno")
+        escribir(app.textFields["campoCorreoRegistro"], correo)
+        escribir(app.secureTextFields["campoContrasenaRegistro"], clave)
+        escribir(app.secureTextFields["campoConfirmar"], "otra-clave\n")
+        esperar("label == 'Las contraseñas no coinciden.'", app.staticTexts["mensajeErrorRegistro"])
+        captura("ui_12_crear_cuenta_validacion")
+
+        let confirmar = app.secureTextFields["campoConfirmar"]
+        confirmar.tap()
+        confirmar.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 15))
+        confirmar.typeText(clave + "\n")
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20))
+
+        agregar("Tarea guardada en la nube")
+        XCTAssertTrue(celda("Tarea guardada en la nube").waitForExistence(timeout: 5))
+
+        // REQ-07: cerrar sesión vuelve a «Iniciar sesión»
+        app.buttons["botonSalir"].tap()
+        XCTAssertTrue(app.navigationBars["Iniciar sesión"].waitForExistence(timeout: 10))
+
+        // Contraseña incorrecta: mensaje en español
+        iniciarSesion(correo, "incorrecta")
+        esperar("label == 'Correo o contraseña incorrectos.'", app.staticTexts["mensajeError"], timeout: 15)
+        captura("ui_13_error_credenciales")
+
+        // Contraseña correcta: entra y sus tareas siguen en Firestore
+        iniciarSesion(correo, clave)
+        XCTAssertTrue(app.navigationBars["Mis tareas"].waitForExistence(timeout: 20))
+        XCTAssertTrue(celda("Tarea guardada en la nube").waitForExistence(timeout: 15),
+                      "La tarea debe seguir en la cuenta después de salir y volver a entrar")
+        captura("ui_14_tareas_desde_la_nube")
+    }
+
+    // MARK: - 4. Error de conexión y «Reintentar» (REQ-09)
+
+    func test_4_errorDeConexionYReintentar() {
+        app.terminate()
+        app.launchArguments = ["-resetData", "-uiTesting", "-simularFalloDeRed"]
+        app.launch()
+        crearCuentaNueva()
+
+        let reintentar = app.buttons["botonReintentar"]
+        XCTAssertTrue(reintentar.waitForExistence(timeout: 10), "Debe aparecer «Reintentar»")
+        esperar("label == 'No se pudo conectar con el servidor.'", app.staticTexts["mensajeLista"])
+        XCTAssertFalse(campo.isEnabled, "No se puede agregar mientras no cargan las tareas")
+        captura("ui_15_error_con_reintentar")
+
+        reintentar.tap()
+        esperar("label BEGINSWITH 'Aún no tienes tareas'", app.staticTexts["mensajeLista"], timeout: 15)
+        XCTAssertTrue(campo.isEnabled)
+        agregar("Después de reintentar")
+        XCTAssertTrue(celda("Después de reintentar").waitForExistence(timeout: 5))
+        captura("ui_16_lista_tras_reintentar")
     }
 }
