@@ -1,10 +1,54 @@
 [
     {
         "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/03B42A23-6E94-4F58-8FB0-B703C85F03FB",
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/DrGXKxpaRUgnuGjONYqNdtHkAW37/tasks/50405D15-2228-4A9C-BA40-2F6BEBD02782",
             "fields": {
                 "createdAt": {
-                    "timestampValue": "2026-10-28T00:06:33.339097Z"
+                    "timestampValue": "2026-10-28T00:29:58.876224Z"
+                },
+                "isCompleted": {
+                    "booleanValue": true
+                },
+                "title": {
+                    "stringValue": "Estudiar Swift"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:29:58.876224Z"
+                }
+            },
+            "createTime": "2026-10-28T00:29:59.123498Z",
+            "updateTime": "2026-10-28T00:29:59.123498Z"
+        },
+        "readTime": "2026-10-28T00:31:10.216675Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/DrGXKxpaRUgnuGjONYqNdtHkAW37/tasks/68B21B34-B0F9-4D13-9C34-DF8069DAB7BA",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:29:59.677813Z"
+                },
+                "isCompleted": {
+                    "booleanValue": true
+                },
+                "title": {
+                    "stringValue": "Repasar UITableView y celdas personalizadas"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:29:59.677813Z"
+                }
+            },
+            "createTime": "2026-10-28T00:29:59.929032Z",
+            "updateTime": "2026-10-28T00:29:59.929032Z"
+        },
+        "readTime": "2026-10-28T00:31:10.216675Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/DrGXKxpaRUgnuGjONYqNdtHkAW37/tasks/B08C751F-0685-44CF-8C1E-A38E37BE438D",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:29:59.173367Z"
                 },
                 "dueDate": {
                     "timestampValue": "2026-11-07T05:59:00Z"
@@ -16,20 +60,20 @@
                     "stringValue": "Entregar el plan del proyecto integrador"
                 },
                 "updatedAt": {
-                    "timestampValue": "2026-10-28T00:06:33.339097Z"
+                    "timestampValue": "2026-10-28T00:29:59.173367Z"
                 }
             },
-            "createTime": "2026-10-28T00:06:33.369318Z",
-            "updateTime": "2026-10-28T00:06:33.369318Z"
+            "createTime": "2026-10-28T00:29:59.564680Z",
+            "updateTime": "2026-10-28T00:29:59.564680Z"
         },
-        "readTime": "2026-10-28T00:07:22.247834Z"
+        "readTime": "2026-10-28T00:31:10.216675Z"
     },
     {
         "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/8F2CAC0A-0A24-4E42-B5CE-CDB63006D474",
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/DrGXKxpaRUgnuGjONYqNdtHkAW37/tasks/B3A813AE-2B83-4742-826A-94BE5CAE3CE0",
             "fields": {
                 "createdAt": {
-                    "timestampValue": "2026-10-28T00:06:33.477915Z"
+                    "timestampValue": "2026-10-28T00:30:00.971084Z"
                 },
                 "dueDate": {
                     "timestampValue": "2026-10-20T15:00:00Z"
@@ -41,42 +85,20 @@
                     "stringValue": "Comprar leche"
                 },
                 "updatedAt": {
-                    "timestampValue": "2026-10-28T00:06:33.477915Z"
+                    "timestampValue": "2026-10-28T00:30:00.971084Z"
                 }
             },
-            "createTime": "2026-10-28T00:06:33.509992Z",
-            "updateTime": "2026-10-28T00:06:33.509992Z"
+            "createTime": "2026-10-28T00:30:01.096849Z",
+            "updateTime": "2026-10-28T00:30:01.096849Z"
         },
-        "readTime": "2026-10-28T00:07:22.247834Z"
+        "readTime": "2026-10-28T00:31:10.216675Z"
     },
     {
         "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/B4F0B7D2-C49A-4568-A217-64856A54A166",
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/DrGXKxpaRUgnuGjONYqNdtHkAW37/tasks/F6CC2947-8CA9-44C3-96B0-8E19AAFF0B00",
             "fields": {
                 "createdAt": {
-                    "timestampValue": "2026-10-28T00:06:33.232666Z"
-                },
-                "isCompleted": {
-                    "booleanValue": true
-                },
-                "title": {
-                    "stringValue": "Estudiar Swift"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-28T00:06:33.232666Z"
-                }
-            },
-            "createTime": "2026-10-28T00:06:33.318611Z",
-            "updateTime": "2026-10-28T00:06:33.318611Z"
-        },
-        "readTime": "2026-10-28T00:07:22.247834Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/C5FF5431-F143-45A7-A6ED-A80285F65AC3",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-28T00:06:33.430958Z"
+                    "timestampValue": "2026-10-28T00:30:00.663650Z"
                 },
                 "dueDate": {
                     "timestampValue": "2026-12-05T00:00:00Z"
@@ -88,35 +110,13 @@
                     "stringValue": "Grabar el video demostrativo de la app"
                 },
                 "updatedAt": {
-                    "timestampValue": "2026-10-28T00:06:33.430958Z"
+                    "timestampValue": "2026-10-28T00:30:00.663650Z"
                 }
             },
-            "createTime": "2026-10-28T00:06:33.455443Z",
-            "updateTime": "2026-10-28T00:06:33.455443Z"
+            "createTime": "2026-10-28T00:30:00.847Z",
+            "updateTime": "2026-10-28T00:30:00.847Z"
         },
-        "readTime": "2026-10-28T00:07:22.247834Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/E432FB17-D65A-4300-88DB-979963A80691",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-28T00:06:33.406497Z"
-                },
-                "isCompleted": {
-                    "booleanValue": true
-                },
-                "title": {
-                    "stringValue": "Repasar UITableView y celdas personalizadas"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-28T00:06:33.406497Z"
-                }
-            },
-            "createTime": "2026-10-28T00:06:33.421452Z",
-            "updateTime": "2026-10-28T00:06:33.421452Z"
-        },
-        "readTime": "2026-10-28T00:07:22.247834Z",
+        "readTime": "2026-10-28T00:31:10.216675Z",
         "done": true
     }
 ]
