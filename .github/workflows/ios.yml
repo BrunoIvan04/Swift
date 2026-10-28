@@ -6,6 +6,9 @@ permissions:
 on:
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'Restaurant/**'
+      - '.github/workflows/restaurant.yml'
   workflow_dispatch:
 
 jobs:
