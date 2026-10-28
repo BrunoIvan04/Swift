@@ -1,104 +1,10 @@
 [
     {
         "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/YzOh4kuGbUCnfEkwzSbmw7JEqnt7/tasks/034C9EEA-A5E1-4063-9D19-C7C82683EB90",
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/03B42A23-6E94-4F58-8FB0-B703C85F03FB",
             "fields": {
                 "createdAt": {
-                    "timestampValue": "2026-10-27T23:45:53.030848Z"
-                },
-                "dueDate": {
-                    "timestampValue": "2026-12-05T00:00:00Z"
-                },
-                "isCompleted": {
-                    "booleanValue": false
-                },
-                "title": {
-                    "stringValue": "Grabar el video demostrativo de la app"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-27T23:45:53.030848Z"
-                }
-            },
-            "createTime": "2026-10-27T23:45:53.044284Z",
-            "updateTime": "2026-10-27T23:45:53.044284Z"
-        },
-        "readTime": "2026-10-27T23:46:36.046428Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/YzOh4kuGbUCnfEkwzSbmw7JEqnt7/tasks/4A4877D5-7E59-45ED-927A-841D30A5DCE0",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-27T23:45:52.862758Z"
-                },
-                "isCompleted": {
-                    "booleanValue": true
-                },
-                "title": {
-                    "stringValue": "Estudiar Swift"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-27T23:45:52.862758Z"
-                }
-            },
-            "createTime": "2026-10-27T23:45:52.897207Z",
-            "updateTime": "2026-10-27T23:45:52.897207Z"
-        },
-        "readTime": "2026-10-27T23:46:36.046428Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/YzOh4kuGbUCnfEkwzSbmw7JEqnt7/tasks/76D20085-3914-4372-9583-6024029BF570",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-27T23:45:52.989789Z"
-                },
-                "isCompleted": {
-                    "booleanValue": true
-                },
-                "title": {
-                    "stringValue": "Repasar UITableView y celdas personalizadas"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-27T23:45:52.989789Z"
-                }
-            },
-            "createTime": "2026-10-27T23:45:53.004814Z",
-            "updateTime": "2026-10-27T23:45:53.004814Z"
-        },
-        "readTime": "2026-10-27T23:46:36.046428Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/YzOh4kuGbUCnfEkwzSbmw7JEqnt7/tasks/91FE7E74-782D-49DE-8E0F-03F5DE0744F6",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-27T23:45:53.054793Z"
-                },
-                "dueDate": {
-                    "timestampValue": "2026-10-20T15:00:00Z"
-                },
-                "isCompleted": {
-                    "booleanValue": false
-                },
-                "title": {
-                    "stringValue": "Comprar leche"
-                },
-                "updatedAt": {
-                    "timestampValue": "2026-10-27T23:45:53.054793Z"
-                }
-            },
-            "createTime": "2026-10-27T23:45:53.078299Z",
-            "updateTime": "2026-10-27T23:45:53.078299Z"
-        },
-        "readTime": "2026-10-27T23:46:36.046428Z"
-    },
-    {
-        "document": {
-            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/YzOh4kuGbUCnfEkwzSbmw7JEqnt7/tasks/F047F95B-5A95-44B0-B112-4BAD0D66A776",
-            "fields": {
-                "createdAt": {
-                    "timestampValue": "2026-10-27T23:45:52.906615Z"
+                    "timestampValue": "2026-10-28T00:06:33.339097Z"
                 },
                 "dueDate": {
                     "timestampValue": "2026-11-07T05:59:00Z"
@@ -110,13 +16,107 @@
                     "stringValue": "Entregar el plan del proyecto integrador"
                 },
                 "updatedAt": {
-                    "timestampValue": "2026-10-27T23:45:52.906615Z"
+                    "timestampValue": "2026-10-28T00:06:33.339097Z"
                 }
             },
-            "createTime": "2026-10-27T23:45:52.941345Z",
-            "updateTime": "2026-10-27T23:45:52.941345Z"
+            "createTime": "2026-10-28T00:06:33.369318Z",
+            "updateTime": "2026-10-28T00:06:33.369318Z"
         },
-        "readTime": "2026-10-27T23:46:36.046428Z",
+        "readTime": "2026-10-28T00:07:22.247834Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/8F2CAC0A-0A24-4E42-B5CE-CDB63006D474",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:06:33.477915Z"
+                },
+                "dueDate": {
+                    "timestampValue": "2026-10-20T15:00:00Z"
+                },
+                "isCompleted": {
+                    "booleanValue": false
+                },
+                "title": {
+                    "stringValue": "Comprar leche"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:06:33.477915Z"
+                }
+            },
+            "createTime": "2026-10-28T00:06:33.509992Z",
+            "updateTime": "2026-10-28T00:06:33.509992Z"
+        },
+        "readTime": "2026-10-28T00:07:22.247834Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/B4F0B7D2-C49A-4568-A217-64856A54A166",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:06:33.232666Z"
+                },
+                "isCompleted": {
+                    "booleanValue": true
+                },
+                "title": {
+                    "stringValue": "Estudiar Swift"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:06:33.232666Z"
+                }
+            },
+            "createTime": "2026-10-28T00:06:33.318611Z",
+            "updateTime": "2026-10-28T00:06:33.318611Z"
+        },
+        "readTime": "2026-10-28T00:07:22.247834Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/C5FF5431-F143-45A7-A6ED-A80285F65AC3",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:06:33.430958Z"
+                },
+                "dueDate": {
+                    "timestampValue": "2026-12-05T00:00:00Z"
+                },
+                "isCompleted": {
+                    "booleanValue": false
+                },
+                "title": {
+                    "stringValue": "Grabar el video demostrativo de la app"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:06:33.430958Z"
+                }
+            },
+            "createTime": "2026-10-28T00:06:33.455443Z",
+            "updateTime": "2026-10-28T00:06:33.455443Z"
+        },
+        "readTime": "2026-10-28T00:07:22.247834Z"
+    },
+    {
+        "document": {
+            "name": "projects/demo-mis-tareas/databases/(default)/documents/users/KQe4SA9UtM1DkQThKmdDgGaC7iN7/tasks/E432FB17-D65A-4300-88DB-979963A80691",
+            "fields": {
+                "createdAt": {
+                    "timestampValue": "2026-10-28T00:06:33.406497Z"
+                },
+                "isCompleted": {
+                    "booleanValue": true
+                },
+                "title": {
+                    "stringValue": "Repasar UITableView y celdas personalizadas"
+                },
+                "updatedAt": {
+                    "timestampValue": "2026-10-28T00:06:33.406497Z"
+                }
+            },
+            "createTime": "2026-10-28T00:06:33.421452Z",
+            "updateTime": "2026-10-28T00:06:33.421452Z"
+        },
+        "readTime": "2026-10-28T00:07:22.247834Z",
         "done": true
     }
 ]

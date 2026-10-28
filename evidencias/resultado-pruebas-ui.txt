@@ -1,12 +1,12 @@
 Resultado XCUITest: 65
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' failed (44.796 seconds).
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' failed (38.057 seconds).
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:259: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion] : XCTAssertEqual failed: ("XCTWaiterResult(rawValue: 2)") is not equal to ("XCTWaiterResult(rawValue: 1)") - No se cumplió: label == 'Las contraseñas no coinciden.'
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' failed (28.845 seconds).
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:95: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar] : XCTAssertTrue failed - Debe entrar a «Mis tareas»
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' failed (39.979 seconds).
-	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.678) seconds
-	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.679) seconds
-	 Executed 4 tests, with 4 failures (0 unexpected) in 151.677 (151.680) seconds
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:98: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir] : XCTAssertTrue failed - Debe entrar a «Mis tareas». Mensaje: La contraseña debe tener al menos 6 caracteres.
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' failed (54.297 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:98: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite] : XCTAssertTrue failed - Debe entrar a «Mis tareas». Mensaje: La contraseña debe tener al menos 6 caracteres.
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' failed (42.865 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:279: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion] : XCTAssertEqual failed: ("XCTWaiterResult(rawValue: 2)") is not equal to ("XCTWaiterResult(rawValue: 1)") - No se cumplió: label == 'Las contraseñas no coinciden.'
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' failed (32.500 seconds).
+/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:98: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar] : XCTAssertTrue failed - Debe entrar a «Mis tareas». Mensaje: La contraseña debe tener al menos 6 caracteres.
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' failed (53.396 seconds).
+	 Executed 4 tests, with 4 failures (0 unexpected) in 183.058 (183.060) seconds
+	 Executed 4 tests, with 4 failures (0 unexpected) in 183.058 (183.062) seconds
+	 Executed 4 tests, with 4 failures (0 unexpected) in 183.058 (183.063) seconds

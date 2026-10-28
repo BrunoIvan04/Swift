@@ -1,11 +1,12 @@
 Building for debugging...
-[0/7] /Users/runner/work/Swift/Swift/Core/.build/arm64-apple-macosx/debug/TodoCorePackageTests.derived/runner.swift
 [0/7] Write sources
+[0/7] /Users/runner/work/Swift/Swift/Core/.build/arm64-apple-macosx/debug/TodoCorePackageTests.derived/runner.swift
+[2/7] Write sources
 [4/7] Write swift-version--79AA4F9932D1E87A.txt
-[6/11] Compiling TodoCore TaskStore.swift
-[7/11] Emitting module TodoCore
-[8/11] Compiling TodoCore TaskPersisting.swift
-[9/11] Compiling TodoCore TaskRepository.swift
+[6/11] Emitting module TodoCore
+[7/11] Compiling TodoCore TaskPersisting.swift
+[8/11] Compiling TodoCore TaskRepository.swift
+[9/11] Compiling TodoCore TaskStore.swift
 [10/12] Compiling TodoCore TodoTask.swift
 [11/14] Compiling TodoCoreTests TaskStoreTests.swift
 [12/14] Emitting module TodoCoreTests
@@ -13,32 +14,32 @@ Building for debugging...
 [14/16] Emitting module TodoCorePackageTests
 [14/16] Write Objects.LinkFileList
 [15/16] Linking TodoCorePackageTests
-Build complete! (16.62s)
-Test Suite 'All tests' started at 2026-10-27 23:38:03.614.
-Test Suite 'TodoCorePackageTests.xctest' started at 2026-10-27 23:38:03.615.
-Test Suite 'TaskStoreTests' started at 2026-10-27 23:38:03.615.
+Build complete! (25.92s)
+Test Suite 'All tests' started at 2026-10-27 23:54:26.291.
+Test Suite 'TodoCorePackageTests.xctest' started at 2026-10-27 23:54:26.293.
+Test Suite 'TaskStoreTests' started at 2026-10-27 23:54:26.293.
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToList]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToList]' passed (0.003 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_appendsToList]' passed (0.005 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_ignoresEmptyOrWhitespaceTitle]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_addTask_trimsWhitespace]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' passed (0.001 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_decodesTasksSavedByVersion1]' passed (0.002 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_filterAndPendingCount]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_importTasks_skipsTasksAlreadyInTheCloud]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_importTasks_skipsTasksAlreadyInTheCloud]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_importTasks_uploadsLocalTasksInOrder]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_importTasks_uploadsLocalTasksInOrder]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_importTasks_uploadsLocalTasksInOrder]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_isOverdue]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_isOverdue]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_loadFailure_reportsErrorAndRetryRecovers]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_loadFailure_reportsErrorAndRetryRecovers]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_loadFailure_reportsErrorAndRetryRecovers]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_onChange_isCalledOnEveryUpdate]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_onChange_isCalledOnEveryUpdate]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_removesOnlyThatTask]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_removesOnlyThatTask]' passed (0.000 seconds).
+Test Case '-[TodoCoreTests.TaskStoreTests test_removeTask_removesOnlyThatTask]' passed (0.001 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_start_loadsTasksAndReportsLoaded]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_start_loadsTasksAndReportsLoaded]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_toggleCompletion_flipsStatus]' started.
@@ -52,13 +53,13 @@ Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_changesTitleAndDueDate
 Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_rejectsEmptyTitle]' started.
 Test Case '-[TodoCoreTests.TaskStoreTests test_updateTask_rejectsEmptyTitle]' passed (0.000 seconds).
 Test Case '-[TodoCoreTests.TaskStoreTests test_writeFailure_throwsAndKeepsList]' started.
-Test Case '-[TodoCoreTests.TaskStoreTests test_writeFailure_throwsAndKeepsList]' passed (0.000 seconds).
-Test Suite 'TaskStoreTests' passed at 2026-10-27 23:38:03.622.
-	 Executed 18 tests, with 0 failures (0 unexpected) in 0.007 (0.007) seconds
-Test Suite 'TodoCorePackageTests.xctest' passed at 2026-10-27 23:38:03.622.
-	 Executed 18 tests, with 0 failures (0 unexpected) in 0.007 (0.007) seconds
-Test Suite 'All tests' passed at 2026-10-27 23:38:03.622.
-	 Executed 18 tests, with 0 failures (0 unexpected) in 0.007 (0.008) seconds
+Test Case '-[TodoCoreTests.TaskStoreTests test_writeFailure_throwsAndKeepsList]' passed (0.001 seconds).
+Test Suite 'TaskStoreTests' passed at 2026-10-27 23:54:26.309.
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.015 (0.017) seconds
+Test Suite 'TodoCorePackageTests.xctest' passed at 2026-10-27 23:54:26.310.
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.015 (0.017) seconds
+Test Suite 'All tests' passed at 2026-10-27 23:54:26.310.
+	 Executed 18 tests, with 0 failures (0 unexpected) in 0.015 (0.018) seconds
 ◇ Test run started.
 ↳ Testing Library Version: 124.4
 ↳ Target Platform: arm64e-apple-macos14.0
