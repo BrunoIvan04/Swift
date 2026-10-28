@@ -7,19 +7,19 @@ Resolve Package Graph
 Resolved source packages:
   SwiftProtobuf: https://github.com/apple/swift-protobuf.git @ 1.39.0
   GoogleDataTransport: https://github.com/google/GoogleDataTransport.git @ 10.1.1
-  GoogleAppMeasurement: https://github.com/google/GoogleAppMeasurement.git @ 11.15.0
-  GoogleUtilities: https://github.com/google/GoogleUtilities.git @ 8.1.5
-  Promises: https://github.com/google/promises.git @ 2.4.1
-  AppCheck: https://github.com/google/app-check.git @ 11.3.2
-  abseil: https://github.com/google/abseil-cpp-binary.git @ 1.2024072200.0
-  leveldb: https://github.com/firebase/leveldb.git @ 1.22.5
-  GTMSessionFetcher: https://github.com/google/gtm-session-fetcher.git @ 4.5.0
-  Firebase: https://github.com/firebase/firebase-ios-sdk @ 11.15.0
-  gRPC: https://github.com/google/grpc-binary.git @ 1.69.1
-  nanopb: https://github.com/firebase/nanopb.git @ 2.30910.1
   GoogleAdsOnDeviceConversion: https://github.com/googleads/google-ads-on-device-conversion-ios-sdk @ 2.3.0
-  TodoCore: /Users/runner/work/Swift/Swift/Core @ local
   InteropForGoogle: https://github.com/google/interop-ios-for-google-sdks.git @ 101.0.0
+  AppCheck: https://github.com/google/app-check.git @ 11.3.2
+  leveldb: https://github.com/firebase/leveldb.git @ 1.22.5
+  nanopb: https://github.com/firebase/nanopb.git @ 2.30910.1
+  gRPC: https://github.com/google/grpc-binary.git @ 1.69.1
+  Firebase: https://github.com/firebase/firebase-ios-sdk @ 11.15.0
+  GoogleUtilities: https://github.com/google/GoogleUtilities.git @ 8.1.5
+  abseil: https://github.com/google/abseil-cpp-binary.git @ 1.2024072200.0
+  GTMSessionFetcher: https://github.com/google/gtm-session-fetcher.git @ 4.5.0
+  Promises: https://github.com/google/promises.git @ 2.4.1
+  GoogleAppMeasurement: https://github.com/google/GoogleAppMeasurement.git @ 11.15.0
+  TodoCore: /Users/runner/work/Swift/Swift/Core @ local
 
 Writing result bundle at path:
 	/Users/runner/work/Swift/Swift/build/UITests.xcresult
@@ -276,8 +276,8 @@ ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/X
 
 ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
 
-Build description signature: 1c50017d704fe1bd263a4721961fa63f
-Build description path: /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/XCBuildData/1c50017d704fe1bd263a4721961fa63f.xcbuilddata
+Build description signature: ef50dcddacbd507d1b13a7b2b365c24e
+Build description path: /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/XCBuildData/ef50dcddacbd507d1b13a7b2b365c24e.xcbuilddata
 ClangStatCache /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk /Users/runner/work/Swift/Swift/build/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
     cd /Users/runner/work/Swift/Swift/SwiftTodoApp.xcodeproj
     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk -o /Users/runner/work/Swift/Swift/build/SDKStatCaches.noindex/iphonesimulator18.5-22F76-96ae0914227b19deccb34b33ba7b5dea.sdkstatcache
@@ -330,17 +330,17 @@ ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-i
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
     builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseAuth.build/empty-Firebase_FirebaseAuth.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseAuth.bundle/Info.plist
 
-WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/empty-SwiftTodoAppUITests.plist (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
+WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.hmap (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
-    write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/empty-SwiftTodoAppUITests.plist
+    write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.hmap
 
 WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyStaticMetadataFileList (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyStaticMetadataFileList
 
-WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.hmap (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
+WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/empty-SwiftTodoAppUITests.plist (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
-    write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.hmap
+    write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/empty-SwiftTodoAppUITests.plist
 
 WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyMetadataFileList (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -394,29 +394,25 @@ WriteAuxiliaryFile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noin
     cd /Users/runner/work/Swift/Swift
     write-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/DerivedSources/Entitlements-Simulated.plist
 
-MkDir /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    /bin/mkdir -p /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest
-
 ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/GoogleUtilities.build/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.build/empty-GoogleUtilities_GoogleUtilities-Reachability.plist (in target 'GoogleUtilities_GoogleUtilities-Reachability' from project 'GoogleUtilities')
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/GoogleUtilities
     builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/GoogleUtilities.build/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.build/empty-GoogleUtilities_GoogleUtilities-Reachability.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle/Info.plist
+
+MkDir /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    /bin/mkdir -p /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest
 
 ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/GoogleUtilities.build/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.build/empty-GoogleUtilities_GoogleUtilities-Network.plist (in target 'GoogleUtilities_GoogleUtilities-Network' from project 'GoogleUtilities')
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/GoogleUtilities
     builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/GoogleUtilities.build/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.build/empty-GoogleUtilities_GoogleUtilities-Network.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.bundle/Info.plist
 
-ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.build/empty-Firebase_FirebaseCoreInternal.plist (in target 'Firebase_FirebaseCoreInternal' from project 'Firebase')
-    cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
-    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.build/empty-Firebase_FirebaseCoreInternal.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle/Info.plist
-
 ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseFirestore.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseFirestore.build/empty-Firebase_FirebaseFirestore.plist (in target 'Firebase_FirebaseFirestore' from project 'Firebase')
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
     builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseFirestore.build/empty-Firebase_FirebaseFirestore.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseFirestore.bundle/Info.plist
 
-ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.build/empty-Firebase_FirebaseCoreExtension.plist (in target 'Firebase_FirebaseCoreExtension' from project 'Firebase')
+ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.build/empty-Firebase_FirebaseCoreInternal.plist (in target 'Firebase_FirebaseCoreInternal' from project 'Firebase')
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
-    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.build/empty-Firebase_FirebaseCoreExtension.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.bundle/Info.plist
+    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.build/empty-Firebase_FirebaseCoreInternal.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle/Info.plist
 
 ProcessProductPackaging "" /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -429,6 +425,10 @@ ProcessProductPackaging "" /Users/runner/work/Swift/Swift/build/Build/Intermedia
     
     builtin-productPackagingUtility -entitlements -format xml -o /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent
 
+ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.build/empty-Firebase_FirebaseCoreExtension.plist (in target 'Firebase_FirebaseCoreExtension' from project 'Firebase')
+    cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
+    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.build/empty-Firebase_FirebaseCoreExtension.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.bundle/Info.plist
+
 ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCore.bundle/Info.plist /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCore.build/empty-Firebase_FirebaseCore.plist (in target 'Firebase_FirebaseCore' from project 'Firebase')
     cd /Users/runner/work/Swift/Swift/build/SourcePackages/checkouts/firebase-ios-sdk
     builtin-infoPlistUtility /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/Firebase.build/Debug-iphonesimulator/Firebase_FirebaseCore.build/empty-Firebase_FirebaseCore.plist -producttype com.apple.product-type.bundle -expandbuildsettings -format binary -platform iphonesimulator -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCore.bundle/Info.plist
@@ -436,18 +436,6 @@ ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-i
 ProcessProductPackagingDER /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent.der (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     /usr/bin/derq query -f xml -i /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent -o /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.app-Simulated.xcent.der --raw
-
-Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreInternal.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
-
-Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
-
-Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Reachability.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
 
 Ld /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/SwiftTodoApp.debug.dylib normal (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -477,6 +465,10 @@ Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/S
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/abseil_abslWrapper.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
 
+Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Reachability.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Reachability.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
+
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Network.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Network.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
@@ -493,6 +485,10 @@ Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/S
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-Environment.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
 
+Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
+
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GTMSessionFetcher_GTMSessionFetcherCore.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GTMSessionFetcher_GTMSessionFetcherCore.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/GTMSessionFetcher_GTMSessionFetcherCore.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
@@ -500,6 +496,10 @@ Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/S
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseFirestore.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseFirestore.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseFirestore.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
+
+Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreInternal.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreInternal.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
 
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreExtension.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseCoreExtension.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -512,6 +512,10 @@ Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/S
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseAuth.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseAuth.bundle (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Firebase_FirebaseAuth.bundle /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app
+
+ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Info.plist /Users/runner/work/Swift/Swift/SwiftTodoApp/Info.plist (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/SwiftTodoApp/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/assetcatalog_generated_info.plist -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseAuth.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreExtension.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreInternal.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseFirestore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/FirebaseFirestoreInternal.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/absl.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/grpc.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/grpcpp.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/openssl_grpc.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GTMSessionFetcher_GTMSessionFetcherCore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Environment.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Logger.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-NSData.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Network.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Reachability.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/abseil_abslWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_grpcWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_grpcppWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_opensslWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/leveldb_leveldb.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/nanopb_nanopb.bundle -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Info.plist
 
 ProcessProductPackaging "" /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.xctest-Simulated.xcent (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -526,10 +530,6 @@ ProcessProductPackaging "" /Users/runner/work/Swift/Swift/build/Build/Intermedia
 }
     
     builtin-productPackagingUtility -entitlements -format xml -o /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.xctest-Simulated.xcent
-
-ProcessInfoPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Info.plist /Users/runner/work/Swift/Swift/SwiftTodoApp/Info.plist (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    builtin-infoPlistUtility /Users/runner/work/Swift/Swift/SwiftTodoApp/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -additionalcontentfile /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/assetcatalog_generated_info.plist -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseAuth.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreExtension.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseCoreInternal.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Firebase_FirebaseFirestore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/FirebaseFirestoreInternal.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/absl.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/grpc.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/grpcpp.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Frameworks/openssl_grpc.framework -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GTMSessionFetcher_GTMSessionFetcherCore.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-AppDelegateSwizzler.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Environment.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Logger.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-NSData.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Network.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/GoogleUtilities_GoogleUtilities-Reachability.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/abseil_abslWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_grpcWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_grpcppWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/gRPC_opensslWrapper.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/leveldb_leveldb.bundle -scanforprivacyfile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/nanopb_nanopb.bundle -o /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/Info.plist
 
 ProcessProductPackagingDER /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.xctest-Simulated.xcent /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.xctest-Simulated.xcent.der (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -561,8 +561,8 @@ Ld /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/Swi
 ExtractAppIntentsMetadata (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name SwiftTodoApp --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 16.0 --bundle-identifier com.brunoivan.SwiftTodoApp --output /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app --target-triple arm64-apple-ios16.0-simulator --binary-file /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app/SwiftTodoApp --dependency-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/Objects-normal/arm64/SwiftTodoApp_dependency_info.dat --stringsdata-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/Objects-normal/arm64/SwiftTodoApp.SwiftFileList --metadata-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/SwiftTodoApp.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoApp.build/Objects-normal/arm64/SwiftTodoApp.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
-2026-10-28 00:32:57.067 appintentsmetadataprocessor[44649:122091] Starting appintentsmetadataprocessor export
-2026-10-28 00:32:57.072 appintentsmetadataprocessor[44649:122091] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-28 00:57:39.510 appintentsmetadataprocessor[39357:103889] Starting appintentsmetadataprocessor export
+2026-10-28 00:57:39.516 appintentsmetadataprocessor[39357:103889] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
 
 CopySwiftLibs /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoApp.app (in target 'SwiftTodoApp' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -633,30 +633,30 @@ CopySwiftLibs /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesi
 ExtractAppIntentsMetadata (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name SwiftTodoAppUITests --sdk-root /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk --xcode-version 16F6 --platform-family iOS --deployment-target 16.0 --bundle-identifier com.brunoivan.SwiftTodoAppUITests --output /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest --target-triple arm64-apple-ios16.0-simulator --binary-file /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest/SwiftTodoAppUITests --dependency-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/Objects-normal/arm64/SwiftTodoAppUITests_dependency_info.dat --stringsdata-file /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/Objects-normal/arm64/SwiftTodoAppUITests.SwiftFileList --metadata-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyMetadataFileList --static-metadata-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/Objects-normal/arm64/SwiftTodoAppUITests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --validate-assistant-intents --no-app-shortcuts-localization
-2026-10-28 00:33:10.568 appintentsmetadataprocessor[45372:123829] Starting appintentsmetadataprocessor export
-2026-10-28 00:33:10.572 appintentsmetadataprocessor[45372:123829] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
+2026-10-28 00:57:49.693 appintentsmetadataprocessor[39728:105046] Starting appintentsmetadataprocessor export
+2026-10-28 00:57:49.697 appintentsmetadataprocessor[39728:105046] warning: Metadata extraction skipped. No AppIntents.framework dependency found.
 
 AppIntentsSSUTraining (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsnltrainingprocessor --infoplist-path /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest/Info.plist --temp-dir-path /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/ssu --bundle-id com.brunoivan.SwiftTodoAppUITests --product-path /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest --extracted-metadata-path /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest/Metadata.appintents --metadata-file-list /Users/runner/work/Swift/Swift/build/Build/Intermediates.noindex/SwiftTodoApp.build/Debug-iphonesimulator/SwiftTodoAppUITests.build/SwiftTodoAppUITests.DependencyMetadataFileList --archive-ssu-assets
-2026-10-28 00:33:10.614 appintentsnltrainingprocessor[45373:123831] Parsing options for appintentsnltrainingprocessor
-2026-10-28 00:33:10.615 appintentsnltrainingprocessor[45373:123831] No AppShortcuts found - Skipping.
-
-MkDir /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    /bin/mkdir -p /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app
+2026-10-28 00:57:49.727 appintentsnltrainingprocessor[39729:105047] Parsing options for appintentsnltrainingprocessor
+2026-10-28 00:57:49.728 appintentsnltrainingprocessor[39729:105047] No AppShortcuts found - Skipping.
 
 CopyPlistFile /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/Info.plist /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     builtin-copyPlist --validate --convert xml1 --macro-expansion WRAPPEDPRODUCTNAME SwiftTodoAppUITests-Runner --macro-expansion WRAPPEDPRODUCTBUNDLEIDENTIFIER com.brunoivan.SwiftTodoAppUITests.xctrunner --macro-expansion TESTPRODUCTNAME SwiftTodoAppUITests --macro-expansion TESTPRODUCTBUNDLEIDENTIFIER com.brunoivan.SwiftTodoAppUITests --copy-value UIDeviceFamily /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest/Info.plist --outdir /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app -- /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/Info.plist
 
-Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PkgInfo /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
-    cd /Users/runner/work/Swift/Swift
-    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app
-
 CopyAndPreserveArchs /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/SwiftTodoAppUITests-Runner (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
     /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/XCTRunner -output /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/SwiftTodoAppUITests-Runner -extract arm64
+
+MkDir /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    /bin/mkdir -p /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app
+
+Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PkgInfo /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
+    cd /Users/runner/work/Swift/Swift
+    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Xcode/Agents/XCTRunner.app/PkgInfo /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app
 
 Copy /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/Frameworks/libXCTestSwiftSupport.dylib /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib (in target 'SwiftTodoAppUITests' from project 'SwiftTodoApp')
     cd /Users/runner/work/Swift/Swift
@@ -713,964 +713,915 @@ Touch /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/
     cd /Users/runner/work/Swift/Swift
     /usr/bin/touch -c /Users/runner/work/Swift/Swift/build/Build/Products/Debug-iphonesimulator/SwiftTodoAppUITests-Runner.app/PlugIns/SwiftTodoAppUITests.xctest
 
-2026-10-28 00:33:32.282858+0000 SwiftTodoAppUITests-Runner[46108:125881] [UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
-2026-10-28 00:33:32.304272+0000 SwiftTodoAppUITests-Runner[46108:125881] [Default] Running tests...
+2026-10-28 00:58:16.182040+0000 SwiftTodoAppUITests-Runner[40713:109973] [UIKit App Config] `UIScene` lifecycle will soon be required. Failure to adopt will result in an assert in the future.
+2026-10-28 00:58:16.206593+0000 SwiftTodoAppUITests-Runner[40713:109973] [Default] Running tests...
     t =      nans Interface orientation changed to Portrait
-Test Suite 'All tests' started at 2026-10-28 00:33:44.531.
-Test Suite 'SwiftTodoAppUITests.xctest' started at 2026-10-28 00:33:44.535.
-Test Suite 'SwiftTodoAppUITests' started at 2026-10-28 00:33:44.536.
+Test Suite 'All tests' started at 2026-10-28 00:58:23.109.
+Test Suite 'SwiftTodoAppUITests.xctest' started at 2026-10-28 00:58:23.114.
+Test Suite 'SwiftTodoAppUITests' started at 2026-10-28 00:58:23.115.
 Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' started.
-    t =     0.00s Start Test at 2026-10-28 00:33:44.538
-    t =     1.20s Set Up
-    t =     1.21s     Open com.brunoivan.SwiftTodoApp
-    t =     1.21s         Launch com.brunoivan.SwiftTodoApp
-    t =    10.52s             Setting up automation session
-    t =    13.23s             Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    15.32s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
-    t =    16.37s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    16.37s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    16.49s Tap "botonIrACrearCuenta" Button
-    t =    16.49s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    16.49s     Find the "botonIrACrearCuenta" Button
-    t =    16.54s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
-    t =    16.63s     Synthesize event
-    t =    17.13s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.14s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
-    t =    18.19s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
-    t =    18.19s         Checking existence of `"Crear cuenta" NavigationBar`
-    t =    18.23s Waiting 5.0s for "campoNombre" TextField to exist
-    t =    19.24s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
-    t =    19.24s         Checking existence of `"campoNombre" TextField`
-    t =    19.29s Tap "campoNombre" TextField
-    t =    19.29s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    19.31s     Find the "campoNombre" TextField
-    t =    19.38s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    19.45s     Synthesize event
-    t =    19.76s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.01s Type 'Prueba' into "campoNombre" TextField
-    t =    22.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.39s     Find the "campoNombre" TextField
-    t =    22.82s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    22.99s     Synthesize event
-    t =    23.39s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.39s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
-    t =    24.43s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
-    t =    24.43s         Checking existence of `"campoCorreoRegistro" TextField`
-    t =    24.54s Tap "campoCorreoRegistro" TextField
-    t =    24.54s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    24.55s     Find the "campoCorreoRegistro" TextField
-    t =    24.62s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    24.67s     Synthesize event
-    t =    24.97s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    25.59s Type 'prueba-84cdbcb2@mi...' into "campoCorreoRegistro" TextField
-    t =    25.60s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    25.62s     Find the "campoCorreoRegistro" TextField
-    t =    25.85s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    25.91s     Synthesize event
-    t =    26.64s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.64s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
-    t =    27.71s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
-    t =    27.71s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
-    t =    27.78s Tap "campoContrasenaRegistro" SecureTextField
-    t =    27.78s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    27.79s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    27.84s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    27.91s     Synthesize event
-    t =    28.35s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.40s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
-    t =    28.40s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.43s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    28.52s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    28.58s     Synthesize event
-    t =    29.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.02s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
-    t =    30.03s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
-    t =    30.03s         Checking existence of `"campoConfirmar" SecureTextField`
-    t =    30.08s Tap "campoConfirmar" SecureTextField
-    t =    30.08s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    30.09s     Find the "campoConfirmar" SecureTextField
-    t =    30.15s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    30.21s     Synthesize event
-    t =    30.53s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    30.56s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    30.56s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    30.57s     Find the "campoConfirmar" SecureTextField
-    t =    30.63s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    30.68s     Synthesize event
-    t =    31.05s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.05s Tap "botonCrearCuenta" Button
-    t =    31.05s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.06s     Find the "botonCrearCuenta" Button
-    t =    31.12s     Check for interrupting elements affecting "botonCrearCuenta" Button
-    t =    31.16s     Synthesize event
-    t =    31.48s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.77s Waiting 20.0s for "Mis tareas" NavigationBar to exist
-    t =    32.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    32.83s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    34.10s Checking `Expect predicate `label BEGINSWITH "Aún no tienes tareas"` for object "mensajeLista" StaticText`
-    t =    34.10s     Find the "mensajeLista" StaticText
-    t =    34.16s Get number of matches for: Descendants matching type Cell
-    t =    35.25s Checking `Expect predicate `label == "0 pendientes"` for object "contadorPendientes" StaticText`
-    t =    35.25s     Find the "contadorPendientes" StaticText
-    t =    35.62s Added attachment named 'ui_01_inicio_sin_tareas'
-    t =    35.62s Tap "campoNuevaTarea" TextField
-    t =    35.62s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    35.62s     Find the "campoNuevaTarea" TextField
-    t =    35.66s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    35.71s     Synthesize event
-    t =    36.03s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    36.51s Type 'Estudiar Swift' into "campoNuevaTarea" TextField
-    t =    36.51s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    36.51s     Find the "campoNuevaTarea" TextField
-    t =    36.64s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    36.70s     Synthesize event
-    t =    37.15s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    37.15s Tap "botonAgregar" Button
-    t =    37.15s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    37.15s     Find the "botonAgregar" Button
-    t =    37.20s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    37.29s     Synthesize event
-    t =    37.60s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    37.91s Waiting 5.0s for "Estudiar Swift" Cell to exist
-    t =    38.95s     Checking `Expect predicate `existsNoRetry == 1` for object "Estudiar Swift" Cell`
-    t =    38.95s         Checking existence of `"Estudiar Swift" Cell`
-    t =    39.01s Find the "campoNuevaTarea" TextField
-    t =    39.06s Tap "campoNuevaTarea" TextField
-    t =    39.06s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.06s     Find the "campoNuevaTarea" TextField
-    t =    39.10s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    39.16s     Synthesize event
-    t =    39.47s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.81s Type 'Entregar Fase III
+    t =     0.00s Start Test at 2026-10-28 00:58:23.118
+    t =     0.70s Set Up
+    t =     0.71s     Open com.brunoivan.SwiftTodoApp
+    t =     0.71s         Launch com.brunoivan.SwiftTodoApp
+    t =    12.45s             Setting up automation session
+    t =    12.59s             Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    14.17s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
+    t =    15.18s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    15.18s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    15.25s Tap "botonIrACrearCuenta" Button
+    t =    15.25s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.25s     Find the "botonIrACrearCuenta" Button
+    t =    15.27s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
+    t =    15.33s     Synthesize event
+    t =    15.74s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.22s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
+    t =    17.24s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
+    t =    17.24s         Checking existence of `"Crear cuenta" NavigationBar`
+    t =    17.27s Waiting 5.0s for "campoNombre" TextField to exist
+    t =    18.29s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
+    t =    18.29s         Checking existence of `"campoNombre" TextField`
+    t =    18.32s Tap "campoNombre" TextField
+    t =    18.32s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.32s     Find the "campoNombre" TextField
+    t =    18.34s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    18.36s     Synthesize event
+    t =    18.65s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.60s Type 'Prueba' into "campoNombre" TextField
+    t =    19.60s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.96s     Find the "campoNombre" TextField
+    t =    20.70s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    20.75s     Synthesize event
+    t =    21.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.08s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
+    t =    22.11s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
+    t =    22.11s         Checking existence of `"campoCorreoRegistro" TextField`
+    t =    22.18s Tap "campoCorreoRegistro" TextField
+    t =    22.18s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.18s     Find the "campoCorreoRegistro" TextField
+    t =    22.21s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    22.24s     Synthesize event
+    t =    22.57s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.95s Type 'prueba-0dbba773@mi...' into "campoCorreoRegistro" TextField
+    t =    22.95s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.96s     Find the "campoCorreoRegistro" TextField
+    t =    23.08s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    23.12s     Synthesize event
+    t =    23.82s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.82s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
+    t =    24.86s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
+    t =    24.86s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
+    t =    24.91s Tap "campoContrasenaRegistro" SecureTextField
+    t =    24.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.91s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    24.94s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    24.96s     Synthesize event
+    t =    25.30s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.34s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
+    t =    25.34s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.35s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    25.41s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    25.44s     Synthesize event
+    t =    25.81s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.81s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
+    t =    26.86s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
+    t =    26.86s         Checking existence of `"campoConfirmar" SecureTextField`
+    t =    26.89s Tap "campoConfirmar" SecureTextField
+    t =    26.89s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    26.89s     Find the "campoConfirmar" SecureTextField
+    t =    26.94s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    26.98s     Synthesize event
+    t =    27.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.28s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    27.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.28s     Find the "campoConfirmar" SecureTextField
+    t =    27.32s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    27.36s     Synthesize event
+    t =    27.72s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.72s Tap "botonCrearCuenta" Button
+    t =    27.72s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.72s     Find the "botonCrearCuenta" Button
+    t =    27.76s     Check for interrupting elements affecting "botonCrearCuenta" Button
+    t =    27.79s     Synthesize event
+    t =    28.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    28.31s Waiting 20.0s for "Mis tareas" NavigationBar to exist
+    t =    29.32s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    29.32s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    30.39s Checking `Expect predicate `label BEGINSWITH "Aún no tienes tareas"` for object "mensajeLista" StaticText`
+    t =    30.39s     Find the "mensajeLista" StaticText
+    t =    30.42s Get number of matches for: Descendants matching type Cell
+    t =    31.46s Checking `Expect predicate `label == "0 pendientes"` for object "contadorPendientes" StaticText`
+    t =    31.46s     Find the "contadorPendientes" StaticText
+    t =    31.70s Added attachment named 'ui_01_inicio_sin_tareas'
+    t =    31.71s Tap "campoNuevaTarea" TextField
+    t =    31.71s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    31.73s     Find the "campoNuevaTarea" TextField
+    t =    31.77s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    31.80s     Synthesize event
+    t =    32.09s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.43s Type 'Estudiar Swift' into "campoNuevaTarea" TextField
+    t =    32.43s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.43s     Find the "campoNuevaTarea" TextField
+    t =    32.48s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    32.52s     Synthesize event
+    t =    32.95s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.95s Tap "botonAgregar" Button
+    t =    32.95s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.96s     Find the "botonAgregar" Button
+    t =    33.00s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    33.06s     Synthesize event
+    t =    33.36s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    33.67s Waiting 5.0s for "Estudiar Swift" Cell to exist
+    t =    34.74s     Checking `Expect predicate `existsNoRetry == 1` for object "Estudiar Swift" Cell`
+    t =    34.74s         Checking existence of `"Estudiar Swift" Cell`
+    t =    34.77s Find the "campoNuevaTarea" TextField
+    t =    34.81s Tap "campoNuevaTarea" TextField
+    t =    34.81s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    34.81s     Find the "campoNuevaTarea" TextField
+    t =    34.83s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    34.85s     Synthesize event
+    t =    35.15s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.43s Type 'Entregar Fase III
 ' into "campoNuevaTarea" TextField
-    t =    39.81s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.82s     Find the "campoNuevaTarea" TextField
-    t =    39.93s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    35.43s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.43s     Find the "campoNuevaTarea" TextField
+    t =    35.47s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    35.50s     Synthesize event
+    t =    35.99s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    36.23s Waiting 5.0s for "Entregar Fase III" Cell to exist
+    t =    37.23s     Checking `Expect predicate `existsNoRetry == 1` for object "Entregar Fase III" Cell`
+    t =    37.23s         Checking existence of `"Entregar Fase III" Cell`
+    t =    37.26s Tap "campoNuevaTarea" TextField
+    t =    37.26s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    37.28s     Find the "campoNuevaTarea" TextField
+    t =    37.32s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    37.34s     Synthesize event
+    t =    37.65s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    37.90s Type '   ' into "campoNuevaTarea" TextField
+    t =    37.90s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    37.91s     Find the "campoNuevaTarea" TextField
+    t =    37.95s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    37.98s     Synthesize event
+    t =    38.23s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.24s Tap "botonAgregar" Button
+    t =    38.24s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.24s     Find the "botonAgregar" Button
+    t =    38.28s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    38.31s     Synthesize event
+    t =    38.60s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    39.93s Get number of matches for: Descendants matching type Cell
+    t =    39.96s Tap "campoNuevaTarea" TextField
+    t =    39.96s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    39.96s     Find the "campoNuevaTarea" TextField
+    t =    39.99s     Check for interrupting elements affecting "campoNuevaTarea" TextField
     t =    40.02s     Synthesize event
-    t =    40.53s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    40.82s Waiting 5.0s for "Entregar Fase III" Cell to exist
-    t =    41.86s     Checking `Expect predicate `existsNoRetry == 1` for object "Entregar Fase III" Cell`
-    t =    41.86s         Checking existence of `"Entregar Fase III" Cell`
-    t =    41.91s Tap "campoNuevaTarea" TextField
-    t =    41.91s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    41.91s     Find the "campoNuevaTarea" TextField
-    t =    41.96s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    41.99s     Synthesize event
-    t =    42.31s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    42.59s Type '   ' into "campoNuevaTarea" TextField
-    t =    42.59s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    42.60s     Find the "campoNuevaTarea" TextField
-    t =    42.68s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    42.73s     Synthesize event
-    t =    42.99s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    42.99s Tap "botonAgregar" Button
-    t =    42.99s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    43.00s     Find the "botonAgregar" Button
-    t =    43.09s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    43.15s     Synthesize event
-    t =    43.45s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.81s Get number of matches for: Descendants matching type Cell
-    t =    44.86s Tap "campoNuevaTarea" TextField
-    t =    44.86s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.86s     Find the "campoNuevaTarea" TextField
-    t =    44.90s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    44.98s     Synthesize event
-    t =    45.35s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.66s Type 'Comprar leche' into "campoNuevaTarea" TextField
-    t =    45.66s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.73s     Find the "campoNuevaTarea" TextField
-    t =    45.87s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    45.99s     Synthesize event
-    t =    46.42s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.43s Tap "botonAgregar" Button
-    t =    46.43s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.46s     Find the "botonAgregar" Button
-    t =    46.54s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    46.60s     Synthesize event
-    t =    46.90s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    48.26s Get number of matches for: Descendants matching type Cell
-    t =    49.33s Checking `Expect predicate `label == "3 pendientes"` for object "contadorPendientes" StaticText`
-    t =    49.33s     Find the "contadorPendientes" StaticText
-    t =    49.53s Added attachment named 'ui_02_tres_tareas_agregadas'
-    t =    49.53s Tap "Estudiar Swift" Cell
-    t =    49.53s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    49.54s     Find the "Estudiar Swift" Cell
-    t =    49.58s     Check for interrupting elements affecting "Estudiar Swift" Cell
-    t =    49.62s     Synthesize event
-    t =    49.93s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    50.99s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
-    t =    50.99s     Find the "Estudiar Swift" Cell
-    t =    52.06s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Entregar Fase III" Cell`
-    t =    52.06s     Find the "Entregar Fase III" Cell
-    t =    53.13s Checking `Expect predicate `label == "2 pendientes"` for object "contadorPendientes" StaticText`
-    t =    53.13s     Find the "contadorPendientes" StaticText
-    t =    53.33s Added attachment named 'ui_03_tarea_completada'
-    t =    53.34s Tap "Estudiar Swift" Cell
-    t =    53.34s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    53.34s     Find the "Estudiar Swift" Cell
-    t =    53.39s     Check for interrupting elements affecting "Estudiar Swift" Cell
-    t =    53.48s     Synthesize event
-    t =    53.79s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    54.84s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Estudiar Swift" Cell`
-    t =    54.84s     Find the "Estudiar Swift" Cell
-    t =    54.90s Tap "Estudiar Swift" Cell
-    t =    54.90s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    54.90s     Find the "Estudiar Swift" Cell
-    t =    54.93s     Check for interrupting elements affecting "Estudiar Swift" Cell
-    t =    55.02s     Synthesize event
-    t =    55.33s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    56.37s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
-    t =    56.38s     Find the "Estudiar Swift" Cell
-    t =    56.46s Swipe left "Comprar leche" Cell
-    t =    56.46s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    56.48s     Find the "Comprar leche" Cell
-    t =    56.53s     Check for interrupting elements affecting "Comprar leche" Cell
-    t =    56.60s     Synthesize event
-    t =    57.09s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    57.81s Waiting 5.0s for "Eliminar" Button to exist
-    t =    58.84s     Checking `Expect predicate `existsNoRetry == 1` for object "Eliminar" Button`
-    t =    58.85s         Checking existence of `"Eliminar" Button`
-    t =    59.11s Added attachment named 'ui_04_boton_eliminar_al_deslizar'
-    t =    59.12s Tap "Eliminar" Button
-    t =    59.12s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    59.12s     Find the "Eliminar" Button
-    t =    59.15s     Check for interrupting elements affecting "Eliminar" Button
-    t =    59.18s     Synthesize event
-    t =    59.48s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    60.53s Get number of matches for: Descendants matching type Cell
-    t =    60.57s Checking existence of `"Comprar leche" Cell`
-    t =    60.71s Added attachment named 'ui_05_tarea_eliminada'
-    t =    60.71s Terminate com.brunoivan.SwiftTodoApp:46830
-    t =    61.79s Open com.brunoivan.SwiftTodoApp
-    t =    61.79s     Launch com.brunoivan.SwiftTodoApp
-    t =    64.93s         Setting up automation session
-    t =    68.54s         Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    70.69s Waiting 15.0s for "Mis tareas" NavigationBar to exist
-    t =    71.73s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    71.73s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    72.06s Waiting 15.0s for "Estudiar Swift" Cell to exist
-    t =    73.07s     Checking `Expect predicate `existsNoRetry == 1` for object "Estudiar Swift" Cell`
-    t =    73.07s         Checking existence of `"Estudiar Swift" Cell`
-    t =    74.20s Get number of matches for: Descendants matching type Cell
-    t =    75.28s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
-    t =    75.28s     Find the "Estudiar Swift" Cell
-    t =    76.40s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Entregar Fase III" Cell`
-    t =    76.40s     Find the "Entregar Fase III" Cell
-    t =    76.70s Added attachment named 'ui_06_persistencia_al_reabrir'
-    t =    76.71s Tear Down
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (77.328 seconds).
+    t =    40.31s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    40.58s Type 'Comprar leche' into "campoNuevaTarea" TextField
+    t =    40.58s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    40.58s     Find the "campoNuevaTarea" TextField
+    t =    40.62s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    40.66s     Synthesize event
+    t =    41.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    41.08s Tap "botonAgregar" Button
+    t =    41.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    41.09s     Find the "botonAgregar" Button
+    t =    41.15s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    41.20s     Synthesize event
+    t =    41.50s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    42.84s Get number of matches for: Descendants matching type Cell
+    t =    43.91s Checking `Expect predicate `label == "3 pendientes"` for object "contadorPendientes" StaticText`
+    t =    43.91s     Find the "contadorPendientes" StaticText
+    t =    44.05s Added attachment named 'ui_02_tres_tareas_agregadas'
+    t =    44.05s Tap "Estudiar Swift" Cell
+    t =    44.05s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    44.06s     Find the "Estudiar Swift" Cell
+    t =    44.09s     Check for interrupting elements affecting "Estudiar Swift" Cell
+    t =    44.11s     Synthesize event
+    t =    44.40s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    45.44s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
+    t =    45.44s     Find the "Estudiar Swift" Cell
+    t =    46.52s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Entregar Fase III" Cell`
+    t =    46.52s     Find the "Entregar Fase III" Cell
+    t =    47.59s Checking `Expect predicate `label == "2 pendientes"` for object "contadorPendientes" StaticText`
+    t =    47.60s     Find the "contadorPendientes" StaticText
+    t =    47.75s Added attachment named 'ui_03_tarea_completada'
+    t =    47.75s Tap "Estudiar Swift" Cell
+    t =    47.75s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    47.76s     Find the "Estudiar Swift" Cell
+    t =    47.78s     Check for interrupting elements affecting "Estudiar Swift" Cell
+    t =    47.83s     Synthesize event
+    t =    48.13s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    49.15s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Estudiar Swift" Cell`
+    t =    49.15s     Find the "Estudiar Swift" Cell
+    t =    49.18s Tap "Estudiar Swift" Cell
+    t =    49.18s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    49.18s     Find the "Estudiar Swift" Cell
+    t =    49.22s     Check for interrupting elements affecting "Estudiar Swift" Cell
+    t =    49.25s     Synthesize event
+    t =    49.55s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    50.60s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
+    t =    50.60s     Find the "Estudiar Swift" Cell
+    t =    50.63s Swipe left "Comprar leche" Cell
+    t =    50.63s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    50.64s     Find the "Comprar leche" Cell
+    t =    50.66s     Check for interrupting elements affecting "Comprar leche" Cell
+    t =    50.73s     Synthesize event
+    t =    51.18s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    51.90s Waiting 5.0s for "Eliminar" Button to exist
+    t =    52.93s     Checking `Expect predicate `existsNoRetry == 1` for object "Eliminar" Button`
+    t =    52.93s         Checking existence of `"Eliminar" Button`
+    t =    53.09s Added attachment named 'ui_04_boton_eliminar_al_deslizar'
+    t =    53.09s Tap "Eliminar" Button
+    t =    53.09s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    53.09s     Find the "Eliminar" Button
+    t =    53.12s     Check for interrupting elements affecting "Eliminar" Button
+    t =    53.14s     Synthesize event
+    t =    53.43s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    54.44s Get number of matches for: Descendants matching type Cell
+    t =    54.48s Checking existence of `"Comprar leche" Cell`
+    t =    54.67s Added attachment named 'ui_05_tarea_eliminada'
+    t =    54.67s Terminate com.brunoivan.SwiftTodoApp:42055
+    t =    55.69s Open com.brunoivan.SwiftTodoApp
+    t =    55.69s     Launch com.brunoivan.SwiftTodoApp
+    t =    59.70s         Setting up automation session
+    t =    61.87s         Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    63.48s Waiting 15.0s for "Mis tareas" NavigationBar to exist
+    t =    64.51s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    64.51s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    64.60s Waiting 15.0s for "Estudiar Swift" Cell to exist
+    t =    65.60s     Checking `Expect predicate `existsNoRetry == 1` for object "Estudiar Swift" Cell`
+    t =    65.61s         Checking existence of `"Estudiar Swift" Cell`
+    t =    66.67s Get number of matches for: Descendants matching type Cell
+    t =    67.72s Checking `Expect predicate `value BEGINSWITH "Completada"` for object "Estudiar Swift" Cell`
+    t =    67.72s     Find the "Estudiar Swift" Cell
+    t =    68.75s Checking `Expect predicate `value BEGINSWITH "Pendiente"` for object "Entregar Fase III" Cell`
+    t =    68.75s     Find the "Entregar Fase III" Cell
+    t =    68.91s Added attachment named 'ui_06_persistencia_al_reabrir'
+    t =    68.91s Tear Down
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (69.267 seconds).
 Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' started.
-    t =     0.00s Start Test at 2026-10-28 00:35:01.868
+    t =     0.00s Start Test at 2026-10-28 00:59:32.385
+    t =     0.04s Set Up
+    t =     0.04s     Open com.brunoivan.SwiftTodoApp
+    t =     0.05s         Launch com.brunoivan.SwiftTodoApp
+    t =     0.05s             Terminate com.brunoivan.SwiftTodoApp:44381
+    t =     2.05s             Setting up automation session
+    t =     3.09s             Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     4.54s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
+    t =     5.58s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =     5.58s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =     5.63s Tap "botonIrACrearCuenta" Button
+    t =     5.63s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     5.63s     Find the "botonIrACrearCuenta" Button
+    t =     5.66s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
+    t =     5.68s     Synthesize event
+    t =     5.98s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     6.41s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
+    t =     7.41s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
+    t =     7.41s         Checking existence of `"Crear cuenta" NavigationBar`
+    t =     7.44s Waiting 5.0s for "campoNombre" TextField to exist
+    t =     8.45s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
+    t =     8.45s         Checking existence of `"campoNombre" TextField`
+    t =     8.48s Tap "campoNombre" TextField
+    t =     8.48s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     8.48s     Find the "campoNombre" TextField
+    t =     8.50s     Check for interrupting elements affecting "campoNombre" TextField
+    t =     8.54s     Synthesize event
+    t =     8.84s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     8.91s Type 'Prueba' into "campoNombre" TextField
+    t =     8.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     9.12s     Find the "campoNombre" TextField
+    t =     9.24s     Check for interrupting elements affecting "campoNombre" TextField
+    t =     9.29s     Synthesize event
+    t =     9.59s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     9.60s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
+    t =    10.60s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
+    t =    10.60s         Checking existence of `"campoCorreoRegistro" TextField`
+    t =    10.66s Tap "campoCorreoRegistro" TextField
+    t =    10.66s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    10.66s     Find the "campoCorreoRegistro" TextField
+    t =    10.70s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    10.73s     Synthesize event
+    t =    11.03s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    11.06s Type 'prueba-6308536a@mi...' into "campoCorreoRegistro" TextField
+    t =    11.06s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    11.06s     Find the "campoCorreoRegistro" TextField
+    t =    11.15s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    11.21s     Synthesize event
+    t =    11.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    11.91s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
+    t =    12.95s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
+    t =    12.95s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
+    t =    13.02s Tap "campoContrasenaRegistro" SecureTextField
+    t =    13.02s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.03s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    13.10s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    13.14s     Synthesize event
+    t =    13.44s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.47s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
+    t =    13.47s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.48s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    13.56s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    13.58s     Synthesize event
+    t =    13.95s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.95s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
+    t =    14.98s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
+    t =    14.98s         Checking existence of `"campoConfirmar" SecureTextField`
+    t =    15.02s Tap "campoConfirmar" SecureTextField
+    t =    15.02s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.03s     Find the "campoConfirmar" SecureTextField
+    t =    15.10s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    15.14s     Synthesize event
+    t =    15.43s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.44s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    15.44s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.44s     Find the "campoConfirmar" SecureTextField
+    t =    15.50s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    15.53s     Synthesize event
+    t =    15.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.91s Tap "botonCrearCuenta" Button
+    t =    15.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.91s     Find the "botonCrearCuenta" Button
+    t =    15.96s     Check for interrupting elements affecting "botonCrearCuenta" Button
+    t =    15.98s     Synthesize event
+    t =    16.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.70s Waiting 20.0s for "Mis tareas" NavigationBar to exist
+    t =    17.71s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    17.71s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    17.74s Tap "campoNuevaTarea" TextField
+    t =    17.74s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    17.74s     Find the "campoNuevaTarea" TextField
+    t =    17.77s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    17.80s     Synthesize event
+    t =    18.10s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.42s Type 'Leer capítulo 3' into "campoNuevaTarea" TextField
+    t =    18.42s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.43s     Find the "campoNuevaTarea" TextField
+    t =    18.48s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    18.52s     Synthesize event
+    t =    18.98s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.98s Tap "botonAgregar" Button
+    t =    18.98s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.98s     Find the "botonAgregar" Button
+    t =    19.03s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    19.06s     Synthesize event
+    t =    19.36s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.66s Tap "campoNuevaTarea" TextField
+    t =    19.66s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.66s     Find the "campoNuevaTarea" TextField
+    t =    19.74s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    19.77s     Synthesize event
+    t =    20.07s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.36s Type 'Hacer ejercicios' into "campoNuevaTarea" TextField
+    t =    20.36s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.37s     Find the "campoNuevaTarea" TextField
+    t =    20.43s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    20.47s     Synthesize event
+    t =    20.93s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.94s Tap "botonAgregar" Button
+    t =    20.94s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.94s     Find the "botonAgregar" Button
+    t =    20.98s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    21.01s     Synthesize event
+    t =    21.30s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.61s Tap "campoNuevaTarea" TextField
+    t =    21.61s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.62s     Find the "campoNuevaTarea" TextField
+    t =    21.72s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    21.85s     Synthesize event
+    t =    22.16s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.45s Type 'Entregar reporte' into "campoNuevaTarea" TextField
+    t =    22.45s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.45s     Find the "campoNuevaTarea" TextField
+    t =    22.51s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    22.59s     Synthesize event
+    t =    23.06s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.07s Tap "botonAgregar" Button
+    t =    23.07s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.07s     Find the "botonAgregar" Button
+    t =    23.12s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    23.15s     Synthesize event
+    t =    23.45s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.80s Get number of matches for: Descendants matching type Cell
+    t =    24.83s Tap "Hacer ejercicios" Cell
+    t =    24.83s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.84s     Find the "Hacer ejercicios" Cell
+    t =    24.87s     Check for interrupting elements affecting "Hacer ejercicios" Cell
+    t =    24.91s     Synthesize event
+    t =    25.21s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    26.26s Checking `Expect predicate `label == "2 pendientes"` for object "contadorPendientes" StaticText`
+    t =    26.26s     Find the "contadorPendientes" StaticText
+    t =    26.31s Tap "Pendientes" Button
+    t =    26.31s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    26.31s     Find the "Pendientes" Button
+    t =    26.35s     Check for interrupting elements affecting "Pendientes" Button
+    t =    26.39s     Synthesize event
+    t =    26.69s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.95s Get number of matches for: Descendants matching type Cell
+    t =    28.01s Checking existence of `"Hacer ejercicios" Cell`
+    t =    28.22s Added attachment named 'ui_07_filtro_pendientes'
+    t =    28.22s Tap "Completadas" Button
+    t =    28.22s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    28.23s     Find the "Completadas" Button
+    t =    28.31s     Check for interrupting elements affecting "Completadas" Button
+    t =    28.39s     Synthesize event
+    t =    28.69s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    29.95s Get number of matches for: Descendants matching type Cell
+    t =    29.97s Checking existence of `"Hacer ejercicios" Cell`
+    t =    30.11s Added attachment named 'ui_08_filtro_completadas'
+    t =    30.11s Tap "Todas" Button
+    t =    30.11s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.12s     Find the "Todas" Button
+    t =    30.15s     Check for interrupting elements affecting "Todas" Button
+    t =    30.19s     Synthesize event
+    t =    30.52s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    31.75s Get number of matches for: Descendants matching type Cell
+    t =    31.80s Swipe right "Entregar reporte" Cell
+    t =    31.80s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    31.80s     Find the "Entregar reporte" Cell
+    t =    31.82s     Check for interrupting elements affecting "Entregar reporte" Cell
+    t =    31.85s     Synthesize event
+    t =    32.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    33.01s Waiting 5.0s for "Editar" Button to exist
+    t =    34.03s     Checking `Expect predicate `existsNoRetry == 1` for object "Editar" Button`
+    t =    34.04s         Checking existence of `"Editar" Button`
+    t =    34.07s Tap "Editar" Button
+    t =    34.07s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    34.08s     Find the "Editar" Button
+    t =    34.11s     Check for interrupting elements affecting "Editar" Button
+    t =    34.14s     Synthesize event
+    t =    34.44s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    34.85s Waiting 5.0s for "Detalle" NavigationBar to exist
+    t =    35.87s     Checking `Expect predicate `existsNoRetry == 1` for object "Detalle" NavigationBar`
+    t =    35.87s         Checking existence of `"Detalle" NavigationBar`
+    t =    35.88s Find the "campoTitulo" TextField
+    t =    35.89s Tap "campoTitulo" TextField
+    t =    35.89s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.90s     Find the "campoTitulo" TextField
+    t =    35.91s     Check for interrupting elements affecting "campoTitulo" TextField
+    t =    35.93s     Synthesize event
+    t =    36.31s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    36.69s Waiting 3.0s for Button (First Match) to exist
+    t =    37.74s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    37.74s         Checking existence of `Button (First Match)`
+    t =    37.85s Tap Button (First Match)
+    t =    37.85s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    37.85s     Find the Button (First Match)
+    t =    37.95s     Check for interrupting elements affecting "Clear text" Button
+    t =    37.99s     Synthesize event
+    t =    38.29s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.30s Type 'Entregar reporte f...' into "campoTitulo" TextField
+    t =    38.30s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.32s     Find the "campoTitulo" TextField
+    t =    38.42s     Check for interrupting elements affecting "campoTitulo" TextField
+    t =    38.48s     Synthesize event
+    t =    39.04s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    39.05s Find the "campoTitulo" TextField
+    t =    39.10s Tap "switchFecha" Switch
+    t =    39.10s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    39.10s     Find the "switchFecha" Switch
+    t =    39.14s     Check for interrupting elements affecting "switchFecha" Switch
+    t =    39.19s     Synthesize event
+    t =    39.49s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    39.62s Waiting 5.0s for "selectorFecha" DatePicker to exist
+    t =    40.63s     Checking `Expect predicate `existsNoRetry == 1` for object "selectorFecha" DatePicker`
+    t =    40.63s         Checking existence of `"selectorFecha" DatePicker`
+    t =    40.82s Added attachment named 'ui_09_detalle_con_fecha'
+    t =    40.82s Tap "botonGuardar" Button
+    t =    40.82s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    40.82s     Find the "botonGuardar" Button
+    t =    40.86s     Check for interrupting elements affecting "botonGuardar" Button
+    t =    40.92s     Synthesize event
+    t =    41.21s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    41.64s Waiting 10.0s for "Entregar reporte final" Cell to exist
+    t =    42.67s     Checking `Expect predicate `existsNoRetry == 1` for object "Entregar reporte final" Cell`
+    t =    42.67s         Checking existence of `"Entregar reporte final" Cell`
+    t =    42.73s Checking existence of `"Entregar reporte" Cell`
+    t =    43.83s Checking `Expect predicate `value CONTAINS "vence"` for object "Entregar reporte final" Cell`
+    t =    43.83s     Find the "Entregar reporte final" Cell
+    t =    43.99s Added attachment named 'ui_10_tarea_editada_con_fecha'
+    t =    43.99s Tear Down
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' passed (44.302 seconds).
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' started.
+    t =     0.00s Start Test at 2026-10-28 01:00:16.688
     t =     0.08s Set Up
     t =     0.08s     Open com.brunoivan.SwiftTodoApp
     t =     0.08s         Launch com.brunoivan.SwiftTodoApp
-    t =     0.08s             Terminate com.brunoivan.SwiftTodoApp:49153
-    t =     2.06s             Setting up automation session
-    t =     4.93s             Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     6.65s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
-    t =     7.68s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =     7.68s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =     7.73s Tap "botonIrACrearCuenta" Button
-    t =     7.73s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     7.73s     Find the "botonIrACrearCuenta" Button
-    t =     7.76s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
-    t =     7.82s     Synthesize event
-    t =     8.14s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     8.58s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
-    t =     9.62s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
-    t =     9.62s         Checking existence of `"Crear cuenta" NavigationBar`
-    t =     9.66s Waiting 5.0s for "campoNombre" TextField to exist
-    t =    10.69s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
-    t =    10.69s         Checking existence of `"campoNombre" TextField`
-    t =    10.70s Tap "campoNombre" TextField
-    t =    10.71s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    10.71s     Find the "campoNombre" TextField
-    t =    10.73s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    10.77s     Synthesize event
-    t =    11.08s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    11.87s Type 'Prueba' into "campoNombre" TextField
-    t =    11.87s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    12.23s     Find the "campoNombre" TextField
-    t =    12.34s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    12.41s     Synthesize event
-    t =    12.74s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    12.75s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
-    t =    13.76s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
-    t =    13.76s         Checking existence of `"campoCorreoRegistro" TextField`
-    t =    13.90s Tap "campoCorreoRegistro" TextField
-    t =    13.91s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    13.92s     Find the "campoCorreoRegistro" TextField
-    t =    14.03s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    14.15s     Synthesize event
-    t =    14.44s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    14.60s Type 'prueba-37a952f9@mi...' into "campoCorreoRegistro" TextField
-    t =    14.60s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    14.68s     Find the "campoCorreoRegistro" TextField
-    t =    14.82s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    14.90s     Synthesize event
-    t =    15.62s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    15.62s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
-    t =    16.66s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
-    t =    16.66s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
-    t =    16.69s Tap "campoContrasenaRegistro" SecureTextField
-    t =    16.69s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    16.69s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    16.73s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    16.77s     Synthesize event
-    t =    17.06s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.06s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
-    t =    17.06s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.07s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    17.11s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    17.14s     Synthesize event
-    t =    17.50s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.50s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
-    t =    18.53s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
-    t =    18.53s         Checking existence of `"campoConfirmar" SecureTextField`
-    t =    18.57s Tap "campoConfirmar" SecureTextField
-    t =    18.57s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.57s     Find the "campoConfirmar" SecureTextField
-    t =    18.60s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    18.62s     Synthesize event
-    t =    18.91s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.92s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    18.92s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.92s     Find the "campoConfirmar" SecureTextField
-    t =    18.96s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    18.99s     Synthesize event
-    t =    19.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    19.36s Tap "botonCrearCuenta" Button
-    t =    19.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    19.36s     Find the "botonCrearCuenta" Button
-    t =    19.40s     Check for interrupting elements affecting "botonCrearCuenta" Button
-    t =    19.43s     Synthesize event
-    t =    19.73s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    20.22s Waiting 20.0s for "Mis tareas" NavigationBar to exist
-    t =    21.27s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    21.27s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    21.30s Tap "campoNuevaTarea" TextField
-    t =    21.30s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.30s     Find the "campoNuevaTarea" TextField
-    t =    21.33s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    21.35s     Synthesize event
-    t =    21.64s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.93s Type 'Leer capítulo 3' into "campoNuevaTarea" TextField
-    t =    21.93s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.95s     Find the "campoNuevaTarea" TextField
-    t =    22.02s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    22.08s     Synthesize event
-    t =    22.54s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.54s Tap "botonAgregar" Button
-    t =    22.54s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.55s     Find the "botonAgregar" Button
-    t =    22.62s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    22.66s     Synthesize event
-    t =    22.96s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.28s Tap "campoNuevaTarea" TextField
-    t =    23.28s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.28s     Find the "campoNuevaTarea" TextField
-    t =    23.35s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    23.38s     Synthesize event
-    t =    23.69s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.98s Type 'Hacer ejercicios' into "campoNuevaTarea" TextField
-    t =    23.98s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.98s     Find the "campoNuevaTarea" TextField
-    t =    24.08s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    24.15s     Synthesize event
-    t =    24.62s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    24.63s Tap "botonAgregar" Button
-    t =    24.63s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    24.64s     Find the "botonAgregar" Button
-    t =    24.70s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    24.74s     Synthesize event
-    t =    25.04s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    25.35s Tap "campoNuevaTarea" TextField
-    t =    25.35s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    25.35s     Find the "campoNuevaTarea" TextField
-    t =    25.40s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    25.45s     Synthesize event
-    t =    25.76s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.06s Type 'Entregar reporte' into "campoNuevaTarea" TextField
-    t =    26.06s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.06s     Find the "campoNuevaTarea" TextField
-    t =    26.15s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    26.24s     Synthesize event
-    t =    26.70s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.71s Tap "botonAgregar" Button
-    t =    26.71s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.72s     Find the "botonAgregar" Button
-    t =    26.77s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    26.82s     Synthesize event
-    t =    27.12s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.48s Get number of matches for: Descendants matching type Cell
-    t =    28.51s Tap "Hacer ejercicios" Cell
+    t =     0.08s             Terminate com.brunoivan.SwiftTodoApp:45537
+    t =     2.46s             Setting up automation session
+    t =     5.24s             Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     7.12s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
+    t =     8.13s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =     8.13s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =     8.22s Tap "botonEntrar" Button
+    t =     8.22s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     8.22s     Find the "botonEntrar" Button
+    t =     8.25s     Check for interrupting elements affecting "botonEntrar" Button
+    t =     8.30s     Synthesize event
+    t =     8.62s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     9.73s Checking `Expect predicate `label == "Escribe tu correo y tu contraseña."` for object "mensajeError" StaticText`
+    t =     9.73s     Find the "mensajeError" StaticText
+    t =     9.89s Added attachment named 'ui_11_inicio_de_sesion'
+    t =     9.89s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
+    t =    10.93s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    10.93s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    10.95s Tap "botonIrACrearCuenta" Button
+    t =    10.95s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    10.95s     Find the "botonIrACrearCuenta" Button
+    t =    10.96s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
+    t =    10.98s     Synthesize event
+    t =    11.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    11.69s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
+    t =    12.72s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
+    t =    12.72s         Checking existence of `"Crear cuenta" NavigationBar`
+    t =    12.75s Waiting 5.0s for "campoNombre" TextField to exist
+    t =    13.79s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
+    t =    13.79s         Checking existence of `"campoNombre" TextField`
+    t =    13.81s Tap "campoNombre" TextField
+    t =    13.81s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.81s     Find the "campoNombre" TextField
+    t =    13.83s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    13.84s     Synthesize event
+    t =    14.14s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    14.32s Type 'Bruno' into "campoNombre" TextField
+    t =    14.32s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    14.55s     Find the "campoNombre" TextField
+    t =    14.72s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    14.78s     Synthesize event
+    t =    15.07s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    15.07s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
+    t =    16.12s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
+    t =    16.12s         Checking existence of `"campoCorreoRegistro" TextField`
+    t =    16.15s Tap "campoCorreoRegistro" TextField
+    t =    16.15s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.15s     Find the "campoCorreoRegistro" TextField
+    t =    16.18s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    16.21s     Synthesize event
+    t =    16.52s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.54s Type 'prueba-962a2076@mi...' into "campoCorreoRegistro" TextField
+    t =    16.54s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.55s     Find the "campoCorreoRegistro" TextField
+    t =    16.59s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    16.64s     Synthesize event
+    t =    17.33s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    17.34s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
+    t =    18.34s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
+    t =    18.34s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
+    t =    18.37s Tap "campoContrasenaRegistro" SecureTextField
+    t =    18.37s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.37s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    18.42s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    18.44s     Synthesize event
+    t =    18.75s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.75s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
+    t =    18.75s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    18.76s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    18.79s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    18.82s     Synthesize event
+    t =    19.18s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.18s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
+    t =    20.19s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
+    t =    20.19s         Checking existence of `"campoConfirmar" SecureTextField`
+    t =    20.31s Tap "campoConfirmar" SecureTextField
+    t =    20.31s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.31s     Find the "campoConfirmar" SecureTextField
+    t =    20.34s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    20.38s     Synthesize event
+    t =    20.68s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.68s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    20.68s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.68s     Find the "campoConfirmar" SecureTextField
+    t =    20.71s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    20.74s     Synthesize event
+    t =    21.11s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.11s Tap "botonCrearCuenta" Button
+    t =    21.11s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.11s     Find the "botonCrearCuenta" Button
+    t =    21.16s     Check for interrupting elements affecting "botonCrearCuenta" Button
+    t =    21.19s     Synthesize event
+    t =    21.48s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.53s Waiting 5.0s for "mensajeErrorRegistro" StaticText to exist
+    t =    22.54s     Checking `Expect predicate `existsNoRetry == 1` for object "mensajeErrorRegistro" StaticText`
+    t =    22.54s         Checking existence of `"mensajeErrorRegistro" StaticText`
+    t =    23.64s Checking `Expect predicate `label == "Las contraseñas no coinciden."` for object "mensajeErrorRegistro" StaticText`
+    t =    23.64s     Find the "mensajeErrorRegistro" StaticText
+    t =    23.81s Added attachment named 'ui_12_crear_cuenta_validacion'
+    t =    23.81s Tap "campoConfirmar" SecureTextField
+    t =    23.81s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.81s     Find the "campoConfirmar" SecureTextField
+    t =    23.84s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    23.89s     Synthesize event
+    t =    24.21s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.21s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    24.21s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.21s     Find the "campoConfirmar" SecureTextField
+    t =    24.25s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    24.29s     Synthesize event
+    t =    24.74s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.74s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    24.74s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.75s     Find the "campoConfirmar" SecureTextField
+    t =    24.78s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    24.82s     Synthesize event
+    t =    25.19s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.19s Tap "botonCrearCuenta" Button
+    t =    25.19s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.19s     Find the "botonCrearCuenta" Button
+    t =    25.24s     Check for interrupting elements affecting "botonCrearCuenta" Button
+    t =    25.28s     Synthesize event
+    t =    25.58s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.82s Waiting 20.0s for "Mis tareas" NavigationBar to exist
+    t =    26.85s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    26.85s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    26.90s Tap "campoNuevaTarea" TextField
+    t =    26.90s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    26.91s     Find the "campoNuevaTarea" TextField
+    t =    26.94s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    26.98s     Synthesize event
+    t =    27.30s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.74s Type 'Tarea guardada en ...' into "campoNuevaTarea" TextField
+    t =    27.74s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    27.75s     Find the "campoNuevaTarea" TextField
+    t =    27.83s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    27.89s     Synthesize event
     t =    28.51s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.52s     Find the "Hacer ejercicios" Cell
-    t =    28.56s     Check for interrupting elements affecting "Hacer ejercicios" Cell
-    t =    28.59s     Synthesize event
+    t =    28.52s Tap "botonAgregar" Button
+    t =    28.52s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    28.52s     Find the "botonAgregar" Button
+    t =    28.55s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    28.60s     Synthesize event
     t =    28.89s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.94s Checking `Expect predicate `label == "2 pendientes"` for object "contadorPendientes" StaticText`
-    t =    29.94s     Find the "contadorPendientes" StaticText
-    t =    29.98s Tap "Pendientes" Button
-    t =    29.98s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.98s     Find the "Pendientes" Button
-    t =    30.02s     Check for interrupting elements affecting "Pendientes" Button
-    t =    30.06s     Synthesize event
-    t =    30.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.63s Get number of matches for: Descendants matching type Cell
-    t =    31.67s Checking existence of `"Hacer ejercicios" Cell`
-    t =    31.93s Added attachment named 'ui_07_filtro_pendientes'
-    t =    31.94s Tap "Completadas" Button
-    t =    31.94s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.95s     Find the "Completadas" Button
-    t =    32.00s     Check for interrupting elements affecting "Completadas" Button
-    t =    32.06s     Synthesize event
-    t =    32.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    33.62s Get number of matches for: Descendants matching type Cell
-    t =    33.64s Checking existence of `"Hacer ejercicios" Cell`
-    t =    33.83s Added attachment named 'ui_08_filtro_completadas'
-    t =    33.83s Tap "Todas" Button
-    t =    33.83s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    33.83s     Find the "Todas" Button
-    t =    33.87s     Check for interrupting elements affecting "Todas" Button
-    t =    33.92s     Synthesize event
-    t =    34.22s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    35.49s Get number of matches for: Descendants matching type Cell
-    t =    35.55s Swipe right "Entregar reporte" Cell
-    t =    35.55s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    35.55s     Find the "Entregar reporte" Cell
-    t =    35.61s     Check for interrupting elements affecting "Entregar reporte" Cell
-    t =    35.64s     Synthesize event
-    t =    36.13s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    36.85s Waiting 5.0s for "Editar" Button to exist
-    t =    37.90s     Checking `Expect predicate `existsNoRetry == 1` for object "Editar" Button`
-    t =    37.90s         Checking existence of `"Editar" Button`
-    t =    37.99s Tap "Editar" Button
-    t =    38.00s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    38.00s     Find the "Editar" Button
-    t =    38.10s     Check for interrupting elements affecting "Editar" Button
-    t =    38.17s     Synthesize event
-    t =    38.51s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.02s Waiting 5.0s for "Detalle" NavigationBar to exist
-    t =    40.04s     Checking `Expect predicate `existsNoRetry == 1` for object "Detalle" NavigationBar`
-    t =    40.04s         Checking existence of `"Detalle" NavigationBar`
-    t =    40.12s Find the "campoTitulo" TextField
-    t =    40.15s Tap "campoTitulo" TextField
-    t =    40.15s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    40.16s     Find the "campoTitulo" TextField
-    t =    40.20s     Check for interrupting elements affecting "campoTitulo" TextField
-    t =    40.29s     Synthesize event
-    t =    40.63s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    41.33s Waiting 3.0s for Button (First Match) to exist
-    t =    42.38s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
-    t =    42.38s         Checking existence of `Button (First Match)`
-    t =    43.05s Tap Button (First Match)
-    t =    43.05s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    43.06s     Find the Button (First Match)
-    t =    43.54s     Check for interrupting elements affecting "Clear text" Button
-    t =    43.67s     Synthesize event
-    t =    44.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.07s Type 'Entregar reporte f...' into "campoTitulo" TextField
-    t =    44.07s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.08s     Find the "campoTitulo" TextField
-    t =    44.25s     Check for interrupting elements affecting "campoTitulo" TextField
-    t =    44.38s     Synthesize event
-    t =    45.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.02s Find the "campoTitulo" TextField
-    t =    45.19s Tap "switchFecha" Switch
-    t =    45.20s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.20s     Find the "switchFecha" Switch
-    t =    45.30s     Check for interrupting elements affecting "switchFecha" Switch
-    t =    45.39s     Synthesize event
-    t =    45.71s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.82s Waiting 5.0s for "selectorFecha" DatePicker to exist
-    t =    46.85s     Checking `Expect predicate `existsNoRetry == 1` for object "selectorFecha" DatePicker`
-    t =    46.85s         Checking existence of `"selectorFecha" DatePicker`
-    t =    47.09s Added attachment named 'ui_09_detalle_con_fecha'
-    t =    47.09s Tap "botonGuardar" Button
-    t =    47.09s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    47.10s     Find the "botonGuardar" Button
-    t =    47.20s     Check for interrupting elements affecting "botonGuardar" Button
-    t =    47.31s     Synthesize event
-    t =    47.68s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    48.14s Waiting 10.0s for "Entregar reporte final" Cell to exist
-    t =    49.17s     Checking `Expect predicate `existsNoRetry == 1` for object "Entregar reporte final" Cell`
-    t =    49.17s         Checking existence of `"Entregar reporte final" Cell`
-    t =    49.25s Checking existence of `"Entregar reporte" Cell`
-    t =    50.36s Checking `Expect predicate `value CONTAINS "vence"` for object "Entregar reporte final" Cell`
-    t =    50.36s     Find the "Entregar reporte final" Cell
-    t =    50.62s Added attachment named 'ui_10_tarea_editada_con_fecha'
-    t =    50.62s Tear Down
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' passed (50.982 seconds).
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' started.
-    t =     0.00s Start Test at 2026-10-28 00:35:52.851
-    t =     0.17s Set Up
-    t =     0.17s     Open com.brunoivan.SwiftTodoApp
-    t =     0.17s         Launch com.brunoivan.SwiftTodoApp
-    t =     0.17s             Terminate com.brunoivan.SwiftTodoApp:49768
-    t =     3.69s             Setting up automation session
-    t =     6.49s             Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     8.53s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
-    t =     9.56s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =     9.56s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =     9.85s Tap "botonEntrar" Button
-    t =     9.85s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     9.91s     Find the "botonEntrar" Button
-    t =     9.97s     Check for interrupting elements affecting "botonEntrar" Button
-    t =    10.02s     Synthesize event
-    t =    10.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    11.49s Checking `Expect predicate `label == "Escribe tu correo y tu contraseña."` for object "mensajeError" StaticText`
-    t =    11.49s     Find the "mensajeError" StaticText
-    t =    11.74s Added attachment named 'ui_11_inicio_de_sesion'
-    t =    11.76s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
-    t =    12.80s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    12.80s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    12.82s Tap "botonIrACrearCuenta" Button
-    t =    12.82s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    12.82s     Find the "botonIrACrearCuenta" Button
-    t =    12.85s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
-    t =    12.91s     Synthesize event
-    t =    13.22s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    13.68s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
-    t =    14.69s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
-    t =    14.69s         Checking existence of `"Crear cuenta" NavigationBar`
-    t =    14.72s Waiting 5.0s for "campoNombre" TextField to exist
-    t =    15.76s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
-    t =    15.76s         Checking existence of `"campoNombre" TextField`
-    t =    15.79s Tap "campoNombre" TextField
-    t =    15.79s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    15.80s     Find the "campoNombre" TextField
-    t =    15.82s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    15.86s     Synthesize event
-    t =    16.16s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    16.71s Type 'Bruno' into "campoNombre" TextField
-    t =    16.71s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    16.91s     Find the "campoNombre" TextField
-    t =    17.03s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    17.10s     Synthesize event
-    t =    17.39s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.39s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
-    t =    18.43s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
-    t =    18.43s         Checking existence of `"campoCorreoRegistro" TextField`
-    t =    18.47s Tap "campoCorreoRegistro" TextField
-    t =    18.47s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.47s     Find the "campoCorreoRegistro" TextField
-    t =    18.53s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    18.57s     Synthesize event
-    t =    18.88s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.89s Type 'prueba-9a6f377d@mi...' into "campoCorreoRegistro" TextField
-    t =    18.89s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.91s     Find the "campoCorreoRegistro" TextField
-    t =    18.99s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    19.02s     Synthesize event
-    t =    19.72s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    19.73s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
-    t =    20.76s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
-    t =    20.76s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
-    t =    20.80s Tap "campoContrasenaRegistro" SecureTextField
-    t =    20.80s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    20.80s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    20.84s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    20.88s     Synthesize event
-    t =    21.20s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.24s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
-    t =    21.24s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.25s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    21.34s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    21.39s     Synthesize event
-    t =    21.76s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.76s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
-    t =    22.80s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
-    t =    22.80s         Checking existence of `"campoConfirmar" SecureTextField`
-    t =    22.84s Tap "campoConfirmar" SecureTextField
-    t =    22.84s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.84s     Find the "campoConfirmar" SecureTextField
-    t =    22.88s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    22.94s     Synthesize event
-    t =    23.25s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.34s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    23.34s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.36s     Find the "campoConfirmar" SecureTextField
-    t =    23.46s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    23.52s     Synthesize event
-    t =    23.88s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.89s Tap "botonCrearCuenta" Button
-    t =    23.89s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.91s     Find the "botonCrearCuenta" Button
-    t =    23.96s     Check for interrupting elements affecting "botonCrearCuenta" Button
-    t =    24.03s     Synthesize event
-    t =    24.34s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    24.41s Waiting 5.0s for "mensajeErrorRegistro" StaticText to exist
-    t =    25.43s     Checking `Expect predicate `existsNoRetry == 1` for object "mensajeErrorRegistro" StaticText`
-    t =    25.43s         Checking existence of `"mensajeErrorRegistro" StaticText`
-    t =    26.58s Checking `Expect predicate `label == "Las contraseñas no coinciden."` for object "mensajeErrorRegistro" StaticText`
-    t =    26.58s     Find the "mensajeErrorRegistro" StaticText
-    t =    26.83s Added attachment named 'ui_12_crear_cuenta_validacion'
-    t =    26.83s Tap "campoConfirmar" SecureTextField
-    t =    26.83s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.84s     Find the "campoConfirmar" SecureTextField
-    t =    26.90s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    26.95s     Synthesize event
-    t =    27.25s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    27.26s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    27.26s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    27.26s     Find the "campoConfirmar" SecureTextField
-    t =    27.30s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    27.35s     Synthesize event
-    t =    27.81s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.05s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    28.05s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.09s     Find the "campoConfirmar" SecureTextField
-    t =    28.32s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    28.38s     Synthesize event
-    t =    28.75s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.75s Tap "botonCrearCuenta" Button
-    t =    28.75s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.76s     Find the "botonCrearCuenta" Button
-    t =    28.80s     Check for interrupting elements affecting "botonCrearCuenta" Button
-    t =    28.84s     Synthesize event
-    t =    29.13s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.38s Waiting 20.0s for "Mis tareas" NavigationBar to exist
-    t =    30.43s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    30.43s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    30.49s Tap "campoNuevaTarea" TextField
-    t =    30.49s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    30.49s     Find the "campoNuevaTarea" TextField
-    t =    30.55s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    30.61s     Synthesize event
-    t =    30.93s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.27s Type 'Tarea guardada en ...' into "campoNuevaTarea" TextField
-    t =    31.28s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    31.28s     Find the "campoNuevaTarea" TextField
-    t =    31.32s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    31.37s     Synthesize event
-    t =    32.00s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    32.00s Tap "botonAgregar" Button
-    t =    32.00s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    32.02s     Find the "botonAgregar" Button
-    t =    32.08s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    32.16s     Synthesize event
-    t =    32.47s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    32.79s Waiting 5.0s for "Tarea guardada en la nube" Cell to exist
-    t =    33.85s     Checking `Expect predicate `existsNoRetry == 1` for object "Tarea guardada en la nube" Cell`
-    t =    33.85s         Checking existence of `"Tarea guardada en la nube" Cell`
-    t =    33.89s Tap "botonSalir" Button
-    t =    33.89s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    33.90s     Find the "botonSalir" Button
-    t =    33.93s     Check for interrupting elements affecting "botonSalir" Button
-    t =    33.98s     Synthesize event
-    t =    34.29s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    34.40s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
-    t =    35.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    35.45s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    35.46s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
-    t =    36.51s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    36.51s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    36.56s Tap "campoCorreo" TextField
-    t =    36.56s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    36.57s     Find the "campoCorreo" TextField
-    t =    36.61s     Check for interrupting elements affecting "campoCorreo" TextField
-    t =    36.66s     Synthesize event
-    t =    37.12s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    37.38s Find the "campoCorreo" TextField
-    t =    37.58s Type 'prueba-9a6f377d@mi...' into "campoCorreo" TextField
-    t =    37.58s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    37.59s     Find the "campoCorreo" TextField
-    t =    37.65s     Check for interrupting elements affecting "campoCorreo" TextField
-    t =    37.69s     Synthesize event
-    t =    38.39s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    38.40s Tap "campoContrasena" SecureTextField
-    t =    38.40s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    38.40s     Find the "campoContrasena" SecureTextField
-    t =    38.44s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    38.50s     Synthesize event
-    t =    38.81s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    38.92s Type '...' into "campoContrasena" SecureTextField
-    t =    38.92s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    38.93s     Find the "campoContrasena" SecureTextField
-    t =    39.00s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    39.05s     Synthesize event
-    t =    39.59s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.65s Type '<redacted>' into "campoContrasena" SecureTextField
-    t =    39.65s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    39.73s     Find the "campoContrasena" SecureTextField
-    t =    39.80s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    39.84s     Synthesize event
-    t =    40.21s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    40.21s Tap "botonEntrar" Button
-    t =    40.21s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    40.22s     Find the "botonEntrar" Button
-    t =    40.25s     Check for interrupting elements affecting "botonEntrar" Button
-    t =    40.30s     Synthesize event
-    t =    40.62s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    42.02s Checking `Expect predicate `label == "Correo o contraseña incorrectos."` for object "mensajeError" StaticText`
-    t =    42.02s     Find the "mensajeError" StaticText
-    t =    42.17s Added attachment named 'ui_13_error_credenciales'
-    t =    42.17s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
-    t =    43.18s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    43.18s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    43.20s Tap "campoCorreo" TextField
-    t =    43.20s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    43.20s     Find the "campoCorreo" TextField
-    t =    43.24s     Check for interrupting elements affecting "campoCorreo" TextField
-    t =    43.27s     Synthesize event
-    t =    43.57s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    43.92s Find the "campoCorreo" TextField
-    t =    43.98s Type '...' into "campoCorreo" TextField
-    t =    43.98s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    43.99s     Find the "campoCorreo" TextField
-    t =    44.02s     Check for interrupting elements affecting "campoCorreo" TextField
-    t =    44.06s     Synthesize event
-    t =    44.76s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.76s Type 'prueba-9a6f377d@mi...' into "campoCorreo" TextField
-    t =    44.76s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    44.77s     Find the "campoCorreo" TextField
-    t =    44.82s     Check for interrupting elements affecting "campoCorreo" TextField
-    t =    44.85s     Synthesize event
-    t =    45.56s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.57s Tap "campoContrasena" SecureTextField
-    t =    45.57s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    45.57s     Find the "campoContrasena" SecureTextField
-    t =    45.62s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    45.67s     Synthesize event
-    t =    45.98s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.01s Type '...' into "campoContrasena" SecureTextField
-    t =    46.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.02s     Find the "campoContrasena" SecureTextField
-    t =    46.07s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    46.13s     Synthesize event
-    t =    46.66s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.71s Type '<redacted>' into "campoContrasena" SecureTextField
-    t =    46.71s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    46.72s     Find the "campoContrasena" SecureTextField
-    t =    46.79s     Check for interrupting elements affecting "campoContrasena" SecureTextField
-    t =    46.82s     Synthesize event
-    t =    47.19s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    47.19s Tap "botonEntrar" Button
-    t =    47.19s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    47.20s     Find the "botonEntrar" Button
-    t =    47.25s     Check for interrupting elements affecting "botonEntrar" Button
-    t =    47.27s     Synthesize event
-    t =    47.56s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    47.80s Waiting 20.0s for "Mis tareas" NavigationBar to exist
-    t =    48.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    48.83s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    48.85s         Capturing element debug description
-    t =    49.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    49.89s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    49.90s         Capturing element debug description
-    t =    50.85s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    50.85s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    50.87s         Capturing element debug description
-    t =    51.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    51.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    51.85s         Capturing element debug description
-    t =    52.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    52.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    52.83s         Capturing element debug description
-    t =    53.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    53.83s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    53.85s         Capturing element debug description
-    t =    54.86s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    54.86s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    54.87s         Capturing element debug description
-    t =    55.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    55.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    55.83s         Capturing element debug description
-    t =    56.86s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    56.86s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    56.88s         Capturing element debug description
-    t =    57.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    57.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    57.83s         Capturing element debug description
-    t =    58.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    58.83s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    58.86s         Capturing element debug description
-    t =    59.87s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    59.87s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    59.89s         Capturing element debug description
-    t =    60.82s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    60.82s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    61.00s         Capturing element debug description
-    t =    61.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    61.84s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    61.87s         Capturing element debug description
-    t =    62.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    62.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    62.83s         Capturing element debug description
-    t =    63.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    63.89s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    63.92s         Capturing element debug description
-    t =    64.85s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    64.85s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    64.87s         Capturing element debug description
-    t =    65.84s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    65.84s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    65.89s         Capturing element debug description
-    t =    66.83s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    66.83s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    66.87s         Capturing element debug description
-    t =    67.81s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    67.81s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    67.82s         Capturing element debug description
-    t =    67.82s     Checking existence of `"Mis tareas" NavigationBar`
-    t =    67.86s Collecting debug information to assist test failure triage
-    t =    67.86s     Requesting snapshot of accessibility hierarchy for app with pid 52321
-    t =    67.92s Checking existence of `"mensajeError" StaticText`
-    t =    67.96s Find the "mensajeError" StaticText
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:304: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion] : XCTAssertTrue failed - Mensaje: Correo o contraseña incorrectos.
-    t =    68.63s Tear Down
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' failed (68.929 seconds).
+    t =    29.21s Waiting 5.0s for "Tarea guardada en la nube" Cell to exist
+    t =    30.25s     Checking `Expect predicate `existsNoRetry == 1` for object "Tarea guardada en la nube" Cell`
+    t =    30.25s         Checking existence of `"Tarea guardada en la nube" Cell`
+    t =    30.29s Tap "botonSalir" Button
+    t =    30.29s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.29s     Find the "botonSalir" Button
+    t =    30.31s     Check for interrupting elements affecting "botonSalir" Button
+    t =    30.35s     Synthesize event
+    t =    30.65s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.77s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
+    t =    31.78s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    31.78s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    31.81s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
+    t =    32.85s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    32.85s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    32.89s Tap "campoCorreo" TextField
+    t =    32.89s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.90s     Find the "campoCorreo" TextField
+    t =    32.92s     Check for interrupting elements affecting "campoCorreo" TextField
+    t =    32.95s     Synthesize event
+    t =    33.63s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    33.71s Waiting 1.0s for Button (First Match) to exist
+    t =    34.72s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    34.72s         Checking existence of `Button (First Match)`
+    t =    34.84s         Capturing element debug description
+    t =    34.85s     Checking existence of `Button (First Match)`
+    t =    35.01s Collecting debug information to assist test failure triage
+    t =    35.01s     Requesting snapshot of accessibility hierarchy for app with pid 47170
+    t =    35.09s Type 'prueba-962a2076@mi...' into "campoCorreo" TextField
+    t =    35.09s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.10s     Find the "campoCorreo" TextField
+    t =    35.18s     Check for interrupting elements affecting "campoCorreo" TextField
+    t =    35.23s     Synthesize event
+    t =    35.96s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.96s Tap "campoContrasena" SecureTextField
+    t =    35.96s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    35.97s     Find the "campoContrasena" SecureTextField
+    t =    36.06s     Check for interrupting elements affecting "campoContrasena" SecureTextField
+    t =    36.11s     Synthesize event
+    t =    36.52s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    36.55s Waiting 1.0s for Button (First Match) to exist
+    t =    37.56s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    37.56s         Checking existence of `Button (First Match)`
+    t =    37.71s         Capturing element debug description
+    t =    37.71s     Checking existence of `Button (First Match)`
+    t =    37.84s Collecting debug information to assist test failure triage
+    t =    37.84s     Requesting snapshot of accessibility hierarchy for app with pid 47170
+    t =    37.91s Type '<redacted>' into "campoContrasena" SecureTextField
+    t =    37.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    37.91s     Find the "campoContrasena" SecureTextField
+    t =    37.98s     Check for interrupting elements affecting "campoContrasena" SecureTextField
+    t =    38.03s     Synthesize event
+    t =    38.41s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.45s Tap "botonEntrar" Button
+    t =    38.45s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    38.46s     Find the "botonEntrar" Button
+    t =    38.52s     Check for interrupting elements affecting "botonEntrar" Button
+    t =    38.58s     Synthesize event
+    t =    38.90s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    40.33s Checking `Expect predicate `label == "Correo o contraseña incorrectos."` for object "mensajeError" StaticText`
+    t =    40.33s     Find the "mensajeError" StaticText
+    t =    40.52s Added attachment named 'ui_13_error_credenciales'
+    t =    40.52s Waiting 10.0s for "Iniciar sesión" NavigationBar to exist
+    t =    41.54s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    41.54s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    41.56s Tap "campoCorreo" TextField
+    t =    41.56s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    41.57s     Find the "campoCorreo" TextField
+    t =    41.60s     Check for interrupting elements affecting "campoCorreo" TextField
+    t =    41.64s     Synthesize event
+    t =    41.97s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    42.27s Waiting 1.0s for Button (First Match) to exist
+    t =    43.28s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    43.28s         Checking existence of `Button (First Match)`
+    t =    43.54s     Checking existence of `Button (First Match)`
+    t =    43.77s Tap Button (First Match)
+    t =    43.77s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    43.77s     Find the Button (First Match)
+    t =    43.94s     Check for interrupting elements affecting "Clear text" Button
+    t =    43.98s     Synthesize event
+    t =    44.28s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    44.29s Type 'prueba-962a2076@mi...' into "campoCorreo" TextField
+    t =    44.29s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    44.29s     Find the "campoCorreo" TextField
+    t =    44.38s     Check for interrupting elements affecting "campoCorreo" TextField
+    t =    44.44s     Synthesize event
+    t =    45.16s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    45.16s Tap "campoContrasena" SecureTextField
+    t =    45.16s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    45.17s     Find the "campoContrasena" SecureTextField
+    t =    45.22s     Check for interrupting elements affecting "campoContrasena" SecureTextField
+    t =    45.28s     Synthesize event
+    t =    45.69s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    45.82s Waiting 1.0s for Button (First Match) to exist
+    t =    46.82s     Checking `Expect predicate `existsNoRetry == 1` for object Button (First Match)`
+    t =    46.82s         Checking existence of `Button (First Match)`
+    t =    46.91s     Checking existence of `Button (First Match)`
+    t =    47.01s Tap Button (First Match)
+    t =    47.01s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    47.01s     Find the Button (First Match)
+    t =    47.11s     Check for interrupting elements affecting "Clear text" Button
+    t =    47.17s     Synthesize event
+    t =    47.48s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    47.49s Type '<redacted>' into "campoContrasena" SecureTextField
+    t =    47.49s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    47.52s     Find the "campoContrasena" SecureTextField
+    t =    47.60s     Check for interrupting elements affecting "campoContrasena" SecureTextField
+    t =    47.65s     Synthesize event
+    t =    48.06s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    48.08s Tap "botonEntrar" Button
+    t =    48.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    48.10s     Find the "botonEntrar" Button
+    t =    48.15s     Check for interrupting elements affecting "botonEntrar" Button
+    t =    48.18s     Synthesize event
+    t =    48.49s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    48.76s Waiting 20.0s for "Mis tareas" NavigationBar to exist
+    t =    49.79s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    49.79s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    49.84s Waiting 15.0s for "Tarea guardada en la nube" Cell to exist
+    t =    50.89s     Checking `Expect predicate `existsNoRetry == 1` for object "Tarea guardada en la nube" Cell`
+    t =    50.89s         Checking existence of `"Tarea guardada en la nube" Cell`
+    t =    51.27s Added attachment named 'ui_14_tareas_desde_la_nube'
+    t =    51.31s Tear Down
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' passed (51.684 seconds).
 Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' started.
-    t =     0.00s Start Test at 2026-10-28 00:37:01.779
-    t =     0.06s Set Up
-    t =     0.06s     Open com.brunoivan.SwiftTodoApp
-    t =     0.07s         Launch com.brunoivan.SwiftTodoApp
-    t =     0.07s             Terminate com.brunoivan.SwiftTodoApp:52321
-    t =     2.09s             Setting up automation session
-    t =     4.43s             Wait for com.brunoivan.SwiftTodoApp to idle
-    t =     6.00s Terminate com.brunoivan.SwiftTodoApp:55448
-    t =     7.03s Open com.brunoivan.SwiftTodoApp
-    t =     7.03s     Launch com.brunoivan.SwiftTodoApp
-    t =     7.88s         Setting up automation session
-    t =     9.13s         Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    10.54s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
-    t =    11.59s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
-    t =    11.59s         Checking existence of `"Iniciar sesión" NavigationBar`
-    t =    11.68s Tap "botonIrACrearCuenta" Button
-    t =    11.68s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    11.69s     Find the "botonIrACrearCuenta" Button
-    t =    11.72s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
-    t =    11.76s     Synthesize event
-    t =    12.08s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    12.55s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
-    t =    13.56s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
-    t =    13.56s         Checking existence of `"Crear cuenta" NavigationBar`
-    t =    13.58s Waiting 5.0s for "campoNombre" TextField to exist
-    t =    14.63s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
-    t =    14.63s         Checking existence of `"campoNombre" TextField`
-    t =    14.66s Tap "campoNombre" TextField
-    t =    14.66s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    14.66s     Find the "campoNombre" TextField
-    t =    14.68s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    14.72s     Synthesize event
-    t =    15.01s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    15.47s Type 'Prueba' into "campoNombre" TextField
-    t =    15.47s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    15.83s     Find the "campoNombre" TextField
-    t =    15.92s     Check for interrupting elements affecting "campoNombre" TextField
-    t =    15.97s     Synthesize event
-    t =    16.28s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    16.29s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
-    t =    17.32s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
-    t =    17.32s         Checking existence of `"campoCorreoRegistro" TextField`
-    t =    17.36s Tap "campoCorreoRegistro" TextField
-    t =    17.36s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.36s     Find the "campoCorreoRegistro" TextField
-    t =    17.41s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    17.46s     Synthesize event
-    t =    17.77s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.79s Type 'prueba-eb8adab2@mi...' into "campoCorreoRegistro" TextField
-    t =    17.79s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    17.79s     Find the "campoCorreoRegistro" TextField
-    t =    17.84s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
-    t =    17.88s     Synthesize event
-    t =    18.58s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    18.59s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
-    t =    19.59s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
-    t =    19.59s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
-    t =    19.66s Tap "campoContrasenaRegistro" SecureTextField
-    t =    19.66s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    19.67s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    19.72s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    19.78s     Synthesize event
-    t =    20.09s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    20.13s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
-    t =    20.13s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    20.14s     Find the "campoContrasenaRegistro" SecureTextField
-    t =    20.21s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
-    t =    20.25s     Synthesize event
-    t =    20.61s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    20.61s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
-    t =    21.65s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
-    t =    21.65s         Checking existence of `"campoConfirmar" SecureTextField`
-    t =    21.70s Tap "campoConfirmar" SecureTextField
-    t =    21.70s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    21.71s     Find the "campoConfirmar" SecureTextField
-    t =    21.75s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    21.80s     Synthesize event
-    t =    22.11s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.12s Type '<redacted>' into "campoConfirmar" SecureTextField
-    t =    22.12s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.12s     Find the "campoConfirmar" SecureTextField
-    t =    22.15s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
-    t =    22.20s     Synthesize event
-    t =    22.56s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.57s Tap "botonCrearCuenta" Button
-    t =    22.57s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    22.57s     Find the "botonCrearCuenta" Button
-    t =    22.61s     Check for interrupting elements affecting "botonCrearCuenta" Button
-    t =    22.65s     Synthesize event
-    t =    22.94s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    23.45s Waiting 20.0s for "Mis tareas" NavigationBar to exist
-    t =    24.45s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
-    t =    24.45s         Checking existence of `"Mis tareas" NavigationBar`
-    t =    24.48s Waiting 10.0s for "botonReintentar" Button to exist
-    t =    25.52s     Checking `Expect predicate `existsNoRetry == 1` for object "botonReintentar" Button`
-    t =    25.52s         Checking existence of `"botonReintentar" Button`
-    t =    26.58s Checking `Expect predicate `label == "No se pudo conectar con el servidor."` for object "mensajeLista" StaticText`
-    t =    26.58s     Find the "mensajeLista" StaticText
-    t =    26.61s Find the "campoNuevaTarea" TextField
-    t =    26.78s Added attachment named 'ui_15_error_con_reintentar'
-    t =    26.78s Tap "botonReintentar" Button
-    t =    26.78s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    26.78s     Find the "botonReintentar" Button
-    t =    26.80s     Check for interrupting elements affecting "botonReintentar" Button
-    t =    26.83s     Synthesize event
-    t =    27.13s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.18s Checking `Expect predicate `label BEGINSWITH "Aún no tienes tareas"` for object "mensajeLista" StaticText`
-    t =    28.18s     Find the "mensajeLista" StaticText
-    t =    28.21s Find the "campoNuevaTarea" TextField
-    t =    28.22s Tap "campoNuevaTarea" TextField
-    t =    28.22s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.23s     Find the "campoNuevaTarea" TextField
-    t =    28.24s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    28.26s     Synthesize event
-    t =    28.57s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.93s Type 'Después de reinten...' into "campoNuevaTarea" TextField
-    t =    28.93s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    28.94s     Find the "campoNuevaTarea" TextField
-    t =    28.99s     Check for interrupting elements affecting "campoNuevaTarea" TextField
-    t =    29.06s     Synthesize event
-    t =    29.60s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.61s Tap "botonAgregar" Button
-    t =    29.61s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    29.61s     Find the "botonAgregar" Button
-    t =    29.64s     Check for interrupting elements affecting "botonAgregar" Button
-    t =    29.67s     Synthesize event
-    t =    29.97s     Wait for com.brunoivan.SwiftTodoApp to idle
-    t =    30.28s Waiting 5.0s for "Después de reintentar" Cell to exist
-    t =    31.32s     Checking `Expect predicate `existsNoRetry == 1` for object "Después de reintentar" Cell`
-    t =    31.32s         Checking existence of `"Después de reintentar" Cell`
-    t =    31.53s Added attachment named 'ui_16_lista_tras_reintentar'
-    t =    31.53s Tear Down
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' passed (31.829 seconds).
-Test Suite 'SwiftTodoAppUITests' failed at 2026-10-28 00:37:33.609.
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.073) seconds
-Test Suite 'SwiftTodoAppUITests.xctest' failed at 2026-10-28 00:37:33.610.
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.074) seconds
-Test Suite 'All tests' failed at 2026-10-28 00:37:33.610.
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.079) seconds
-2026-10-28 00:38:08.906 xcodebuild[38965:108606] [MT] IDETestOperationsObserverDebug: 297.806 elapsed -- Testing started completed.
-2026-10-28 00:38:08.906 xcodebuild[38965:108606] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
-2026-10-28 00:38:08.906 xcodebuild[38965:108606] [MT] IDETestOperationsObserverDebug: 297.806 sec, +297.806 sec -- end
+    t =     0.00s Start Test at 2026-10-28 01:01:08.373
+    t =     0.09s Set Up
+    t =     0.09s     Open com.brunoivan.SwiftTodoApp
+    t =     0.10s         Launch com.brunoivan.SwiftTodoApp
+    t =     0.10s             Terminate com.brunoivan.SwiftTodoApp:47170
+    t =     3.66s             Setting up automation session
+    t =     5.90s             Wait for com.brunoivan.SwiftTodoApp to idle
+    t =     7.62s Terminate com.brunoivan.SwiftTodoApp:49945
+    t =     8.68s Open com.brunoivan.SwiftTodoApp
+    t =     8.68s     Launch com.brunoivan.SwiftTodoApp
+    t =     9.77s         Setting up automation session
+    t =    10.90s         Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    12.40s Waiting 15.0s for "Iniciar sesión" NavigationBar to exist
+    t =    13.41s     Checking `Expect predicate `existsNoRetry == 1` for object "Iniciar sesión" NavigationBar`
+    t =    13.41s         Checking existence of `"Iniciar sesión" NavigationBar`
+    t =    13.49s Tap "botonIrACrearCuenta" Button
+    t =    13.49s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.50s     Find the "botonIrACrearCuenta" Button
+    t =    13.51s     Check for interrupting elements affecting "botonIrACrearCuenta" Button
+    t =    13.55s     Synthesize event
+    t =    13.87s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    13.92s Waiting 5.0s for "Crear cuenta" NavigationBar to exist
+    t =    14.98s     Checking `Expect predicate `existsNoRetry == 1` for object "Crear cuenta" NavigationBar`
+    t =    14.98s         Checking existence of `"Crear cuenta" NavigationBar`
+    t =    15.01s Waiting 5.0s for "campoNombre" TextField to exist
+    t =    16.04s     Checking `Expect predicate `existsNoRetry == 1` for object "campoNombre" TextField`
+    t =    16.04s         Checking existence of `"campoNombre" TextField`
+    t =    16.08s Tap "campoNombre" TextField
+    t =    16.08s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    16.09s     Find the "campoNombre" TextField
+    t =    16.10s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    16.17s     Synthesize event
+    t =    16.47s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    17.15s Type 'Prueba' into "campoNombre" TextField
+    t =    17.15s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    17.51s     Find the "campoNombre" TextField
+    t =    17.61s     Check for interrupting elements affecting "campoNombre" TextField
+    t =    17.66s     Synthesize event
+    t =    17.96s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    17.96s Waiting 5.0s for "campoCorreoRegistro" TextField to exist
+    t =    18.98s     Checking `Expect predicate `existsNoRetry == 1` for object "campoCorreoRegistro" TextField`
+    t =    18.98s         Checking existence of `"campoCorreoRegistro" TextField`
+    t =    19.03s Tap "campoCorreoRegistro" TextField
+    t =    19.03s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.03s     Find the "campoCorreoRegistro" TextField
+    t =    19.06s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    19.09s     Synthesize event
+    t =    19.42s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.49s Type 'prueba-186e65a8@mi...' into "campoCorreoRegistro" TextField
+    t =    19.49s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    19.49s     Find the "campoCorreoRegistro" TextField
+    t =    19.59s     Check for interrupting elements affecting "campoCorreoRegistro" TextField
+    t =    19.63s     Synthesize event
+    t =    20.33s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    20.34s Waiting 5.0s for "campoContrasenaRegistro" SecureTextField to exist
+    t =    21.38s     Checking `Expect predicate `existsNoRetry == 1` for object "campoContrasenaRegistro" SecureTextField`
+    t =    21.38s         Checking existence of `"campoContrasenaRegistro" SecureTextField`
+    t =    21.43s Tap "campoContrasenaRegistro" SecureTextField
+    t =    21.43s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.43s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    21.49s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    21.53s     Synthesize event
+    t =    21.87s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.91s Type '<redacted>' into "campoContrasenaRegistro" SecureTextField
+    t =    21.91s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    21.92s     Find the "campoContrasenaRegistro" SecureTextField
+    t =    22.01s     Check for interrupting elements affecting "campoContrasenaRegistro" SecureTextField
+    t =    22.08s     Synthesize event
+    t =    22.45s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    22.45s Waiting 5.0s for "campoConfirmar" SecureTextField to exist
+    t =    23.47s     Checking `Expect predicate `existsNoRetry == 1` for object "campoConfirmar" SecureTextField`
+    t =    23.47s         Checking existence of `"campoConfirmar" SecureTextField`
+    t =    23.55s Tap "campoConfirmar" SecureTextField
+    t =    23.55s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.55s     Find the "campoConfirmar" SecureTextField
+    t =    23.62s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    23.68s     Synthesize event
+    t =    23.98s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    23.99s Type '<redacted>' into "campoConfirmar" SecureTextField
+    t =    23.99s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.01s     Find the "campoConfirmar" SecureTextField
+    t =    24.10s     Check for interrupting elements affecting "campoConfirmar" SecureTextField
+    t =    24.14s     Synthesize event
+    t =    24.51s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.51s Tap "botonCrearCuenta" Button
+    t =    24.51s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    24.51s     Find the "botonCrearCuenta" Button
+    t =    24.55s     Check for interrupting elements affecting "botonCrearCuenta" Button
+    t =    24.59s     Synthesize event
+    t =    24.90s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    25.18s Waiting 20.0s for "Mis tareas" NavigationBar to exist
+    t =    26.21s     Checking `Expect predicate `existsNoRetry == 1` for object "Mis tareas" NavigationBar`
+    t =    26.21s         Checking existence of `"Mis tareas" NavigationBar`
+    t =    26.30s Waiting 10.0s for "botonReintentar" Button to exist
+    t =    27.34s     Checking `Expect predicate `existsNoRetry == 1` for object "botonReintentar" Button`
+    t =    27.35s         Checking existence of `"botonReintentar" Button`
+    t =    28.44s Checking `Expect predicate `label == "No se pudo conectar con el servidor."` for object "mensajeLista" StaticText`
+    t =    28.44s     Find the "mensajeLista" StaticText
+    t =    28.47s Find the "campoNuevaTarea" TextField
+    t =    28.62s Added attachment named 'ui_15_error_con_reintentar'
+    t =    28.63s Tap "botonReintentar" Button
+    t =    28.63s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    28.63s     Find the "botonReintentar" Button
+    t =    28.67s     Check for interrupting elements affecting "botonReintentar" Button
+    t =    28.70s     Synthesize event
+    t =    28.99s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.06s Checking `Expect predicate `label BEGINSWITH "Aún no tienes tareas"` for object "mensajeLista" StaticText`
+    t =    30.06s     Find the "mensajeLista" StaticText
+    t =    30.09s Find the "campoNuevaTarea" TextField
+    t =    30.11s Tap "campoNuevaTarea" TextField
+    t =    30.12s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.13s     Find the "campoNuevaTarea" TextField
+    t =    30.19s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    30.22s     Synthesize event
+    t =    30.58s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.89s Type 'Después de reinten...' into "campoNuevaTarea" TextField
+    t =    30.89s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    30.90s     Find the "campoNuevaTarea" TextField
+    t =    30.96s     Check for interrupting elements affecting "campoNuevaTarea" TextField
+    t =    31.03s     Synthesize event
+    t =    31.58s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    31.58s Tap "botonAgregar" Button
+    t =    31.58s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    31.59s     Find the "botonAgregar" Button
+    t =    31.64s     Check for interrupting elements affecting "botonAgregar" Button
+    t =    31.82s     Synthesize event
+    t =    32.16s     Wait for com.brunoivan.SwiftTodoApp to idle
+    t =    32.52s Waiting 5.0s for "Después de reintentar" Cell to exist
+    t =    33.57s     Checking `Expect predicate `existsNoRetry == 1` for object "Después de reintentar" Cell`
+    t =    33.58s         Checking existence of `"Después de reintentar" Cell`
+    t =    33.75s Added attachment named 'ui_16_lista_tras_reintentar'
+    t =    33.75s Tear Down
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' passed (34.165 seconds).
+Test Suite 'SwiftTodoAppUITests' passed at 2026-10-28 01:01:42.540.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.425) seconds
+Test Suite 'SwiftTodoAppUITests.xctest' passed at 2026-10-28 01:01:42.543.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.429) seconds
+Test Suite 'All tests' passed at 2026-10-28 01:01:42.544.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.435) seconds
+2026-10-28 01:01:45.258 xcodebuild[34554:92474] [MT] IDETestOperationsObserverDebug: 235.208 elapsed -- Testing started completed.
+2026-10-28 01:01:45.269 xcodebuild[34554:92474] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-28 01:01:45.269 xcodebuild[34554:92474] [MT] IDETestOperationsObserverDebug: 235.208 sec, +235.208 sec -- end
 
 Test session results, code coverage, and logs:
 	/Users/runner/work/Swift/Swift/build/UITests.xcresult
 
-Failing tests:
-	SwiftTodoAppUITests.test_3_cuentaInicioYCierreDeSesion()
-
-** TEST FAILED **
+** TEST SUCCEEDED **
 
 Testing started

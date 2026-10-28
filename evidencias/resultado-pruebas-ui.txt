@@ -1,9 +1,8 @@
-Resultado XCUITest: 65
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (77.328 seconds).
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' passed (50.982 seconds).
-/Users/runner/work/Swift/Swift/SwiftTodoAppUITests/SwiftTodoAppUITests.swift:304: error: -[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion] : XCTAssertTrue failed - Mensaje: Correo o contraseña incorrectos.
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' failed (68.929 seconds).
-Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' passed (31.829 seconds).
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.073) seconds
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.074) seconds
-	 Executed 4 tests, with 1 failure (0 unexpected) in 229.068 (229.079) seconds
+Resultado XCUITest: 0
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_1_flujoCompleto_agregarCompletarEliminarYPersistir]' passed (69.267 seconds).
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_2_filtroDetalleYFechaLimite]' passed (44.302 seconds).
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_3_cuentaInicioYCierreDeSesion]' passed (51.684 seconds).
+Test Case '-[SwiftTodoAppUITests.SwiftTodoAppUITests test_4_errorDeConexionYReintentar]' passed (34.165 seconds).
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.425) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.429) seconds
+	 Executed 4 tests, with 0 failures (0 unexpected) in 199.419 (199.435) seconds
