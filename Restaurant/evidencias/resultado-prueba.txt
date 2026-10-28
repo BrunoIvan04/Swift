@@ -1,0 +1,5 @@
+Resultado: 0
+Test Case '-[RestaurantUITests.RestaurantUITests test_ordenCompleta_categoriasMenuDetalleOrdenYConfirmacion]' passed (50.364 seconds).
+	 Executed 1 test, with 0 failures (0 unexpected) in 50.364 (50.365) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 50.364 (50.367) seconds
+	 Executed 1 test, with 0 failures (0 unexpected) in 50.364 (50.369) seconds

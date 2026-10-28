@@ -1,0 +1,17 @@
+127.0.0.1 - - [28/Oct/2026 23:02:20] "GET /categories HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:05] "GET /categories HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:08] "GET /menu?category=entradas HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:09] "GET /images/1.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:09] "GET /images/2.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:09] "GET /images/3.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:13] "GET /images/1.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:20] "GET /menu?category=platos%20fuertes HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:20] "GET /images/7.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:20] "GET /images/4.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:20] "GET /images/5.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:20] "GET /images/6.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:24] "GET /images/4.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:30] "GET /images/4.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:30] "GET /images/1.png HTTP/1.1" 200 -
+127.0.0.1 - - [28/Oct/2026 23:09:37] Orden recibida: [1, 4]
+127.0.0.1 - - [28/Oct/2026 23:09:37] "POST /order HTTP/1.1" 200 -
