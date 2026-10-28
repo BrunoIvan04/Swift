@@ -34,6 +34,8 @@ final class LoginViewController: UIViewController {
 
         emailField.delegate = self
         passwordField.delegate = self
+        emailField.clearButtonMode = .whileEditing
+        passwordField.clearButtonMode = .whileEditing
         emailField.returnKeyType = .next
         passwordField.returnKeyType = .go
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)

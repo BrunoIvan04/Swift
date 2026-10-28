@@ -101,16 +101,14 @@ final class SwiftTodoAppUITests: XCTestCase {
 
     private func iniciarSesion(_ correo: String, _ contrasena: String) {
         XCTAssertTrue(app.navigationBars["Iniciar sesión"].waitForExistence(timeout: 10))
-        let campoCorreo = app.textFields["campoCorreo"]
-        let campoClave = app.secureTextFields["campoContrasena"]
-        campoCorreo.tap()
-        if let actual = campoCorreo.value as? String, !actual.isEmpty, actual != "Correo electrónico" {
-            campoCorreo.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: actual.count))
+        for (campo, texto) in [(app.textFields["campoCorreo"], correo),
+                               (app.secureTextFields["campoContrasena"], contrasena)] {
+            campo.tap()
+            // Si ya tiene texto, se borra con el botón (x) del campo.
+            let limpiar = campo.buttons.firstMatch
+            if limpiar.waitForExistence(timeout: 1) { limpiar.tap() }
+            campo.typeText(texto)
         }
-        campoCorreo.typeText(correo)
-        campoClave.tap()
-        campoClave.typeText(String(repeating: XCUIKeyboardKey.delete.rawValue, count: 20))
-        campoClave.typeText(contrasena)
         app.buttons["botonEntrar"].tap()
     }
 
