@@ -34,18 +34,29 @@ Realiza pruebas adicionales para encontrar y solucionar posibles errores.
 
 Las pruebas y capturas se generan automáticamente en una Mac de GitHub Actions (`.github/workflows/ios.yml`), en un simulador de iPhone 17 con iOS 26.2.
 
-### Versión 1.1
+### Versión 2.0 (con Firebase)
 
-- Agregar, completar y eliminar tareas (deslizar a la izquierda → «Eliminar»).
-- Pantalla de detalle para editar el título y asignar una fecha límite (deslizar a la derecha → «Editar», o botón ⓘ). Las vencidas se ven en rojo.
-- Filtro Todas / Pendientes / Completadas y contador de pendientes.
-- Persistencia con UserDefaults + Codable y migración de los datos de la versión 1.0.
+- **Cuenta:** crear cuenta (nombre, correo y contraseña), iniciar y cerrar sesión con Firebase Authentication. La sesión se recuerda al reabrir la app.
+- **Nube:** las tareas viven en Cloud Firestore (`users/{uid}/tasks`) y se actualizan en tiempo real. Las que quedaron guardadas en el teléfono (versiones 1.x) se suben solas en el primer inicio de sesión.
+- **Estados:** indicador de carga, lista vacía y error de conexión con «Reintentar».
+- Agregar, completar, eliminar (deslizar → «Eliminar»), detalle con fecha límite (deslizar a la derecha o botón ⓘ), filtro Todas / Pendientes / Completadas y contador.
 - Dynamic Type, modo oscuro y VoiceOver.
+- **Seguridad:** reglas de Firestore en [`firestore.rules`](firestore.rules): cada usuario solo ve sus datos.
 
-### Evidencias
+### Configurar Firebase
 
-- **Video demostrativo (1 min 51 s):** [`evidencias/demo_app_funcional.mp4`](evidencias/demo_app_funcional.mp4)
-- **Pruebas unitarias (15/15):** [`evidencias/resultado-pruebas-unitarias.txt`](evidencias/resultado-pruebas-unitarias.txt)
-- **Pruebas de interfaz XCUITest (2/2):** flujo principal, y filtro + detalle + fecha límite: [`evidencias/resultado-pruebas-ui.txt`](evidencias/resultado-pruebas-ui.txt)
-- **Capturas del simulador:** carpeta [`evidencias/`](evidencias/) (ui_01 a ui_10 y 01 a 05)
+El repositorio es público, así que **no incluye** el `GoogleService-Info.plist` real (está en `.gitignore`).
+
+- **En una Mac:** descarga el archivo desde la consola de Firebase (proyecto `mis-tareas`, app de iOS `com.brunoivan.SwiftTodoApp`) y colócalo en `SwiftTodoApp/GoogleService-Info.plist`.
+- **En CI:** `ci/write_demo_firebase_config.sh` escribe una configuración de prueba (`demo-mis-tareas`). Con un proyecto `demo-*`, la app se conecta sola al emulador de Firebase, así que las pruebas nunca tocan datos reales.
+- **Opcional:** si guardas el contenido del archivo real como secreto del repositorio `GOOGLE_SERVICE_INFO_PLIST`, CI también comprueba que la app compila con el proyecto real.
+
+### Evidencias (GitHub Actions, macOS 15, iPhone 17 con iOS 26.2)
+
+- **Video demostrativo (2 min 27 s):** [`evidencias/demo_app_funcional.mp4`](evidencias/demo_app_funcional.mp4)
+- **Pruebas unitarias (18/18):** [`evidencias/resultado-pruebas-unitarias.txt`](evidencias/resultado-pruebas-unitarias.txt)
+- **Pruebas de reglas de Firestore (6/6):** [`evidencias/resultado-pruebas-reglas.txt`](evidencias/resultado-pruebas-reglas.txt)
+- **Pruebas de interfaz XCUITest (4/4):** flujo principal; filtro y detalle; crear cuenta, salir y volver a entrar; error de conexión y «Reintentar». Ver [`evidencias/resultado-pruebas-ui.txt`](evidencias/resultado-pruebas-ui.txt)
+- **Datos guardados en el emulador:** [`evidencias/firestore_tareas_cuenta_demo.json`](evidencias/firestore_tareas_cuenta_demo.json) y [`evidencias/auth_cuentas_emulador.json`](evidencias/auth_cuentas_emulador.json)
+- **Capturas del simulador:** carpeta [`evidencias/`](evidencias/) (ui_01 a ui_16 y 01 a 05)
 - **Diseño editable:** [`docs/diseno/`](docs/diseno/) · **Documentos de la Fase III:** [`docs/`](docs/)

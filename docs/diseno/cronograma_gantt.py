@@ -11,11 +11,11 @@ rows=[
  ("Construcción","Detalle, fecha límite y filtro (adelantado)",D(10,26),D(10,26),"done"),
  ("Pruebas","Corrección de defectos D-01 a D-05",D(10,26),D(10,26),"done"),
  ("Sprint 2","Revisión del sprint y ajustes de diseño",D(10,27),D(11,6),"prog"),
- ("Construcción","Proyecto Firebase + login y registro",D(11,9),D(11,13),"todo"),
- ("Construcción","Repositorio Firestore async + estados de carga",D(11,11),D(11,19),"todo"),
- ("Construcción","Migración de tareas locales a la nube",D(11,18),D(11,20),"todo"),
+ ("Construcción","Firebase: login, registro y Firestore (adelantado)",D(10,27),D(10,27),"done"),
+ ("Construcción","Estados de carga y migración a la nube (adelantado)",D(10,27),D(10,27),"done"),
+ ("Pruebas","Unitarias, UI con emulador y reglas de Firestore",D(10,27),D(10,27),"done"),
+ ("Pruebas","Prueba en iPhone real y modo sin conexión",D(11,9),D(11,20),"todo"),
  ("Construcción","Recordatorios (notificaciones locales)",D(11,23),D(11,27),"todo"),
- ("Pruebas","Unitarias, UI y reglas de Firestore",D(11,23),D(12,1),"todo"),
  ("Integración","Integración final, video y entrega",D(11,30),D(12,4),"todo"),
 ]
 col={"done":"#1F6E4A","prog":"#2F6DB5","todo":"#9AA5B1"}
