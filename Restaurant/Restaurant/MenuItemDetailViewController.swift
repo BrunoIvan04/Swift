@@ -43,6 +43,8 @@ class MenuItemDetailViewController: UIViewController {
         priceLabel.font = .preferredFont(forTextStyle: .title2)
         priceLabel.adjustsFontForContentSizeCategory = true
         priceLabel.setContentHuggingPriority(.required, for: .horizontal)
+        priceLabel.setContentCompressionResistancePriority(.required, for: .horizontal)
+        nameLabel.setContentCompressionResistancePriority(.defaultLow, for: .horizontal)
         detailTextLabel.font = .preferredFont(forTextStyle: .body)
         detailTextLabel.adjustsFontForContentSizeCategory = true
         detailTextLabel.textColor = .secondaryLabel
