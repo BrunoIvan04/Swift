@@ -1,0 +1,390 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D2000000000000000000B000 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F000 /* AppDelegate.swift */; };
+		D2000000000000000000B001 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F001 /* SceneDelegate.swift */; };
+		D2000000000000000000B002 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F002 /* MenuItem.swift */; };
+		D2000000000000000000B003 /* ResponseModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F003 /* ResponseModels.swift */; };
+		D2000000000000000000B004 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F004 /* Order.swift */; };
+		D2000000000000000000B005 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F005 /* MenuController.swift */; };
+		D2000000000000000000B006 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F006 /* Helpers.swift */; };
+		D2000000000000000000B007 /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F007 /* MenuItemCell.swift */; };
+		D2000000000000000000B008 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F008 /* CategoryTableViewController.swift */; };
+		D2000000000000000000B009 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F009 /* MenuTableViewController.swift */; };
+		D2000000000000000000B010 /* MenuItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F010 /* MenuItemDetailViewController.swift */; };
+		D2000000000000000000B011 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F011 /* OrderTableViewController.swift */; };
+		D2000000000000000000B012 /* OrderConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2000000000000000000F012 /* OrderConfirmationViewController.swift */; };
+		D20000000000000000000014 /* RestaurantUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20000000000000000000013 /* RestaurantUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D20000000000000000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D20000000000000000000005 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D20000000000000000000001;
+			remoteInfo = Restaurant;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D20000000000000000000002 /* Restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20000000000000000000004 /* RestaurantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RestaurantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2000000000000000000F000 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D2000000000000000000F001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D2000000000000000000F002 /* MenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		D2000000000000000000F003 /* ResponseModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModels.swift; sourceTree = "<group>"; };
+		D2000000000000000000F004 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		D2000000000000000000F005 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
+		D2000000000000000000F006 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		D2000000000000000000F007 /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		D2000000000000000000F008 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
+		D2000000000000000000F009 /* MenuTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		D2000000000000000000F010 /* MenuItemDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemDetailViewController.swift; sourceTree = "<group>"; };
+		D2000000000000000000F011 /* OrderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
+		D2000000000000000000F012 /* OrderConfirmationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationViewController.swift; sourceTree = "<group>"; };
+		D20000000000000000000012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20000000000000000000013 /* RestaurantUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantUITests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D2000000000000000000000B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2000000000000000000000E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D20000000000000000000006 = {
+			isa = PBXGroup;
+			children = (
+				D20000000000000000000008 /* Restaurant */,
+				D20000000000000000000009 /* RestaurantUITests */,
+				D20000000000000000000007 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D20000000000000000000007 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D20000000000000000000002 /* Restaurant.app */,
+				D20000000000000000000004 /* RestaurantUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D20000000000000000000008 /* Restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				D2000000000000000000F000 /* AppDelegate.swift */,
+				D2000000000000000000F001 /* SceneDelegate.swift */,
+				D2000000000000000000F002 /* MenuItem.swift */,
+				D2000000000000000000F003 /* ResponseModels.swift */,
+				D2000000000000000000F004 /* Order.swift */,
+				D2000000000000000000F005 /* MenuController.swift */,
+				D2000000000000000000F006 /* Helpers.swift */,
+				D2000000000000000000F007 /* MenuItemCell.swift */,
+				D2000000000000000000F008 /* CategoryTableViewController.swift */,
+				D2000000000000000000F009 /* MenuTableViewController.swift */,
+				D2000000000000000000F010 /* MenuItemDetailViewController.swift */,
+				D2000000000000000000F011 /* OrderTableViewController.swift */,
+				D2000000000000000000F012 /* OrderConfirmationViewController.swift */,
+				D20000000000000000000012 /* Info.plist */,
+			);
+			path = Restaurant;
+			sourceTree = "<group>";
+		};
+		D20000000000000000000009 /* RestaurantUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D20000000000000000000013 /* RestaurantUITests.swift */,
+			);
+			path = RestaurantUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D20000000000000000000001 /* Restaurant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D20000000000000000000021 /* Build configuration list for PBXNativeTarget "Restaurant" */;
+			buildPhases = (
+				D2000000000000000000000A /* Sources */,
+				D2000000000000000000000B /* Frameworks */,
+				D2000000000000000000000C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Restaurant;
+			productName = Restaurant;
+			productReference = D20000000000000000000002 /* Restaurant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D20000000000000000000003 /* RestaurantUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D20000000000000000000022 /* Build configuration list for PBXNativeTarget "RestaurantUITests" */;
+			buildPhases = (
+				D2000000000000000000000D /* Sources */,
+				D2000000000000000000000E /* Frameworks */,
+				D2000000000000000000000F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D20000000000000000000011 /* PBXTargetDependency */,
+			);
+			name = RestaurantUITests;
+			productName = RestaurantUITests;
+			productReference = D20000000000000000000004 /* RestaurantUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D20000000000000000000005 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					D20000000000000000000001 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					D20000000000000000000003 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = D20000000000000000000001;
+					};
+				};
+			};
+			buildConfigurationList = D20000000000000000000020 /* Build configuration list for PBXProject "Restaurant" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = es;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				es,
+				Base,
+			);
+			mainGroup = D20000000000000000000006;
+			productRefGroup = D20000000000000000000007 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D20000000000000000000001 /* Restaurant */,
+				D20000000000000000000003 /* RestaurantUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D2000000000000000000000C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2000000000000000000000F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D2000000000000000000000A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D2000000000000000000B000 /* AppDelegate.swift in Sources */,
+				D2000000000000000000B001 /* SceneDelegate.swift in Sources */,
+				D2000000000000000000B002 /* MenuItem.swift in Sources */,
+				D2000000000000000000B003 /* ResponseModels.swift in Sources */,
+				D2000000000000000000B004 /* Order.swift in Sources */,
+				D2000000000000000000B005 /* MenuController.swift in Sources */,
+				D2000000000000000000B006 /* Helpers.swift in Sources */,
+				D2000000000000000000B007 /* MenuItemCell.swift in Sources */,
+				D2000000000000000000B008 /* CategoryTableViewController.swift in Sources */,
+				D2000000000000000000B009 /* MenuTableViewController.swift in Sources */,
+				D2000000000000000000B010 /* MenuItemDetailViewController.swift in Sources */,
+				D2000000000000000000B011 /* OrderTableViewController.swift in Sources */,
+				D2000000000000000000B012 /* OrderConfirmationViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D2000000000000000000000D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20000000000000000000014 /* RestaurantUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D20000000000000000000011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D20000000000000000000001 /* Restaurant */;
+			targetProxy = D20000000000000000000010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		D20000000000000000000030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D20000000000000000000031 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		D20000000000000000000032 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Restaurant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.Restaurant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		D20000000000000000000033 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Restaurant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.Restaurant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		D20000000000000000000034 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.RestaurantUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Restaurant;
+			};
+			name = Debug;
+		};
+		D20000000000000000000035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brunoivan.RestaurantUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_TARGET_NAME = Restaurant;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D20000000000000000000020 /* Build configuration list for PBXProject "Restaurant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20000000000000000000030 /* Debug */,
+				D20000000000000000000031 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D20000000000000000000021 /* Build configuration list for PBXNativeTarget "Restaurant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20000000000000000000032 /* Debug */,
+				D20000000000000000000033 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D20000000000000000000022 /* Build configuration list for PBXNativeTarget "RestaurantUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20000000000000000000034 /* Debug */,
+				D20000000000000000000035 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D20000000000000000000005 /* Project object */;
+}

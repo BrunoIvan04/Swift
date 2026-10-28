@@ -1,0 +1,72 @@
+name: Restaurant (proyecto guiado) - capturas
+
+permissions:
+  contents: write
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'Restaurant/**'
+      - '.github/workflows/restaurant.yml'
+  workflow_dispatch:
+
+jobs:
+  restaurant:
+    runs-on: macos-15
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Iniciar el servidor de prueba (como OpenRestaurant)
+        shell: bash
+        run: |
+          nohup python3 Restaurant/servidor/servidor.py > servidor.log 2>&1 &
+          for i in $(seq 1 30); do curl -s http://localhost:8080/categories && exit 0; sleep 1; done
+          cat servidor.log; exit 1
+
+      - name: Compilar y probar en el simulador
+        shell: bash
+        run: |
+          set -o pipefail
+          OUT=Restaurant/evidencias; mkdir -p "$OUT"
+          UDID=$(xcrun simctl list devices available -j | python3 -c '
+          import json, sys, re
+          data = json.load(sys.stdin)["devices"]
+          def ver(rt):
+              m = re.search(r"iOS-(\d+)-(\d+)", rt)
+              return (int(m.group(1)), int(m.group(2))) if m else (0, 0)
+          for rt in sorted((r for r in data if "iOS" in r), key=ver, reverse=True):
+              phones = [d for d in data[rt] if d["name"].startswith("iPhone") and "SE" not in d["name"]]
+              if phones:
+                  pick = next((d for d in phones if re.fullmatch(r"iPhone \d+", d["name"])), phones[0])
+                  print(pick["udid"]); break
+          ')
+          xcrun simctl boot "$UDID" || true
+          xcrun simctl bootstatus "$UDID" -b
+          xcrun simctl status_bar "$UDID" override --time "9:41" --batteryState charged --batteryLevel 100 --cellularBars 4 --wifiBars 3 || true
+          xcrun simctl io "$UDID" recordVideo --codec=h264 --force "$OUT/restaurant-simulador.mp4" &
+          VIDEO_PID=$!
+          sleep 2
+          set +e
+          TEST_RUNNER_SCREENSHOT_DIR="$PWD/$OUT" xcodebuild test \
+            -project Restaurant/Restaurant.xcodeproj -scheme Restaurant \
+            -destination "id=$UDID" -derivedDataPath build-restaurant 2>&1 \
+            | tee "$OUT/log-pruebas.txt" | grep -E "error:|Test Case|Executed|BUILD" | tail -n 30
+          STATUS=${PIPESTATUS[0]}
+          set -e
+          kill -INT "$VIDEO_PID" || true; wait "$VIDEO_PID" || true
+          { echo "Resultado: $STATUS"; grep -E "Test Case .*(passed|failed)|Executed|error:" "$OUT/log-pruebas.txt"; } > "$OUT/resultado-prueba.txt"
+          cp servidor.log "$OUT/servidor-log.txt" || true
+          exit $STATUS
+
+      - name: Guardar evidencias en el repositorio
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          rm -f Restaurant/evidencias/log-pruebas.txt
+          git add -f Restaurant/evidencias
+          git commit -m "Evidencias de Restaurant (run ${{ github.run_number }}) [skip ci]" || echo "Sin cambios"
+          git pull --rebase origin main && git push origin HEAD:main

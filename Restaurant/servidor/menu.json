@@ -1,0 +1,12 @@
+[
+  {"id": 1, "name": "Guacamole con totopos", "description": "Aguacate machacado con jitomate, cebolla, cilantro, chile serrano y limón. Se sirve con totopos recién hechos.", "price": 95.0, "category": "entradas", "estimated_prep_time": 5},
+  {"id": 2, "name": "Sopa de tortilla", "description": "Caldo de jitomate con tiras de tortilla frita, aguacate, queso fresco, crema y chile pasilla.", "price": 85.0, "category": "entradas", "estimated_prep_time": 8},
+  {"id": 3, "name": "Queso fundido", "description": "Queso Oaxaca y manchego gratinados con chorizo. Incluye tortillas de harina.", "price": 110.0, "category": "entradas", "estimated_prep_time": 10},
+  {"id": 4, "name": "Tacos al pastor", "description": "Cuatro tacos de cerdo marinado con piña, cebolla y cilantro, en tortilla de maíz.", "price": 135.0, "category": "platos fuertes", "estimated_prep_time": 12},
+  {"id": 5, "name": "Enchiladas verdes", "description": "Tortillas rellenas de pollo bañadas en salsa verde, con crema, queso y cebolla morada.", "price": 145.0, "category": "platos fuertes", "estimated_prep_time": 15},
+  {"id": 6, "name": "Pozole rojo", "description": "Maíz cacahuazintle con cerdo en caldo de chile guajillo. Lechuga, rábano, orégano y tostadas aparte.", "price": 150.0, "category": "platos fuertes", "estimated_prep_time": 15},
+  {"id": 7, "name": "Mole poblano", "description": "Pieza de pollo con mole poblano, ajonjolí, arroz rojo y tortillas.", "price": 175.0, "category": "platos fuertes", "estimated_prep_time": 20},
+  {"id": 8, "name": "Churros con chocolate", "description": "Cinco churros con azúcar y canela, con chocolate caliente para remojar.", "price": 70.0, "category": "postres", "estimated_prep_time": 6},
+  {"id": 9, "name": "Flan napolitano", "description": "Flan casero de vainilla con caramelo.", "price": 65.0, "category": "postres", "estimated_prep_time": 3},
+  {"id": 10, "name": "Pastel tres leches", "description": "Bizcocho bañado en leche evaporada, condensada y crema, con fresas.", "price": 75.0, "category": "postres", "estimated_prep_time": 3}
+]
