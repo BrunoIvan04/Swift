@@ -43,6 +43,10 @@ Las pruebas y capturas se generan automáticamente en una Mac de GitHub Actions 
 - Dynamic Type, modo oscuro y VoiceOver.
 - **Seguridad:** reglas de Firestore en [`firestore.rules`](firestore.rules): cada usuario solo ve sus datos.
 
+### Proyecto guiado: Restaurant
+
+El proyecto guiado de la Fase III está en [`Restaurant/`](Restaurant/), con su servidor de prueba y sus capturas en [`Restaurant/evidencias/`](Restaurant/evidencias/).
+
 ### Configurar Firebase
 
 El repositorio es público, así que **no incluye** el `GoogleService-Info.plist` real (está en `.gitignore`).
