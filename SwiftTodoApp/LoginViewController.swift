@@ -104,6 +104,11 @@ enum Form {
         field.autocorrectionType = .no
         field.spellCheckingType = .no
         field.isSecureTextEntry = secure
+        // En pruebas de UI se desactiva la sugerencia «Usar contraseña segura» de
+        // iOS, que cubre los campos y no deja escribir. En uso normal se conserva.
+        if secure && ProcessInfo.processInfo.arguments.contains("-uiTesting") {
+            field.textContentType = .oneTimeCode
+        }
         if email {
             field.keyboardType = .emailAddress
             field.textContentType = .emailAddress
